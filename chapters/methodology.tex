@@ -244,7 +244,7 @@ which gives smooth, gradual transitions. A higher power tends to make the values
 cluster tightly around each known point, which produces unnatural-looking
 ``bubbles'' when there are only a few points to work from.
 
-The interpolation was carried out in Blender with a short Python script. numpy is
+The interpolation was carried out in Blender with a short Python script as shown in Listing~\ref{lst:thickness_interpolation}. numpy is
 used for the distance and averaging calculations, and scipy is used for handling
 the nearest-point lookups. For every vertex the script computes the distances to
 the known values, forms the weights, and takes the weighted average. The result
@@ -253,7 +253,7 @@ Before storing, the values are scaled to the range zero to one by dividing by th
 largest thickness, because the modifier used in the next step expects weights in
 that range.
 
-\begin{lstlisting}[language=Python, caption={Interpolation of the thickness distribution using inverse distance weighting.}, label={lst:thickness_interpolation}]
+\begin{lstlisting}[language=Python, caption={Interpolation of the thickness distribution in Blender using inverse distance weighting.}, label={lst:thickness_interpolation}]
 import bpy
 import numpy as np
 
@@ -303,7 +303,6 @@ def apply_thickness(obj_name, known_pos, known_val, power=2):
         f"(max={max_d})"
     )
 
-
 # ------------------------------------------------------------------
 # Mesh 1
 # ------------------------------------------------------------------
@@ -336,7 +335,6 @@ apply_thickness(
         thickness11,
     ]
 )
-
 
 # ------------------------------------------------------------------
 # Mesh 2
@@ -414,3 +412,8 @@ between them, for the reason given in Section~\ref{sec:interp}.
 
 The output of this step is a single solid mesh in which the leaflet walls have the
 measured, locally varying thickness.
+
+\section{Printing the complete model}\label{sec:print}
+Jetzt wo erfolgreich eine gute approximation beziehungsweise Modell der Mitral Klappe erzielt worden war ging es zum eigentlichen Ziel und Kern dieser Arbeit: Ein realitätsnahes Ultrashall Phantom zu fabrizieren. Nachdem Präzision und realitätstreue im Vordergrund über leichte und massentaugliche Produktion standen, wurde FDM 3D-Druck gewählt. 3D-Drucker ermöglichen mitleiweile eine ausreichende Detailtreue und zudem auch die für dieses Projekt essentielle Möglichkeit mit flexiblen Materialien wie TPU zu arbeiten. Die herstellung von flexiblen Strukturen wäre auch mit Gußformen und einem Material wie beispielsweise Silikon möglich und würden sogar eine massentaugliche Herstöllung ermöglichen jedoch blieb die Wahl beim 3D-Druck da dadurch leichte anpassungen möglich wären und zudem nicht darauf rücksicht genommen werden muss, wie man die Gussform entfernt.
+
+Schon während der Abmessung der Dickenwerte über die Laufzeit des Projekts wurde zeitgleich mit Testdrucken parallel ermittelt, wie man zu einem bestmöglichen Ergebnis kommen kann. Es war klar, dass die Herzklappe beim Druck Support Strukturen benötigen wird, da die convexe Form möglichst flach auf den Druckbrett aufliegen müsste und es damit Überhänge weit über 60° gäben würde. Das Modell senkrecht zu drucken verminderte zwar die querschnittsfläche an Support ein wenig aber nicht maßgiblich und zudem wurde die Struktur dann beim drucken instabil da sich das Druckbrett in der Y achse hin und her bewegt. Das Problem mit Support Material ist, dass es beim entfernen schwierig ist, alle Rückstende zu beseitigen und eine glatte Fläche zu erziehlen. In diesem Fall beim drucken 

@@ -24,6 +24,7 @@
 \contentsline {section}{\numberline {3.5}Measuring leaflet thickness in 3D~Slicer}{8}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Spreading the measurements over the mesh}{9}{section.3.6}%
 \contentsline {section}{\numberline {3.7}Building the solid model}{12}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Printing the complete model}{13}{section.3.8}%
 \contentsline {chapter}{\chapternumberline {4}Introduction to \LaTeX }{15}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Installation}{15}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Editors}{15}{section.4.2}%
