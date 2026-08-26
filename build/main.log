@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.26)  26 AUG 2026 11:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.26)  26 AUG 2026 11:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/mnt/c/Users/sebi1/OneDrive/Uni/Bachelorthesis/Thesis/thesis.tex
-(/mnt/c/Users/sebi1/OneDrive/Uni/Bachelorthesis/Thesis/thesis.tex
+**/mnt/c/Users/sebi1/OneDrive/Uni/Bachelorthesis/Bachelor_thesis/main.tex
+(/mnt/c/Users/sebi1/OneDrive/Uni/Bachelorthesis/Bachelor_thesis/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (./vutinfth.cls
@@ -527,9 +527,9 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 \vutinfth@placedate@width=\skip262
 )
 
-LaTeX Warning: Writing or overwriting file `thesis.xmpdata'.
+LaTeX Warning: Writing or overwriting file `main.xmpdata'.
 
-\openout15 = `thesis.xmpdata'.
+\openout15 = `main.xmpdata'.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
@@ -1089,8 +1089,8 @@ File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 ) (/usr/share/texlive/texmf-dist/tex/latex/pdfx/AdobeColorProfiles.tex) (/usr/share/texlive/texmf-dist/tex/latex/pdfx/8bit.def
 File: 8bit.def 2008/03/30 v1.1d Input encoding file
 )
-** pdfx: Metadata file thesis.xmpdata read successfully.
-(./thesis.xmpdata)<<sRGB.icc>> (/usr/share/texlive/texmf-dist/tex/latex/pdfx/8bit.def
+** pdfx: Metadata file main.xmpdata read successfully.
+(build/main.xmpdata)<<sRGB.icc>> (/usr/share/texlive/texmf-dist/tex/latex/pdfx/8bit.def
 File: 8bit.def 2008/03/30 v1.1d Input encoding file
 ) (/usr/share/texlive/texmf-dist/tex/latex/pdfx/8bit.def
 File: 8bit.def 2008/03/30 v1.1d Input encoding file
@@ -1113,357 +1113,357 @@ Using XMP template file: pdfa.xmp
 \xmpinclRead=\read6
 \openout5 = `pdfa.xmpi'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
 \openout5 = `pdfa.xmpi'.
 
@@ -1599,22 +1599,22 @@ Package: supertabular 2020/02/02 v4.1g the supertabular environment
 Package: glossary-tree 2023/09/29 v4.53 (NLCT)
 \glstreeindent=\skip304
 ))
-\thesis@idxfile=\write130
-\openout5 = `thesis.idx'.
+\main@idxfile=\write130
+\openout5 = `main.idx'.
 
 
-Writing index file thesis.idx 
+Writing index file main.idx 
 \glswrite=\write131
 \glo@main@file=\write132
-\openout5 = `thesis.glo'.
+\openout5 = `main.glo'.
 
-Package glossaries Info: Writing glossary file thesis.glo on input line 59.
+Package glossaries Info: Writing glossary file main.glo on input line 59.
 \glo@acronym@file=\write133
-\openout5 = `thesis.acn'.
+\openout5 = `main.acn'.
 
-Package glossaries Info: Writing glossary file thesis.acn on input line 59.
-(./thesis.aux)
-\openout1 = `thesis.aux'.
+Package glossaries Info: Writing glossary file main.acn on input line 59.
+(build/main.aux)
+\openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
 LaTeX Font Info:    ... okay on input line 107.
@@ -1720,7 +1720,7 @@ Package caption Info: End \AtBeginDocument code.
 Package hyperref Warning: Draft mode on.
 
 Package hyperref Info: Link coloring OFF on input line 107.
-(./thesis.glsdefs)
+(build/main.glsdefs)
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -1859,141 +1859,141 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 113.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 113.
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [1{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}] (./thesis.mw)
-\openout5 = `thesis.mw'.
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.ist'.
+\openout5 = `main.ist'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.ist'.
+\openout5 = `main.ist'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [2
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -2030,735 +2030,735 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 Overfull \vbox (4.07988pt too high) has occurred while \output is active []
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [3
 
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [4
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [5
 
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [6
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 118.
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [7
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [8
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [9
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [10
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [11
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [12
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [13
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [14
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
- (./thesis.toc)
-\openout5 = `thesis.mw'.
+ (build/main.toc)
+\openout5 = `main.mw'.
 
- [15] (./thesis.mw)
-\openout5 = `thesis.mw'.
+ [15] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [16
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [1
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [2
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
  (./intro.tex
 \@gls@deffile=\write134
-\openout5 = `thesis.glsdefs'.
+\openout5 = `main.glsdefs'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
- [3] (./thesis.mw)
-\openout5 = `thesis.mw'.
+ [3] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [4
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <24.88> on input line 33.
@@ -2766,18 +2766,18 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <20.74> on input line 33.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 33.
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
- [5] (./thesis.mw)
-\openout5 = `thesis.mw'.
+ [5] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
@@ -2785,193 +2785,193 @@ Package microtype Info: Character `029' is missing
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/8'.
 (microtype)             Ignoring protrusion settings for this character.
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
- [6] (./thesis.mw)
-\openout5 = `thesis.mw'.
+ [6] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
- [7] (./thesis.mw)
-\openout5 = `thesis.mw'.
+ [7] (build/main.mw)
+\openout5 = `main.mw'.
 
 <graphics/TUWI-Logo-Code.png, id=94, 476.78125pt x 476.78125pt>
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
- [8{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}] (./thesis.mw)
-\openout5 = `thesis.mw'.
+ [8{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
- [9] (./thesis.mw)
-\openout5 = `thesis.mw'.
+ [9] (build/main.mw)
+\openout5 = `main.mw'.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 247.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
- [10{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] (./thesis.mw)
-\openout5 = `thesis.mw'.
+ [10{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
- [11] (./thesis.mw)
-\openout5 = `thesis.mw'.
+ [11] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
 )
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
- [12] (./thesis.mw)
-\openout5 = `thesis.mw'.
+ [12] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [13
 
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [14
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [15
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [16
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
- (./thesis.lof)
-\openout5 = `thesis.mw'.
+ (build/main.lof)
+\openout5 = `main.mw'.
 
- [17] (./thesis.mw)
-\openout5 = `thesis.mw'.
+ [17] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [18
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
- (./thesis.lot)
-\openout5 = `thesis.mw'.
+ (build/main.lot)
+\openout5 = `main.mw'.
 
- [19] (./thesis.mw)
-\openout5 = `thesis.mw'.
+ [19] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [20
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
- (./thesis.loa) (./thesis.ind
-\openout5 = `thesis.mw'.
+ (build/main.loa) (build/main.ind
+\openout5 = `main.mw'.
 
- [21] (./thesis.mw)
-\openout5 = `thesis.mw'.
+ [21] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [22
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
  [23
 
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
 )
-No file thesis.gls.
-No file thesis.acr.
-(./thesis.bbl
-\openout5 = `thesis.mw'.
+No file main.gls.
+No file main.acr.
+(build/main.bbl
+\openout5 = `main.mw'.
 
  [24
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
 
 bibitemlist
@@ -2982,496 +2982,496 @@ Class memoir Warning: The material used in the headers is too large
 either increase the head height or redesign the header
 (in both cases you will find help in the memoir manual). on input line 184.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
 [25
 
-] (./thesis.mw)
-\openout5 = `thesis.mw'.
+] (build/main.mw)
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.glsdefs'.
+\openout5 = `main.glsdefs'.
 
 
 No complaints by nag.
 \tf@toc=\write135
-\openout5 = `thesis.toc'.
+\openout5 = `main.toc'.
 
 \tf@lof=\write136
-\openout5 = `thesis.lof'.
+\openout5 = `main.lof'.
 
 \tf@lot=\write137
-\openout5 = `thesis.lot'.
+\openout5 = `main.lot'.
 
 \tf@loa=\write138
-\openout5 = `thesis.loa'.
+\openout5 = `main.loa'.
 
-(./thesis.aux
-\openout5 = `thesis.mw'.
+(build/main.aux
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
-\openout5 = `thesis.mw'.
+\openout5 = `main.mw'.
 
 )
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-\openout5 = `thesis.idx'.
+\openout5 = `main.idx'.
 
-\openout5 = `thesis.glo'.
+\openout5 = `main.glo'.
 
-\openout5 = `thesis.acn'.
+\openout5 = `main.acn'.
 
-\openout5 = `thesis.toc'.
+\openout5 = `main.toc'.
 
-\openout5 = `thesis.lof'.
+\openout5 = `main.lof'.
 
-\openout5 = `thesis.lot'.
+\openout5 = `main.lot'.
 
-\openout5 = `thesis.loa'.
+\openout5 = `main.loa'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47514 strings out of 474222
- 854296 string characters out of 5748733
+ 47515 strings out of 474222
+ 851929 string characters out of 5748733
  1943975 words of memory out of 5000000
  67373 multiletter control sequences out of 15000+600000
  698855 words of font info for 221 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,16n,131p,2379b,2732s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,16n,131p,2386b,2732s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on thesis.pdf (41 pages, 367662 bytes).
+Output written on build/main.pdf (41 pages, 367662 bytes).
 PDF statistics:
  266 PDF objects out of 1000 (max. 8388607)
  172 compressed objects within 2 object streams
