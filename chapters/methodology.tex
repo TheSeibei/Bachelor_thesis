@@ -1,0 +1,306 @@
+
+
+% Placeholder marker -- fill these in and then delete the \ph wrapper.
+\newcommand{\ph}[1]{\textcolor{red}{[#1]}}
+
+\chapter{Methodology}
+
+\section{Overview of the approach}\label{sec:overview}
+
+The goal of this work is a solid, thickness-accurate 3D model of the valve
+leaflets that can serve as the basis for an ultrasound phantom. The starting
+point is two things: a volumetric ultrasound scan of the valve, stored as a VDB
+volume, and a surface mesh of the leaflets. The problem is that these two do not
+directly provide what is needed. The scan contains the full valve, but only as a
+grid of grayscale values with no explicit geometry. The mesh has clean geometry,
+but it is only a single surface with no thickness, so on its own it cannot be
+turned into a physical object with a wall.
+
+The core task of the whole pipeline is therefore to bridge these two: to bring
+the mesh and the volume into a common coordinate system, to recover the leaflet
+thickness from the volume, to transfer that thickness to the mesh, and to turn
+the single surface into a closed solid.
+
+I did not carry out all of this in a single program, because no single tool does
+every part well. Instead the work is split across three: MeVisLab is used to load
+and prepare the volume, 3D~Slicer is used to align the mesh with the volume and
+to take the thickness measurements, and Blender is used to interpolate the
+measurements over the mesh and build the solid. Some smaller steps, mainly the
+interpolation, were done with short Python scripts using the numpy and scipy
+libraries. The following sections describe each part, and, more importantly, why
+each choice was made and not one of the other possible ones.
+
+\section{Input data}\label{sec:input}
+
+The first input is the volumetric scan. It is a 3D grayscale field where bright
+voxels roughly correspond to tissue and dark voxels to the surrounding space. It
+contains the leaflets with their real thickness, but this thickness is only
+present as a bright band in the image and not as a number or a shape that can be
+measured automatically without further steps. The scan is also not clean
+everywhere: the ultrasound probe used to record it left a very noisy region in
+the centre of the valve, around the opening, which becomes important later.
+
+The second input is the surface mesh of the leaflets. This mesh is a single
+surface. It does not enclose a volume, and it has no wall thickness at all. In
+practice there are two separate leaflet meshes, referred to here as \ph{Mesh5}
+and \ph{Mesh6}.
+
+Before deciding how to add thickness, I first had to establish what the surface
+actually represents, because this changes the whole calculation. A surface mesh
+of a thin structure can either be a \emph{midsurface}, sitting in the middle
+between the two walls, or a \emph{boundary surface}, sitting on one side. If it
+is a midsurface, the real thickness is split evenly on both sides of it. If it is
+a boundary surface, the whole thickness sits on one side only. Getting this wrong
+would make every thickness value off by a factor of two.
+
+To check this, the mesh was placed next to the volume and a cross-section through
+a leaflet was examined. If the mesh were a midsurface, it would run through the
+middle of the bright leaflet band. In this case the surface sits on one side of
+the band, which means it is the underside (a boundary surface), not the middle.
+This has a direct consequence for the later steps: the full measured thickness
+has to be added on one side, and there is no division by two. I come back to this
+in Section~\ref{sec:solid}.
+
+\section{Choosing how to recover thickness}\label{sec:recover}
+
+Thickness is not stored anywhere in the data. It has to be recovered from the
+grayscale volume. There were two reasonable ways to do this, and it is worth
+explaining both, because the reason for choosing the second one is part of the
+method.
+
+The first idea was to compute the thickness fully automatically with a distance
+transform. The steps would be: turn the volume into a binary mask, where material
+is~1 and everything else is~0, and then run a distance transform on that mask. A
+distance transform gives, for every inside voxel, the distance to the nearest
+background voxel, in other words the distance to the closest wall. In the middle
+of a leaflet, that distance is half the local thickness, so the thickness could
+in principle be read off as two times the distance value. This was set up in
+MeVisLab using an \texttt{OpenVDBLoad} module to load the volume, a
+\texttt{Threshold} module to make the binary mask (values above~0.4 set to~1,
+everything else to~0), and a \texttt{EuclideanDistanceTransform} module in 3D
+mode to produce the distance field.
+
+The reason this idea is attractive is that it is automatic and dense: it would
+give a thickness value everywhere on the leaflet at once, without any manual
+work. In the end, though, I decided not to use it, for a few reasons that add up.
+
+First, there is a practical problem with reading the result. To get thickness at
+the mesh, the distance field has to be sampled exactly at the positions of the
+mesh points. MeVisLab does not have a simple, ready-made module for ``sample this
+volume at the vertices of that mesh'', and the scripting module has no image
+input or output that would let this be done directly inside the network. It would
+mean exporting the distance field and doing the sampling externally in Python,
+which is possible but adds another step that would itself have to be checked.
+
+Second, the simple ``two times the distance'' rule only holds if the mesh is a
+midsurface. As shown in Section~\ref{sec:input}, the mesh here is the underside.
+For a boundary surface the correct value would be the distance from the underside
+across to the top wall, which is not what a symmetric distance transform gives
+without extra work. So the clean version of the method does not actually match
+this data.
+
+Third, and most importantly, the whole result depends on one global threshold
+that separates material from background, and the volume is not clean enough for
+that. Ultrasound volumes have speckle and blurred edges, and this scan has an
+especially noisy region in the centre of the valve. A single fixed threshold
+applied to the whole volume would turn that noise into false geometry exactly
+where the data is worst, and there would be no easy way to notice that it had
+happened. A dense automatic field of numbers is only useful if it can be trusted,
+and here it could not be.
+
+Taken together, these points describe a method that would produce a lot of
+numbers that could not be properly checked. For a bachelor's thesis, a dense
+automatic result that cannot be verified is worse than a smaller set of values
+that can. This is the reason I chose to measure the thickness by hand at a
+limited number of well-imaged locations instead. Measuring by hand, however, only
+works if the mesh is correctly placed inside the volume, so the first step before
+measuring was to align the two. This is described next.
+
+\section{Aligning the mesh and the volume}\label{sec:align}
+
+The mesh and the volume did not overlap when they were first loaded together;
+they sat in different coordinate systems. This alignment matters here because, as
+described in Section~\ref{sec:measure}, the thickness is measured along lines
+perpendicular to the mesh surface. If the mesh is in the wrong place, those
+perpendicular lines start in the wrong place, and the measurement is meaningless.
+So the mesh and the volume had to be brought into the same coordinate frame
+first.
+
+Aligning the two by their shapes directly is difficult, because the leaflet
+surface is smooth and curved and offers no clear matching landmarks to line up by
+eye. Instead, I used a reference that all three programs agree on: the bounding
+box. MeVisLab, 3D~Slicer and Blender each draw an axis-aligned bounding box
+around the volume, and this box is the same in all of them because it is derived
+from the same volume. I added planes to the mesh that correspond to this bounding
+box, so that the mesh carries the same box as a built-in reference. Matching the
+mesh's bounding planes to the volume's bounding box then defines the alignment
+completely, because the two boxes have to coincide.
+
+From this box-to-box correspondence a transformation matrix was obtained, which
+was applied to the mesh in 3D~Slicer. After applying it, the mesh sits inside the
+volume in the correct position and orientation, so that a leaflet in the mesh
+lines up with the corresponding bright band in the scan. Using the bounding box
+as a shared reference is more reliable here than trying to register the curved
+surfaces against each other, and it keeps the alignment reproducible, because the
+box is defined by the data and not by a subjective judgement of where the
+surfaces should meet.
+
+\section{Measuring leaflet thickness in 3D~Slicer}\label{sec:measure}
+
+With the mesh aligned, the thickness was measured in 3D~Slicer. The tool used is
+the line (ruler) markup, which gives a direct distance reading in millimetres
+between two points. The important part is not the tool but the rule I followed
+for placing the two points, because a clear rule is what makes the measurements
+repeatable.
+
+I chose not to judge the leaflet edges purely by eye, and I also chose not to
+threshold the whole volume, for the reasons given in
+Section~\ref{sec:recover}. Instead, I used a local intensity criterion, applied
+only at the spot being measured. Tissue was defined as an intensity of about~0.2
+or higher. Each measurement line was placed perpendicular to the mesh surface at
+the chosen location. Along that line, the measurement starts where the intensity
+first rises to~0.2 and ends where it falls back below~0.2, and the thickness is
+the length of that span. This is the same kind of intensity criterion that the
+automatic approach would have used, but applying it locally, along a single line
+at a spot I had judged to be clean, avoids the problem of applying it to the whole
+noisy volume at once. I chose where to place each line; the intensity rule then
+decided where the tissue began and ended.
+
+Where the measurements were taken was itself a choice driven by the data quality.
+Thickness is not the same everywhere on a leaflet, so I wanted to sample across
+the surface, but two regions turned out to be hard to measure. The first is the
+centre of the valve, around the opening, where the probe left a noisy hole in the
+scan. In that region it is difficult to see a clean tissue band, so reliable
+perpendicular measurements are hard to obtain. The second is the thin outer brim
+of the leaflet, at the edge of the mesh, where measurements were also difficult
+to take cleanly. In between these two problem regions the data is clearer, so
+most of the measurements were taken there, where the tissue band is well defined
+and the intensity rule can be applied with confidence.
+
+For the two difficult regions I made a deliberate simplification rather than
+forcing measurements the data does not support. For the noisy centre I took all
+the measurements I could obtain there and reduced them to a single value, the
+median, and treated the thickness across the whole centre region as constant at
+that value. I did the same for the outer edge, taking the median of the edge
+measurements and treating the edge as having one constant thickness. The median
+was used rather than the mean because it is less affected by the occasional bad
+reading, which is exactly what one expects in these noisy regions. Assuming a
+homogeneous thickness in the centre and at the edge is a simplification, and it is
+stated as such, but it is a reasonable one: the data in those regions is not good
+enough to justify anything finer, and a single well-chosen value is more honest
+than a set of unreliable point measurements.
+
+\section{Spreading the measurements over the mesh}\label{sec:interp}
+
+At this point there is, for each leaflet, a set of thickness values: several point
+measurements in the well-imaged middle region, plus one constant value for the
+noisy centre and one constant value for the outer edge. The mesh, however, has
+several thousand vertices, and the step that builds the solid
+(Section~\ref{sec:solid}) needs a thickness value at every single vertex. So the
+measured values have to be spread over the whole surface.
+
+The measured points can be recorded as follows:
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{clcc}
+    \toprule
+    Point & Location & Leaflet & Thickness [mm] \\
+    \midrule
+    1 & Base               & \ph{Mesh5} & \ph{} \\
+    2 & Middle             & \ph{Mesh5} & \ph{} \\
+    3 & Free edge (median) & \ph{Mesh5} & \ph{} \\
+    4 & Centre (median)    & \ph{Mesh5} & \ph{} \\
+    \dots & \dots          & \dots      & \dots \\
+    \bottomrule
+  \end{tabular}
+  \caption{Measured leaflet thickness at the sampled locations.}
+  \label{tab:measurements}
+\end{table}
+
+The simplest way to fill the gap would be to give the whole leaflet one average
+thickness. I rejected this because it would remove the variation between the base
+and the edge that I went to the trouble of capturing. So some form of
+interpolation is needed for the region that is well sampled, while the centre and
+the edge keep their constant median values as described in
+Section~\ref{sec:measure}.
+
+For the interpolation I chose inverse distance weighting (IDW). The idea is easy
+to state: each vertex is given a thickness that is a weighted average of the known
+values, and values that are closer to the vertex count more than ones further
+away. The weight of each value falls off with distance, following one over the
+distance raised to a power. A vertex sitting right next to a known value gets
+almost exactly that value, and a vertex halfway between two of them gets roughly
+their average.
+
+I chose IDW over more advanced interpolation methods such as kriging or radial
+basis functions on purpose. With only a handful of known values, the more
+advanced methods bring in extra assumptions and parameters that could not be
+checked with so little data. IDW, in contrast, makes no assumption about an
+underlying function, works with irregularly placed values, and is simple enough
+to explain and defend in full. For the power parameter I used a value of one,
+which gives smooth, gradual transitions. A higher power tends to make the values
+cluster tightly around each known point, which produces unnatural-looking
+``bubbles'' when there are only a few points to work from.
+
+The interpolation was carried out in Blender with a short Python script. numpy is
+used for the distance and averaging calculations, and scipy is used for handling
+the nearest-point lookups. For every vertex the script computes the distances to
+the known values, forms the weights, and takes the weighted average. The result
+is stored on the mesh as a per-vertex weight, called a vertex group in Blender.
+Before storing, the values are scaled to the range zero to one by dividing by the
+largest thickness, because the modifier used in the next step expects weights in
+that range.
+
+One limitation of this choice should be stated openly, because it also explains a
+later decision. IDW here uses straight-line (euclidean) distance through space,
+not distance measured along the curved surface. Across a fold, or across the gap
+between the two leaflets, straight-line distance could mix values that really
+should not be mixed, because two points can be close in space while being far
+apart along the tissue. This is exactly why the two leaflets are kept as two
+separate meshes and interpolated separately: a value measured on one leaflet
+cannot leak across the gap onto the other. Within a single, fairly flat leaflet
+the difference between straight-line distance and along-surface distance is small
+enough to accept for the purpose of this work.
+
+\section{Building the solid model}\label{sec:solid}
+
+The last step has this problem to solve: there is now a thickness value at every
+vertex, and a single surface that represents the underside of the leaflet, and
+this has to be turned into a closed solid whose wall has the correct local
+thickness.
+
+For this step, Blender's Solidify modifier was used. This modifier takes a
+surface and extrudes it by a chosen thickness to produce a solid, and,
+importantly, it can scale that thickness per vertex using a vertex group. This is
+what makes it fit the situation here: the interpolated thickness field from
+Section~\ref{sec:interp} is stored as exactly such a vertex group, so it maps
+directly onto how far each part of the surface is pushed out. In practice the
+modifier's thickness is set to the largest thickness value, given in metres
+because Blender works in metres, and the zero-to-one weights then scale every
+other part of the surface below that maximum. The local thickness at a vertex is
+the weight at that vertex multiplied by the modifier thickness.
+
+The extrusion is done in one direction only, which is where the check from
+Section~\ref{sec:input} finally pays off. Because the mesh is the underside of
+the leaflet and not the midsurface, the whole thickness has to be added on one
+side, growing outward from the surface, rather than split half on each side. This
+is also the concrete reason why the ``two times the distance'' rule from the
+distance-field idea in Section~\ref{sec:recover} would have been wrong for this
+data: a factor of two is only correct when the surface is the centre, and here it
+is a boundary. In the modifier this is set by using a one-sided offset so that the
+material grows only outward. The direction of the extrusion follows the surface
+normals, so the normals were checked beforehand and flipped where needed, to make
+sure the wall grows away from the leaflet body and not into it.
+
+Each leaflet is solidified on its own before the two are combined. The reason is
+that the two leaflets have different thickness ranges, and a single modifier can
+only hold one thickness value and one vertex group. So \ph{Mesh5} and \ph{Mesh6}
+are each given their own modifier with their own maximum thickness. Only after the
+thickness has been fixed into the geometry, by applying the modifier, are the two
+meshes joined into one object. Joining them earlier would force a single shared
+thickness on both, and would also let the interpolation bleed across the gap
+between them, for the reason given in Section~\ref{sec:interp}.
+
+The output of this step is a single solid mesh in which the leaflet walls have the
+measured, locally varying thickness.

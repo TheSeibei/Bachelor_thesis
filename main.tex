@@ -42,6 +42,11 @@
 \usepackage{morewrites} % Increases the number of external files that can be used.
 \usepackage[a-2b,mathxmp]{pdfx}      % Enables PDF/A compliance. Loads the package hyperref and has to be included second to last.
 \usepackage[acronym,toc]{glossaries} % Enables the generation of glossaries and lists of acronyms. This package has to be included last.
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
 
 % Set PDF document properties
 \hypersetup{
@@ -144,6 +149,8 @@ Associate Prof. Dr.in}{Renata Georgia Raidou}{}{female}
 
 \chapter{Additional Chapter}
 \todo{Enter your text here.}
+
+\include{chapters/methodology}
 
 % Remove following line for the final thesis.
 \input{intro.tex} % A short introduction to LaTeX.
