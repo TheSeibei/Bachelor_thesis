@@ -1,8 +1,8 @@
-\begin{thebibliography}{Tur36}
+\begin{thebibliography}{edM}
 
-\bibitem[Tur36]{Turing1936}
-Alan~Mathison Turing.
-\newblock On computable numbers, with an application to the entscheidungsproblem.
-\newblock {\em J. of Math}, 58:345--363, 1936.
+\bibitem[edM]{edMorphologyDistance}
+{M}orphology - {D}istance {T}ransform --- homepages.inf.ed.ac.uk.
+\newblock \url{https://homepages.inf.ed.ac.uk/rbf/{H}{I}{P}{R}2/distance.htm}.
+\newblock [Accessed 26-08-2026].
 
 \end{thebibliography}

@@ -42,8 +42,8 @@ the centre of the valve, around the opening, which becomes important later.
 
 The second input is the surface mesh of the leaflets. This mesh is a single
 surface. It does not enclose a volume, and it has no wall thickness at all. In
-practice there are two separate leaflet meshes, referred to here as \ph{Mesh5}
-and \ph{Mesh6}.
+practice there are two separate leaflet meshes, referred to here as \ph{Mesh1}
+and \ph{Mesh2}.
 
 Before deciding how to add thickness, I first had to establish what the surface
 actually represents, because this changes the whole calculation. A surface mesh
@@ -72,7 +72,7 @@ The first idea was to compute the thickness fully automatically with a distance
 transform. The steps would be: turn the volume into a binary mask, where material
 is~1 and everything else is~0, and then run a distance transform on that mask. A
 distance transform gives, for every inside voxel, the distance to the nearest
-background voxel, in other words the distance to the closest wall. In the middle
+background voxel, in other words the distance to the closest wall \cite{edMorphologyDistance}. In the middle
 of a leaflet, that distance is half the local thickness, so the thickness could
 in principle be read off as two times the distance value. This was set up in
 MeVisLab using an \texttt{OpenVDBLoad} module to load the volume, a
@@ -101,7 +101,7 @@ this data.
 
 Third, and most importantly, the whole result depends on one global threshold
 that separates material from background, and the volume is not clean enough for
-that. Ultrasound volumes have speckle and blurred edges, and this scan has an
+that. The Ultrasound volume has speckled and blurred edges, and this scan has an
 especially noisy region in the centre of the valve. A single fixed threshold
 applied to the whole volume would turn that noise into false geometry exactly
 where the data is worst, and there would be no easy way to notice that it had
@@ -118,8 +118,8 @@ measuring was to align the two. This is described next.
 
 \section{Aligning the mesh and the volume}\label{sec:align}
 
-The mesh and the volume did not overlap when they were first loaded together;
-they sat in different coordinate systems. This alignment matters here because, as
+The mesh and the volume did not overlap when they were first loaded together in both MeVisLab and 3D Slicer - only Blender could directly open the .usda file which preserved both coordinate systems in the correct orientation;
+in MeVisLab and 3D Slicer they sat in different coordinate systems. This alignment matters here because, as
 described in Section~\ref{sec:measure}, the thickness is measured along lines
 perpendicular to the mesh surface. If the mesh is in the wrong place, those
 perpendicular lines start in the wrong place, and the measurement is meaningless.
@@ -131,8 +131,9 @@ surface is smooth and curved and offers no clear matching landmarks to line up b
 eye. Instead, I used a reference that all three programs agree on: the bounding
 box. MeVisLab, 3D~Slicer and Blender each draw an axis-aligned bounding box
 around the volume, and this box is the same in all of them because it is derived
-from the same volume. I added planes to the mesh that correspond to this bounding
-box, so that the mesh carries the same box as a built-in reference. Matching the
+from the same volume. Since everything was perfectly alligned in Blender I added 
+planes to the mesh that correspond to the bounding
+box of the volume, so that the mesh carries the same box as a built-in reference. Matching the
 mesh's bounding planes to the volume's bounding box then defines the alignment
 completely, because the two boxes have to coincide.
 
@@ -156,10 +157,10 @@ repeatable.
 I chose not to judge the leaflet edges purely by eye, and I also chose not to
 threshold the whole volume, for the reasons given in
 Section~\ref{sec:recover}. Instead, I used a local intensity criterion, applied
-only at the spot being measured. Tissue was defined as an intensity of about~0.2
+only at the spot being measured. Tissue was defined as an intensity of ~0.2
 or higher. Each measurement line was placed perpendicular to the mesh surface at
 the chosen location. Along that line, the measurement starts where the intensity
-first rises to~0.2 and ends where it falls back below~0.2, and the thickness is
+first rises to~0.2 and ends where it falls back on or below~0.2, and the thickness is
 the length of that span. This is the same kind of intensity criterion that the
 automatic approach would have used, but applying it locally, along a single line
 at a spot I had judged to be clean, avoids the problem of applying it to the whole
@@ -207,10 +208,10 @@ The measured points can be recorded as follows:
     \toprule
     Point & Location & Leaflet & Thickness [mm] \\
     \midrule
-    1 & Base               & \ph{Mesh5} & \ph{} \\
-    2 & Middle             & \ph{Mesh5} & \ph{} \\
-    3 & Free edge (median) & \ph{Mesh5} & \ph{} \\
-    4 & Centre (median)    & \ph{Mesh5} & \ph{} \\
+    1 & Base               & \ph{Mesh1} & \ph{} \\
+    2 & Middle             & \ph{Mesh1} & \ph{} \\
+    3 & Free edge (median) & \ph{Mesh1} & \ph{} \\
+    4 & Centre (median)    & \ph{Mesh1} & \ph{} \\
     \dots & \dots          & \dots      & \dots \\
     \bottomrule
   \end{tabular}
@@ -251,6 +252,115 @@ is stored on the mesh as a per-vertex weight, called a vertex group in Blender.
 Before storing, the values are scaled to the range zero to one by dividing by the
 largest thickness, because the modifier used in the next step expects weights in
 that range.
+
+\begin{lstlisting}[language=Python, caption={Interpolation of the thickness distribution using inverse distance weighting.}, label={lst:thickness_interpolation}]
+import bpy
+import numpy as np
+
+
+def apply_thickness(obj_name, known_pos, known_val, power=2):
+    obj = bpy.data.objects[obj_name]
+    mesh = obj.data
+
+    all_verts = np.array([v.co for v in mesh.vertices])
+
+    def idw(query, kpos, kval, power):
+        diff = query[:, None, :] - kpos[None, :, :]
+        dist = np.maximum(np.linalg.norm(diff, axis=2), 1e-9)
+
+        w = 1.0 / dist**power
+
+        return (w * kval).sum(1) / w.sum(1)
+
+    thickness_mm = idw(
+        all_verts,
+        np.array(known_pos),
+        np.array(known_val),
+        power
+    )
+
+    max_d = np.array(known_val).max()
+
+    # Remove existing group for re-runs
+    if "thickness" in obj.vertex_groups:
+        obj.vertex_groups.remove(
+            obj.vertex_groups["thickness"]
+        )
+
+    vg = obj.vertex_groups.new(name="thickness")
+
+    for i, d in enumerate(thickness_mm):
+        vg.add(
+            [i],
+            float(d / max_d),
+            'REPLACE'
+        )
+
+    print(
+        f"{obj_name}: "
+        f"{thickness_mm.min():.2f} - "
+        f"{thickness_mm.max():.2f} mm "
+        f"(max={max_d})"
+    )
+
+
+# ------------------------------------------------------------------
+# Mesh 1
+# ------------------------------------------------------------------
+apply_thickness(
+    "mesh1",
+    known_pos=[
+        [point1x,  point1y,  point1z],
+        [point2x,  point2y,  point2z],
+        [point3x,  point3y,  point3z],
+        [point4x,  point4y,  point4z],
+        [point5x,  point5y,  point5z],
+        [point6x,  point6y,  point6z],
+        [point7x,  point7y,  point7z],
+        [point8x,  point8y,  point8z],
+        [point9x,  point9y,  point9z],
+        [point10x, point10y, point10z],
+        [point11x, point11y, point11z],
+    ],
+    known_val=[
+        thickness1,
+        thickness2,
+        thickness3,
+        thickness4,
+        thickness5,
+        thickness6,
+        thickness7,
+        thickness8,
+        thickness9,
+        thickness10,
+        thickness11,
+    ]
+)
+
+
+# ------------------------------------------------------------------
+# Mesh 2
+# ------------------------------------------------------------------
+apply_thickness(
+    "mesh2",
+    known_pos=[
+        [point1x, point1y, point1z],
+        [point2x, point2y, point2z],
+        [point3x, point3y, point3z],
+        [point4x, point4y, point4z],
+        [point5x, point5y, point5z],
+        [point6x, point6y, point6z],
+    ],
+    known_val=[
+        thickness1,
+        thickness2,
+        thickness3,
+        thickness4,
+        thickness5,
+        thickness6,
+    ]
+)
+\end{lstlisting}
 
 One limitation of this choice should be stated openly, because it also explains a
 later decision. IDW here uses straight-line (euclidean) distance through space,
@@ -295,7 +405,7 @@ sure the wall grows away from the leaflet body and not into it.
 
 Each leaflet is solidified on its own before the two are combined. The reason is
 that the two leaflets have different thickness ranges, and a single modifier can
-only hold one thickness value and one vertex group. So \ph{Mesh5} and \ph{Mesh6}
+only hold one thickness value and one vertex group. So \ph{Mesh1} and \ph{Mesh2}
 are each given their own modifier with their own maximum thickness. Only after the
 thickness has been fixed into the geometry, by applying the modifier, are the two
 meshes joined into one object. Joining them earlier would force a single shared

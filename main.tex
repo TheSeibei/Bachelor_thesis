@@ -5,7 +5,7 @@
 % 'final': Remove all debug information in the final build.
 % 'onside': Create document for onsided printing (without empty pages added by LaTeX).
 % 'twoside': Create document for twosided printing, which adds empty pages to start chapters on odd pages.
-\documentclass[draft,twoside]{vutinfth}
+\documentclass[final,twoside]{vutinfth}
 
 % Define convenience functions to use the author name and the thesis title in the PDF document properties.
 \newcommand{\authorname}{Sebastian Bolek} % The author name without titles.
@@ -47,6 +47,17 @@
 \usepackage{booktabs}
 \usepackage{xcolor}
 \usepackage{hyperref}
+\usepackage{listings}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+    captionpos=b,
+    showstringspaces=false
+}
 
 % Set PDF document properties
 \hypersetup{
@@ -185,7 +196,7 @@ Associate Prof. Dr.in}{Renata Georgia Raidou}{}{female}
 \printglossaries % Rerun build-thesis or build-all when removing it through commenting.
 
 % Add a bibliography.
-\bibliographystyle{alpha}
-\bibliography{intro}
+\bibliographystyle{alpha} %ask: maybe change to {plain}
+\bibliography{references}
 
 \end{document}
