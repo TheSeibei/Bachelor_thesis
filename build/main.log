@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.26)  26 AUG 2026 13:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.26)  27 AUG 2026 09:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2297,14 +2297,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout5 = `main.mw'.
 
-)
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 419.
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
 \openout5 = `main.mw'.
 
- [13] (build/main.mw)
+ [13{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
 
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+ [14] (build/main.mw)
 \openout5 = `main.mw'.
 
  (./intro.tex
@@ -2911,15 +2919,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout5 = `main.mw'.
 
-\openout5 = `main.mw'.
-
- [14
-
-
-
-] (build/main.mw)
-\openout5 = `main.mw'.
-
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <24.88> on input line 33.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -2928,7 +2927,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 33.
 \openout5 = `main.mw'.
 
- [15] (build/main.mw)
+ [15
+
+
+
+] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
@@ -2976,7 +2979,7 @@ Package microtype Info: Character `029' is missing
 
 \openout5 = `main.mw'.
 
-<graphics/TUWI-Logo-Code.png, id=485, 476.78125pt x 476.78125pt>
+<graphics/TUWI-Logo-Code.png, id=486, 476.78125pt x 476.78125pt>
 File: graphics/TUWI-Logo-Code.png Graphic file (type png)
 <use graphics/TUWI-Logo-Code.png>
 Package pdftex.def Info: graphics/TUWI-Logo-Code.png  used on input line 175.
@@ -3011,13 +3014,9 @@ LaTeX Warning: Citation `Turing1936' on page 18 undefined on input line 226.
 
 \openout5 = `main.mw'.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 247.
- (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 \openout5 = `main.mw'.
 
- [20{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] (build/main.mw)
+ [20] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
@@ -3762,11 +3761,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
  ) 
 Here is how much of TeX's memory you used:
- 49923 strings out of 474222
- 883465 string characters out of 5748733
+ 49926 strings out of 474222
+ 883498 string characters out of 5748733
  2132975 words of memory out of 5000000
- 69301 multiletter control sequences out of 15000+600000
- 705035 words of font info for 242 fonts, out of 8000000 for 9000
+ 69302 multiletter control sequences out of 15000+600000
+ 705118 words of font info for 243 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,16n,131p,2410b,3834s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -3788,7 +3787,7 @@ pdfTeX warning (dest): name{glo:pdf} has been referenced but does not exist, rep
 pdfTeX warning (dest): name{glo:texteditor} has been referenced but does not exist, replaced by a fixed one
 
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on build/main.pdf (51 pages, 816169 bytes).
+Output written on build/main.pdf (51 pages, 819364 bytes).
 PDF statistics:
  819 PDF objects out of 1000 (max. 8388607)
  702 compressed objects within 8 object streams

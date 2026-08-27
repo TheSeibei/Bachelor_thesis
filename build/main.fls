@@ -1156,6 +1156,14 @@ OUTPUT build/main.mw
 OUTPUT build/main.mw
 INPUT build/main.mw
 OUTPUT build/main.mw
+INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ts1-lmr10.tfm
+OUTPUT build/main.mw
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT build/main.mw
+OUTPUT build/main.mw
 OUTPUT build/main.mw
 INPUT build/main.mw
 OUTPUT build/main.mw
@@ -1166,9 +1174,6 @@ INPUT ./intro.tex
 INPUT ./intro.tex
 INPUT intro.tex
 OUTPUT build/main.glsdefs
-OUTPUT build/main.mw
-INPUT build/main.mw
-OUTPUT build/main.mw
 OUTPUT build/main.mw
 INPUT build/main.mw
 OUTPUT build/main.mw
@@ -1701,12 +1706,7 @@ OUTPUT build/main.mw
 OUTPUT build/main.mw
 INPUT build/main.mw
 OUTPUT build/main.mw
-INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
-INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
-INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ts1-lmr10.tfm
 OUTPUT build/main.mw
-INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT build/main.mw
 OUTPUT build/main.mw
 OUTPUT build/main.mw
