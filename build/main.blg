@@ -6,45 +6,48 @@ The style file: alpha.bst
 Database file #1: references.bib
 Warning--I didn't find a database entry for "Turing1936"
 Warning--to sort, need author or key in edMorphologyDistance
-You've used 1 entry,
+Warning--to sort, need author or key in recreusFilamentFilaflex90
+Warning--to sort, need author or key in recreusFilamentFilaflex82
+Warning--to sort, need author or key in recreusFilamentFilaflex60
+You've used 10 entries,
             2543 wiz_defined-function locations,
-            566 strings with 4673 characters,
-and the built_in function-call counts, 244 in all, are:
-= -- 23
-> -- 1
-< -- 0
-+ -- 0
-- -- 0
-* -- 12
-:= -- 36
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 4
-chr.to.int$ -- 1
-cite$ -- 3
-duplicate$ -- 10
-empty$ -- 28
-format.name$ -- 0
-if$ -- 54
-int.to.chr$ -- 1
+            628 strings with 6978 characters,
+and the built_in function-call counts, 4088 in all, are:
+= -- 394
+> -- 229
+< -- 3
++ -- 86
+- -- 83
+* -- 316
+:= -- 651
+add.period$ -- 32
+call.type$ -- 10
+change.case$ -- 74
+chr.to.int$ -- 8
+cite$ -- 18
+duplicate$ -- 134
+empty$ -- 293
+format.name$ -- 88
+if$ -- 834
+int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 8
-num.names$ -- 0
-pop$ -- 12
+missing$ -- 5
+newline$ -- 55
+num.names$ -- 18
+pop$ -- 100
 preamble$ -- 1
-purify$ -- 5
+purify$ -- 84
 quote$ -- 0
-skip$ -- 8
+skip$ -- 106
 stack$ -- 0
-substring$ -- 8
-swap$ -- 1
-text.length$ -- 0
-text.prefix$ -- 0
+substring$ -- 188
+swap$ -- 20
+text.length$ -- 3
+text.prefix$ -- 2
 top$ -- 0
-type$ -- 8
-warning$ -- 1
-while$ -- 0
-width$ -- 2
-write$ -- 13
-(There were 2 warnings)
+type$ -- 80
+warning$ -- 4
+while$ -- 26
+width$ -- 13
+write$ -- 127
+(There were 5 warnings)

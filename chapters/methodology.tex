@@ -26,8 +26,7 @@ every part well. Instead the work is split across three: MeVisLab is used to loa
 and prepare the volume, 3D~Slicer is used to align the mesh with the volume and
 to take the thickness measurements, and Blender is used to interpolate the
 measurements over the mesh and build the solid. Some smaller steps, mainly the
-interpolation, were done with short Python scripts using the numpy and scipy
-libraries. The following sections describe each part, and, more importantly, why
+interpolation, were done with short Python scripts using the numpy librariy. The following sections describe each part, and, more importantly, why
 each choice was made and not one of the other possible ones.
 
 \section{Input data}\label{sec:input}
@@ -148,7 +147,7 @@ surfaces should meet.
 
 \section{Measuring leaflet thickness in 3D~Slicer}\label{sec:measure}
 
-With the mesh aligned, the thickness was measured in 3D~Slicer. The tool used is
+With the mesh aligned, the thickness was measured in 3D~Slicer \cite{fedorov20123d}. The tool used is
 the line (ruler) markup, which gives a direct distance reading in millimetres
 between two points. The important part is not the tool but the rule I followed
 for placing the two points, because a clear rule is what makes the measurements
@@ -226,7 +225,7 @@ interpolation is needed for the region that is well sampled, while the centre an
 the edge keep their constant median values as described in
 Section~\ref{sec:measure}.
 
-For the interpolation I chose inverse distance weighting (IDW). The idea is easy
+For the interpolation I chose inverse distance weighting (IDW) \cite{shepard1968two}. The idea is easy
 to state: each vertex is given a thickness that is a weighted average of the known
 values, and values that are closer to the vertex count more than ones further
 away. The weight of each value falls off with distance, following one over the
@@ -239,14 +238,9 @@ basis functions on purpose. With only a handful of known values, the more
 advanced methods bring in extra assumptions and parameters that could not be
 checked with so little data. IDW, in contrast, makes no assumption about an
 underlying function, works with irregularly placed values, and is simple enough
-to explain and defend in full. For the power parameter I used a value of one,
-which gives smooth, gradual transitions. A higher power tends to make the values
-cluster tightly around each known point, which produces unnatural-looking
-``bubbles'' when there are only a few points to work from.
+to explain and defend in full. For the power parameter, a value of two was used. This gives greater weight to nearby measurements while still providing a smooth transition between the measured points.
 
-The interpolation was carried out in Blender with a short Python script as shown in Listing~\ref{lst:thickness_interpolation}. numpy is
-used for the distance and averaging calculations, and scipy is used for handling
-the nearest-point lookups. For every vertex the script computes the distances to
+The interpolation was carried out in Blender using a short Python script, as shown in Listing~\ref{lst:thickness_interpolation}. NumPy \cite{harris2020array} is used for the distance and weighted averaging calculations. For each vertex, the script calculates the Euclidean distance to all measured points, determines the corresponding inverse-distance weights, and computes the weighted average of the measured thickness values. For every vertex the script computes the distances to
 the known values, forms the weights, and takes the weighted average. The result
 is stored on the mesh as a per-vertex weight, called a vertex group in Blender.
 Before storing, the values are scaled to the range zero to one by dividing by the
@@ -378,7 +372,7 @@ vertex, and a single surface that represents the underside of the leaflet, and
 this has to be turned into a closed solid whose wall has the correct local
 thickness.
 
-For this step, Blender's Solidify modifier was used. This modifier takes a
+For this step, Blender's Solidify modifier was used \cite{blenderSolidify}. This modifier takes a
 surface and extrudes it by a chosen thickness to produce a solid, and,
 importantly, it can scale that thickness per vertex using a vertex group. This is
 what makes it fit the situation here: the interpolated thickness field from
@@ -414,10 +408,14 @@ The output of this step is a single solid mesh in which the leaflet walls have t
 measured, locally varying thickness.
 
 \section{Printing the complete model}\label{sec:print}
-Once a sufficiently accurate approximation, or model, of the mitral valve had been successfully developed, the actual objective and core of this work was addressed: the fabrication of a realistic ultrasound phantom. As accuracy and realism were prioritized over ease of production and scalability, FDM 3D printing was selected as the manufacturing method. Modern 3D printers provide sufficient detail resolution and, importantly for this project, the ability to work with flexible materials such as TPU. The fabrication of flexible structures using molds and a material such as silicone would also have been possible and could even have enabled scalable production. However, 3D printing was ultimately chosen because it allows for easy modifications to the model and eliminates the need to consider how the mold can be removed after casting.
+Once a sufficiently accurate approximation, or model, of the mitral valve had been successfully developed, the actual objective and core of this work was addressed: the fabrication of a realistic ultrasound phantom. As accuracy and realism were prioritized over ease of production and scalability, FDM 3D printing was selected as the manufacturing method \cite{medellin2019design}. Modern 3D printers provide sufficient detail resolution and, importantly for this project, the ability to work with flexible materials such as TPU. The fabrication of flexible structures using molds and a material such as silicone would also have been possible and could even have enabled scalable production. However, 3D printing was ultimately chosen because it allows for easy modifications to the model and eliminates the need to consider how the mold can be removed after casting.
 
-Throughout the project, while the thickness measurements were being determined, test prints were conducted in parallel to identify the approach that would yield the best possible result. It was apparent that the heart valve would require support structures during printing, as the convex geometry would need to rest as flat as possible on the build plate, resulting in overhangs of well above 60°. Printing the model vertically slightly reduced the cross-sectional area requiring support, but not to a significant extent. Furthermore, this orientation caused the structure to become unstable during printing, as the build plate moves back and forth along the Y-axis. The higher the print progressed, the more pronounced this movement became, causing the structure to wobble.
+Throughout the project, while the thickness measurements were being determined, test prints were conducted in parallel to identify the approach that would yield the best possible result. It was apparent that the heart valve would require support structures during printing, as the convex geometry would need to rest as flat as possible on the build plate, resulting in overhangs of well above 60° \cite{medellin2019design}. Printing the model vertically slightly reduced the cross-sectional area requiring support, but not to a significant extent. Furthermore, this orientation caused the structure to become unstable during printing, as the build plate moves back and forth along the Y-axis. The higher the print progressed, the more pronounced this movement became, causing the structure to wobble.
 
-A major disadvantage of support material is the difficulty of completely removing all residues and achieving a smooth surface after printing. Test prints using PLA, for example, which is a relatively rigid plastic, demonstrated that removing the support structures alone was already a considerable challenge. Achieving a surface as smooth as the upper side of the print would then require substantial additional effort. Printing with flexible TPU did not significantly change this situation. The TPA95A used (the number associated with TPU indicates its hardness, with lower values corresponding to softer materials) could be printed using settings that were almost identical to those used for PLA. For TPU80A, the printing speed was reduced to avoid compromising print quality. However, at the desired thickness of the heart valve, this material remained too inflexible. TPU60A, which provided an appropriate degree of flexibility and softness, introduced another problem: the amount of support material used previously was insufficient to adequately support the material between the individual support structures. The resulting print contained numerous holes and areas where the printed material had fused with the supports. The solution was to increase the density of the support structures by reducing the spacing between them. In this case, this was achieved by selecting smaller squares in the grid pattern.
+A major disadvantage of support material is the difficulty of completely removing all residues and achieving a smooth surface after printing. Test prints using PLA, for example, which is a relatively rigid plastic, demonstrated that removing the support structures alone was already a considerable challenge. Achieving a surface as smooth as the upper side of the print would then require substantial additional effort. Printing with flexible TPU did not significantly change this situation. The TPA95A used was specified with a Shore A hardness of 95; in general, lower Shore A values correspond to softer and more flexible TPU materials \cite{recreusFilamentFilaflex90}. It could be printed using settings that were almost identical to those used for PLA. For TPU82A \cite{recreusFilamentFilaflex82}, the printing speed was reduced to avoid compromising print quality. However, at the desired thickness of the heart valve, this material remained too inflexible. TPU60A \cite{recreusFilamentFilaflex60}, which provided an appropriate degree of flexibility and softness, introduced another problem: the amount of support material used previously was insufficient to adequately support the material between the individual support structures. The resulting print contained numerous holes and areas where the printed material had fused with the supports. The solution was to increase the density of the support structures by reducing the spacing between them. In this case, this was achieved by selecting smaller squares in the grid pattern.
 
-Das er
+This resulted in a print using the desired material that appeared intact at first glance. However, the issue of the difficult-to-remove support structures remained. To address this problem, additional prototypes were produced using a multi-nozzle printer capable of printing with multiple materials simultaneously. The idea was to print the supports using a water-soluble filament, in this case polyvinyl alcohol (PVA) \cite{moradi2023optimizing}, while continuing to print the mitral valve using TPU60A. The finished model could then have been placed in water, allowing the supports to dissolve completely without leaving any residue.
+
+However, there were concerns that the TPU might not adhere sufficiently to the PVA supports during printing, potentially resulting in print defects in the model. Therefore, PLA supports were initially used instead. Ultimately, this proved to be the right choice for this particular application, as the PLA and TPU adhered strongly enough to ensure a successful print while still allowing the valve to be easily peeled away from the support material after completion. As hoped, this resulted in a perfectly smooth underside. Furthermore, the gap within the valve opening was preserved.
+
+The only remaining step was to manually create a small incision in the opening using a scalpel. This was necessary because 3D printing small openings generally leaves behind thin strands of filament, a phenomenon known as \textit{stringing}, which can cause the opening to become partially sealed. The completed prototype, including the support structures, was handed over to Siemens Healthineers, where the valve is currently undergoing further testing. \todo{change if Siemens gets back with results}

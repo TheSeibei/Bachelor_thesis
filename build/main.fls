@@ -1119,6 +1119,7 @@ OUTPUT build/main.mw
 INPUT build/main.mw
 OUTPUT build/main.mw
 OUTPUT build/main.mw
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT build/main.mw
 OUTPUT build/main.mw
 OUTPUT build/main.mw
@@ -1691,7 +1692,6 @@ OUTPUT build/main.mw
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
-INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT build/main.mw
 OUTPUT build/main.mw
 OUTPUT build/main.mw
@@ -1832,6 +1832,9 @@ OUTPUT build/main.mw
 INPUT build/main.bbl
 INPUT build/main.bbl
 INPUT build/main.bbl
+OUTPUT build/main.mw
+INPUT build/main.mw
+OUTPUT build/main.mw
 OUTPUT build/main.mw
 INPUT build/main.mw
 OUTPUT build/main.mw

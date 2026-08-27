@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.26)  27 AUG 2026 09:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.26)  27 AUG 2026 10:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2222,7 +2222,7 @@ Package hyperref Info: bookmark level for unknown todo defaults to 0 on input li
 
 \openout5 = `main.mw'.
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 78.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 77.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
@@ -2253,7 +2253,7 @@ Package microtype Info: Character `029' is missing
 
 \openout5 = `main.mw'.
 
- [8] (build/main.mw)
+ [8{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
@@ -2272,9 +2272,9 @@ Package microtype Info: Character `029' is missing
  (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 256.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 250.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 284.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 278.
 \openout5 = `main.mw'.
 
  [10] (build/main.mw)
@@ -2297,10 +2297,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout5 = `main.mw'.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 419.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 413.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
+)
 \openout5 = `main.mw'.
 
  [13{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] (build/main.mw)
@@ -2310,6 +2310,7 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 \openout5 = `main.mw'.
 
+)
 \openout5 = `main.mw'.
 
  [14] (build/main.mw)
@@ -2979,7 +2980,7 @@ Package microtype Info: Character `029' is missing
 
 \openout5 = `main.mw'.
 
-<graphics/TUWI-Logo-Code.png, id=486, 476.78125pt x 476.78125pt>
+<graphics/TUWI-Logo-Code.png, id=507, 476.78125pt x 476.78125pt>
 File: graphics/TUWI-Logo-Code.png Graphic file (type png)
 <use graphics/TUWI-Logo-Code.png>
 Package pdftex.def Info: graphics/TUWI-Logo-Code.png  used on input line 175.
@@ -2994,7 +2995,7 @@ LaTeX Warning: Citation `Turing1936' on page 18 undefined on input line 226.
 
 \openout5 = `main.mw'.
 
-[18{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc} <./graphics/TUWI-Logo-Code.png>] (build/main.mw)
+[18{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc} <./graphics/TUWI-Logo-Code.png>] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
@@ -3207,12 +3208,35 @@ No file main.acr.
 
 
 bibitemlist
-)
 
-Class memoir Warning: The material used in the headers is too large
-(35.3779pt) for the given head height (13.6pt), it is recommended to
-either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 202.
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
+[]\T1/lmr/m/n/10.95 (+20) Morphology - Dis-tance Trans-form --- home-pages.inf.ed.ac.uk.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
+[]$\T1/pcr/m/n/10.95 https : / / homepages . inf . ed . ac . uk / rbf / {H}{I}{P}{R}2 /
+ []
+
+
+Underfull \hbox (badness 3690) in paragraph at lines 36--39
+[]\T1/lmr/m/n/10.95 (+20) Filaflex 95A TPU Fil-a-ment is com-pat-i-ble with all 3d print-
+ []
+
+
+Underfull \hbox (badness 6493) in paragraph at lines 36--39
+\T1/lmr/m/n/10.95 (+20) ers --- recreus.com.  []$\T1/pcr/m/n/10.95 https : / / recreus . com / en / products /
+ []
+
+
+Underfull \hbox (badness 7796) in paragraph at lines 41--44
+[]\T1/lmr/m/n/10.95 (+20) TPU Fil-a-ment Fi-laflex 60A, flex-i-ble fil-a-ment for 3d print-
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 41--44
+\T1/lmr/m/n/10.95 (+20) ing --- recreus.com.  []$\T1/pcr/m/n/10.95 https : / / recreus . com / en / products /
+ []
 
 \openout5 = `main.mw'.
 
@@ -3223,6 +3247,28 @@ either increase the head height or redesign the header
 
 \openout5 = `main.mw'.
 
+\openout5 = `main.mw'.
+
+
+Underfull \hbox (badness 4084) in paragraph at lines 46--49
+[]\T1/lmr/m/n/10.95 (+20) TPU Fil-a-ment Fi-laflex 82A, Flex-i-ble Fil-a-ment for 3D Print-
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 46--49
+\T1/lmr/m/n/10.95 (+20) ing --- recreus.com.  []$\T1/pcr/m/n/10.95 https : / / recreus . com / en / products /
+ []
+
+)
+
+Class memoir Warning: The material used in the headers is too large
+(35.3779pt) for the given head height (13.6pt), it is recommended to
+either increase the head height or redesign the header
+(in both cases you will find help in the memoir manual). on input line 202.
+
+\openout5 = `main.mw'.
+
+[36] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.glsdefs'.
@@ -3744,7 +3790,7 @@ LaTeX Warning: There were undefined references.
 \openout5 = `main.out'.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 191F42C5BC83ECBE56F123B7ECC014C9;2041.
+(rerunfilecheck)             Checksum: D0D54659424D75D771AD6881F3654C2B;2041.
 \openout5 = `main.idx'.
 
 \openout5 = `main.glo'.
@@ -3761,11 +3807,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
  ) 
 Here is how much of TeX's memory you used:
- 49926 strings out of 474222
- 883498 string characters out of 5748733
- 2132975 words of memory out of 5000000
- 69302 multiletter control sequences out of 15000+600000
- 705118 words of font info for 243 fonts, out of 8000000 for 9000
+ 49969 strings out of 474222
+ 884259 string characters out of 5748733
+ 2125975 words of memory out of 5000000
+ 69321 multiletter control sequences out of 15000+600000
+ 705479 words of font info for 247 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,16n,131p,2410b,3834s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -3787,10 +3833,10 @@ pdfTeX warning (dest): name{glo:pdf} has been referenced but does not exist, rep
 pdfTeX warning (dest): name{glo:texteditor} has been referenced but does not exist, replaced by a fixed one
 
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on build/main.pdf (51 pages, 819364 bytes).
+Output written on build/main.pdf (52 pages, 829441 bytes).
 PDF statistics:
- 819 PDF objects out of 1000 (max. 8388607)
- 702 compressed objects within 8 object streams
- 234 named destinations out of 1000 (max. 500000)
+ 851 PDF objects out of 1000 (max. 8388607)
+ 733 compressed objects within 8 object streams
+ 245 named destinations out of 1000 (max. 500000)
  76059 words of extra memory for PDF output out of 89155 (max. 10000000)
 
