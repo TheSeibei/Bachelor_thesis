@@ -1107,6 +1107,11 @@ OUTPUT build/main.mw
 OUTPUT build/main.mw
 INPUT build/main.mw
 OUTPUT build/main.mw
+INPUT ./chapters/code/blender_script.tex
+INPUT ./chapters/code/blender_script.tex
+INPUT ./chapters/code/blender_script.tex
+INPUT ./chapters/code/blender_script.tex
+INPUT chapters/code/blender_script.tex
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
