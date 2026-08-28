@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.26)  28 AUG 2026 01:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.26)  28 AUG 2026 15:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1636,7 +1636,7 @@ Package glossaries Info: Writing glossary file main.glo on input line 75.
 \openout5 = `main.acn'.
 
 Package glossaries Info: Writing glossary file main.acn on input line 75.
-(build/main.aux (build/chapters/methodology.aux))
+(build/main.aux (build/chapters/introduction.aux) (build/chapters/related_work.aux) (build/chapters/methodology.aux) (build/chapters/results.aux) (build/chapters/conclusion.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
@@ -1859,7 +1859,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<graphics/Logo-schwarz.pdf, id=122, 380.32086pt x 57.013pt>
+<graphics/Logo-schwarz.pdf, id=134, 380.32086pt x 57.013pt>
 File: graphics/Logo-schwarz.pdf Graphic file (type pdf)
 <use graphics/Logo-schwarz.pdf>
 Package pdftex.def Info: graphics/Logo-schwarz.pdf  used on input line 129.
@@ -2134,12 +2134,39 @@ Package hyperref Info: bookmark level for unknown todo defaults to 0 on input li
  [12] (build/main.mw)
 \openout5 = `main.mw'.
 
+\openout2 = `chapters/introduction.aux'.
+
+ (./chapters/introduction.tex)
 \openout5 = `main.mw'.
 
  [1
 
 
+
 ] (build/main.mw)
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout2 = `chapters/related_work.aux'.
+
+ (./chapters/related_work.tex
+\openout5 = `main.mw'.
+
+ [2
+
+
+
+
+] (build/main.mw)
+\openout5 = `main.mw'.
+
+)
+\openout5 = `main.mw'.
+
+ [3] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
@@ -2151,7 +2178,9 @@ Package hyperref Info: bookmark level for unknown todo defaults to 0 on input li
  (./chapters/methodology.tex
 \openout5 = `main.mw'.
 
- [2
+ [4
+
+
 
 
 ] (build/main.mw)
@@ -2159,7 +2188,7 @@ Package hyperref Info: bookmark level for unknown todo defaults to 0 on input li
 
 \openout5 = `main.mw'.
 
- [3] (build/main.mw)
+ [5] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
@@ -2187,25 +2216,7 @@ Package microtype Info: Character `029' is missing
 (microtype)             Ignoring protrusion settings for this character.
 \openout5 = `main.mw'.
 
- [4] (build/main.mw)
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
- [5] (build/main.mw)
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
- [6{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}] (build/main.mw)
+ [6] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
@@ -2221,7 +2232,25 @@ Package microtype Info: Character `029' is missing
 
 \openout5 = `main.mw'.
 
- (./chapters/code/blender_script.tex (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+\openout5 = `main.mw'.
+
+ [8{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}] (build/main.mw)
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+ [9] (build/main.mw)
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+ (./chapters/files/blender_script.tex (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1.
@@ -2229,7 +2258,7 @@ LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 29.
 \openout5 = `main.mw'.
 
- [8] (build/main.mw)
+ [10] (build/main.mw)
 \openout5 = `main.mw'.
 
 
@@ -2237,13 +2266,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout5 = `main.mw'.
 
- [9] (build/main.mw)
+ [11] (build/main.mw)
 \openout5 = `main.mw'.
 
 )
 \openout5 = `main.mw'.
 
- [10] (build/main.mw)
+ [12] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
@@ -2256,7 +2285,7 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 \openout5 = `main.mw'.
 
- [11{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] (build/main.mw)
+ [13{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
@@ -2266,7 +2295,47 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 \openout5 = `main.mw'.
 
- [12] (build/main.mw)
+ [14] (build/main.mw)
+\openout5 = `main.mw'.
+
+\openout2 = `chapters/results.aux'.
+
+ (./chapters/results.tex)
+\openout5 = `main.mw'.
+
+ [15
+
+
+
+
+] (build/main.mw)
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout2 = `chapters/conclusion.aux'.
+
+ (./chapters/conclusion.tex
+\openout5 = `main.mw'.
+
+ [16
+
+
+
+
+] (build/main.mw)
+\openout5 = `main.mw'.
+
+)
+\openout5 = `main.mw'.
+
+ [17] (build/main.mw)
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
 \openout5 = `main.mw'.
 
  (./intro.tex
@@ -2873,6 +2942,15 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 \openout5 = `main.mw'.
 
+\openout5 = `main.mw'.
+
+ [18
+
+
+
+] (build/main.mw)
+\openout5 = `main.mw'.
+
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <24.88> on input line 33.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -2881,11 +2959,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 33.
 \openout5 = `main.mw'.
 
- [13
-
-
-
-] (build/main.mw)
+ [19] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
@@ -2913,7 +2987,7 @@ Package microtype Info: Character `029' is missing
 (microtype)             Ignoring protrusion settings for this character.
 \openout5 = `main.mw'.
 
- [14] (build/main.mw)
+ [20] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
@@ -2926,14 +3000,14 @@ Package microtype Info: Character `029' is missing
 
 \openout5 = `main.mw'.
 
- [15] (build/main.mw)
+ [21] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
 
-<graphics/TUWI-Logo-Code.png, id=463, 476.78125pt x 476.78125pt>
+<graphics/TUWI-Logo-Code.png, id=502, 476.78125pt x 476.78125pt>
 File: graphics/TUWI-Logo-Code.png Graphic file (type png)
 <use graphics/TUWI-Logo-Code.png>
 Package pdftex.def Info: graphics/TUWI-Logo-Code.png  used on input line 175.
@@ -2944,126 +3018,13 @@ Package pdftex.def Info: graphics/TUWI-Logo-Code.png  used on input line 181.
 (pdftex.def)             Requested size: 94.10643pt x 94.10324pt.
 
 
-LaTeX Warning: Citation `Turing1936' on page 16 undefined on input line 226.
+LaTeX Warning: Citation `Turing1936' on page 22 undefined on input line 226.
 
 \openout5 = `main.mw'.
 
-[16{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc} <./graphics/TUWI-Logo-Code.png>] (build/main.mw)
+[22{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc} <./graphics/TUWI-Logo-Code.png>] (build/main.mw)
 \openout5 = `main.mw'.
 
-\openout5 = `main.mw'.
-
- [17] (build/main.mw)
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
- [18] (build/main.mw)
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
- [19] (build/main.mw)
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-)
-\openout5 = `main.mw'.
-
- [20] (build/main.mw)
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
- [21
-
-
-] (build/main.mw)
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
-\openout5 = `main.mw'.
-
- [22
-
-] (build/main.mw)
-\openout5 = `main.mw'.
-
- (build/main.lof)
 \openout5 = `main.mw'.
 
  [23] (build/main.mw)
@@ -3075,12 +3036,49 @@ LaTeX Warning: Citation `Turing1936' on page 16 undefined on input line 226.
 
 \openout5 = `main.mw'.
 
- [24
-
-] (build/main.mw)
 \openout5 = `main.mw'.
 
- (build/main.lot)
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+ [24] (build/main.mw)
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
 \openout5 = `main.mw'.
 
  [25] (build/main.mw)
@@ -3096,15 +3094,36 @@ LaTeX Warning: Citation `Turing1936' on page 16 undefined on input line 226.
 
 \openout5 = `main.mw'.
 
- [26
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+)
+\openout5 = `main.mw'.
+
+ [26] (build/main.mw)
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+ [27
+
 
 ] (build/main.mw)
-\openout5 = `main.mw'.
-
- (build/main.loa) (build/main.ind
-\openout5 = `main.mw'.
-
- [27] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
@@ -3118,9 +3137,64 @@ LaTeX Warning: Citation `Turing1936' on page 16 undefined on input line 226.
 ] (build/main.mw)
 \openout5 = `main.mw'.
 
+ (build/main.lof)
 \openout5 = `main.mw'.
 
- [29
+ [29] (build/main.mw)
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+ [30
+
+] (build/main.mw)
+\openout5 = `main.mw'.
+
+ (build/main.lot)
+\openout5 = `main.mw'.
+
+ [31] (build/main.mw)
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+ [32
+
+] (build/main.mw)
+\openout5 = `main.mw'.
+
+ (build/main.loa) (build/main.ind
+\openout5 = `main.mw'.
+
+ [33] (build/main.mw)
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+ [34
+
+] (build/main.mw)
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+ [35
 
 
 ] (build/main.mw)
@@ -3136,7 +3210,7 @@ No file main.acr.
 (build/main.bbl
 \openout5 = `main.mw'.
 
- [30
+ [36
 
 ] (build/main.mw)
 \openout5 = `main.mw'.
@@ -3175,7 +3249,7 @@ Underfull \hbox (badness 5893) in paragraph at lines 41--44
 
 \openout5 = `main.mw'.
 
-[31
+[37
 
 ] (build/main.mw)
 \openout5 = `main.mw'.
@@ -3199,11 +3273,11 @@ Underfull \hbox (badness 5893) in paragraph at lines 46--49
 Class memoir Warning: The material used in the headers is too large
 (35.3779pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 187.
+(in both cases you will find help in the memoir manual). on input line 189.
 
 \openout5 = `main.mw'.
 
-[32] (build/main.mw)
+[38] (build/main.mw)
 \openout5 = `main.mw'.
 
 \openout5 = `main.glsdefs'.
@@ -3351,6 +3425,7 @@ No complaints by nag.
 
 \openout5 = `main.mw'.
 
+ (build/chapters/introduction.aux
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
@@ -3367,7 +3442,24 @@ No complaints by nag.
 
 \openout5 = `main.mw'.
 
- (build/chapters/methodology.aux
+) (build/chapters/related_work.aux
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+) (build/chapters/methodology.aux
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
@@ -3404,6 +3496,40 @@ No complaints by nag.
 
 \openout5 = `main.mw'.
 
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+) (build/chapters/results.aux
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+\openout5 = `main.mw'.
+
+) (build/chapters/conclusion.aux
 \openout5 = `main.mw'.
 
 \openout5 = `main.mw'.
@@ -3605,7 +3731,7 @@ LaTeX Warning: There were undefined references.
 \openout5 = `main.out'.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 322164F0F0D873A4799431E0DB071DCE;1855.
+(rerunfilecheck)             Checksum: 373086466A99FDF7845355401AE01D24;1995.
 \openout5 = `main.idx'.
 
 \openout5 = `main.glo'.
@@ -3622,10 +3748,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
  ) 
 Here is how much of TeX's memory you used:
- 49775 strings out of 474222
- 882242 string characters out of 5748733
- 2122975 words of memory out of 5000000
- 69278 multiletter control sequences out of 15000+600000
+ 49964 strings out of 474222
+ 886459 string characters out of 5748733
+ 2121975 words of memory out of 5000000
+ 69352 multiletter control sequences out of 15000+600000
  705479 words of font info for 247 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,16n,131p,2410b,3834s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3648,10 +3774,10 @@ pdfTeX warning (dest): name{glo:pdf} has been referenced but does not exist, rep
 pdfTeX warning (dest): name{glo:texteditor} has been referenced but does not exist, replaced by a fixed one
 
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on build/main.pdf (44 pages, 821200 bytes).
+Output written on build/main.pdf (50 pages, 825454 bytes).
 PDF statistics:
- 795 PDF objects out of 1000 (max. 8388607)
- 686 compressed objects within 7 object streams
- 229 named destinations out of 1000 (max. 500000)
- 76035 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 836 PDF objects out of 1000 (max. 8388607)
+ 720 compressed objects within 8 object streams
+ 237 named destinations out of 1000 (max. 500000)
+ 76059 words of extra memory for PDF output out of 89155 (max. 10000000)
 

@@ -1,7 +1,11 @@
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
+A level-1 auxiliary file: chapters/introduction.aux
+A level-1 auxiliary file: chapters/related_work.aux
 A level-1 auxiliary file: chapters/methodology.aux
+A level-1 auxiliary file: chapters/results.aux
+A level-1 auxiliary file: chapters/conclusion.aux
 The style file: alpha.bst
 Database file #1: references.bib
 Warning--I didn't find a database entry for "Turing1936"
@@ -11,7 +15,7 @@ Warning--to sort, need author or key in recreusFilamentFilaflex82
 Warning--to sort, need author or key in recreusFilamentFilaflex60
 You've used 10 entries,
             2543 wiz_defined-function locations,
-            628 strings with 6978 characters,
+            632 strings with 7071 characters,
 and the built_in function-call counts, 4088 in all, are:
 = -- 394
 > -- 229

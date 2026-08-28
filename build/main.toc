@@ -10,37 +10,40 @@
 \babel@toc {english}{}\relax
 \contentsline {chapter}{Contents}{xi}{section*.6}%
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}%
-\contentsline {chapter}{\chapternumberline {2}Methodology}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Overview of the approach}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Input data}{3}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Choosing how to recover thickness}{4}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Aligning the mesh and the volume}{5}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Measuring leaflet thickness in 3D~Slicer}{6}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Spreading the measurements over the mesh}{7}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Building the solid model}{10}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Printing the complete model}{11}{section.2.8}%
-\contentsline {chapter}{\chapternumberline {3}Introduction to \LaTeX }{13}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Installation}{13}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Editors}{13}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Compilation}{14}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Basic Functionality}{15}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Floats}{15}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Tables}{15}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Images}{16}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Mathematical Expressions}{16}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Pseudo Code}{16}{subsection.3.4.5}%
-\contentsline {section}{\numberline {3.5}Bibliography}{17}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Table of Contents}{17}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Acronyms / Glossary / Index}{17}{section.3.7}%
-\contentsline {section}{\numberline {3.8}Tips}{18}{section.3.8}%
-\contentsline {section}{\numberline {3.9}Resources}{19}{section.3.9}%
-\contentsline {subsection}{\numberline {3.9.1}Useful Links}{19}{subsection.3.9.1}%
-\contentsline {subsection}{\numberline {3.9.2}Comprehensive TeX Archive Network}{19}{subsection.3.9.2}%
+\contentsline {chapter}{\chapternumberline {2}Related Work}{3}{chapter.2}%
+\contentsline {chapter}{\chapternumberline {3}Methodology}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Overview of the approach}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Input data}{5}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Choosing how to recover thickness}{6}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Aligning the mesh and the volume}{7}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Measuring leaflet thickness in 3D~Slicer}{8}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Spreading the measurements over the mesh}{9}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Building the solid model}{12}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Printing the complete model}{13}{section.3.8}%
+\contentsline {chapter}{\chapternumberline {4}Results}{15}{chapter.4}%
+\contentsline {chapter}{\chapternumberline {5}Conclusion}{17}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {6}Introduction to \LaTeX }{19}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Installation}{19}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Editors}{19}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Compilation}{20}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Basic Functionality}{21}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Floats}{21}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Tables}{21}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Images}{22}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Mathematical Expressions}{22}{subsection.6.4.4}%
+\contentsline {subsection}{\numberline {6.4.5}Pseudo Code}{22}{subsection.6.4.5}%
+\contentsline {section}{\numberline {6.5}Bibliography}{23}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Table of Contents}{23}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Acronyms / Glossary / Index}{23}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Tips}{24}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Resources}{25}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Useful Links}{25}{subsection.6.9.1}%
+\contentsline {subsection}{\numberline {6.9.2}Comprehensive TeX Archive Network}{25}{subsection.6.9.2}%
 \babel@toc {english}{}\relax
-\contentsline {chapter}{Overview of Generative AI Tools Used}{21}{chapter*.16}%
+\contentsline {chapter}{Overview of Generative AI Tools Used}{27}{chapter*.15}%
 \babel@toc {english}{}\relax
-\contentsline {chapter}{List of Figures}{23}{section*.18}%
-\contentsline {chapter}{List of Tables}{25}{section*.19}%
-\contentsline {chapter}{List of Algorithms}{27}{chapter*.20}%
-\contentsline {chapter}{Index}{29}{section*.21}%
-\contentsline {chapter}{Bibliography}{31}{chapter*.22}%
+\contentsline {chapter}{List of Figures}{29}{section*.17}%
+\contentsline {chapter}{List of Tables}{31}{section*.18}%
+\contentsline {chapter}{List of Algorithms}{33}{chapter*.19}%
+\contentsline {chapter}{Index}{35}{section*.20}%
+\contentsline {chapter}{Bibliography}{37}{chapter*.21}%
