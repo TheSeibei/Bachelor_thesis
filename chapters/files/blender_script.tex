@@ -54,30 +54,16 @@ def apply_thickness(obj_name, known_pos, known_val, power=2):
 apply_thickness(
     "mesh1",
     known_pos=[
-        [point1x,  point1y,  point1z],
-        [point2x,  point2y,  point2z],
-        [point3x,  point3y,  point3z],
-        [point4x,  point4y,  point4z],
-        [point5x,  point5y,  point5z],
-        [point6x,  point6y,  point6z],
-        [point7x,  point7y,  point7z],
-        [point8x,  point8y,  point8z],
-        [point9x,  point9y,  point9z],
-        [point10x, point10y, point10z],
-        [point11x, point11y, point11z],
+        [point1x, point1y, point1z],
+        [point2x, point2y, point2z],
+        # ... additional sample coordinates
+        [pointN_x, pointN_y, pointN_z],
     ],
     known_val=[
         thickness1,
         thickness2,
-        thickness3,
-        thickness4,
-        thickness5,
-        thickness6,
-        thickness7,
-        thickness8,
-        thickness9,
-        thickness10,
-        thickness11,
+        # ... additional thickness values
+        thicknessN,
     ]
 )
 
@@ -89,18 +75,14 @@ apply_thickness(
     known_pos=[
         [point1x, point1y, point1z],
         [point2x, point2y, point2z],
-        [point3x, point3y, point3z],
-        [point4x, point4y, point4z],
-        [point5x, point5y, point5z],
-        [point6x, point6y, point6z],
+        # ... additional sample coordinates
+        [pointM_x, pointM_y, pointM_z],
     ],
     known_val=[
         thickness1,
         thickness2,
-        thickness3,
-        thickness4,
-        thickness5,
-        thickness6,
+        # ... additional thickness values
+        thicknessM,
     ]
 )
 \end{lstlisting}
