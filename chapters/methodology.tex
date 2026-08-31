@@ -75,7 +75,7 @@ background voxel, in other words the distance to the closest wall \cite{edMorpho
 of a leaflet, that distance is half the local thickness, so the thickness could
 in principle be read off as two times the distance value. This was set up in
 MeVisLab using an \texttt{OpenVDBLoad} module to load the volume, a
-\texttt{Threshold} module to make the binary mask (values above~0.4 set to~1,
+\texttt{Threshold} module to make the binary mask (values above~0.2 set to~1,
 everything else to~0), and a \texttt{EuclideanDistanceTransform} module in 3D
 mode to produce the distance field.
 
@@ -183,7 +183,7 @@ to take cleanly. In between these two problem regions the data is clearer, so
 most of the measurements were taken there, where the tissue band is well defined
 and the intensity rule can be applied with confidence. The resulting locations where measurements were taken are shown in Figure~\ref{fig:Valve_measurments} although the numbers in the figure do not correspond to the actual indexing of the measurements in Table~\ref{tab:measurements}. \textit{It should be mentioned that the Aortic valve is shown as well in the figure and it was within the scope of the project to produce a model of the Aortic valve too, but due to the poor quality of the ultrasound data around it there were nearly any areas where measurements could be taken. Therefore, the Aortic valve was not included in the final model.}
 
-\begin{figure}[H]
+\begin{figure}[h]
   \centering
   \includegraphics[width=0.75\linewidth]{graphics/Valve_measurments.png}
   \caption{Locations of the manual thickness measurements on the leaflets meshes.}
@@ -212,7 +212,7 @@ several thousand vertices, and the step that builds the solid
 (Section~\ref{sec:solid}) needs a thickness value at every single vertex. So the
 measured values have to be spread over the whole surface.
 
-The measured points can be recorded as follows:
+The measured points can be recorded as follows in Table~\ref{tab:measurements}, which lists the coordinates of each measured point and the corresponding thickness value. The table is split into two parts, one for each leaflet mesh, and it includes the sample points, the outer rim points, and the centre points. The outer rim and centre points are treated as having constant thickness values, as described in Section~\ref{sec:measure}.
 
 \begin{table}[htbp]
   \centering
@@ -298,14 +298,14 @@ checked with so little data. IDW, in contrast, makes no assumption about an
 underlying function, works with irregularly placed values, and is simple enough
 to explain and defend in full. For the power parameter, a value of two was used. This gives greater weight to nearby measurements while still providing a smooth transition between the measured points. The resulting assignment of thickness values to the mesh is shown in Figure~\ref{fig:blender_weight_paint}. The outer brim of the leaflet is shown in red as it has the maximum thickness, while the centre of the leaflet, the thinnest part, is shown here in green which is roughly half of the maximum thickness and therefore not in blue, as blue would map to a thickness of zero. The transition between the two is smooth, as expected from the interpolation.
 
-\begin{figure}[H]
+\begin{figure}[h]
   \centering
   \includegraphics[width=0.75\linewidth]{graphics/Blender_weight_paint_topdown_view.jpg}
   \caption{Top-down view of the leaflet mesh in Blender, showing the interpolated thickness values as a vertex group. The color gradient represents the thickness, with red indicating thicker regions and blue indicating thinner regions.}
   \label{fig:blender_weight_paint}
 \end{figure}
 
-The interpolation itself was carried out in Blender using a short Python script, as shown in Listing~\ref{lst:thickness_interpolation}. NumPy \cite{harris2020array} is used for the distance and weighted averaging calculations. For each vertex, the script calculates the Euclidean distance to all measured points, determines the corresponding inverse-distance weights, and computes the weighted average of the measured thickness values. For every vertex the script computes the distances to
+The interpolation itself was carried out in Blender using a short Python script, as shown in Listing~\ref{lst:thickness_interpolation} and the values and coordinates as in Table~\ref{tab:measurements}. NumPy \cite{harris2020array} is used for the distance and weighted averaging calculations. For each vertex, the script calculates the Euclidean distance to all measured points, determines the corresponding inverse-distance weights, and computes the weighted average of the measured thickness values. For every vertex the script computes the distances to
 the known values, forms the weights, and takes the weighted average. The result
 is stored on the mesh as a per-vertex weight, called a vertex group in Blender.
 Before storing, the values are scaled to the range zero to one by dividing by the
