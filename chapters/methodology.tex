@@ -117,13 +117,12 @@ measuring was to align the two. This is described next.
 
 \section{Aligning the mesh and the volume}\label{sec:align}
 
-The mesh and the volume did not overlap when they were first loaded together in both MeVisLab and 3D Slicer - only Blender could directly open the .usda file which preserved both coordinate systems in the correct orientation;
-in MeVisLab and 3D Slicer they sat in different coordinate systems. This alignment matters here because, as
+The mesh and the volume did not overlap when they were first loaded together in both MeVisLab and 3D Slicer - only Blender could directly open the .usda file which preserved both coordinate systems in the correct orientation. In MeVisLab and 3D Slicer they sat in different coordinate systems. This alignment matters here because, as
 described in Section~\ref{sec:measure}, the thickness is measured along lines
 perpendicular to the mesh surface. If the mesh is in the wrong place, those
 perpendicular lines start in the wrong place, and the measurement is meaningless.
 So the mesh and the volume had to be brought into the same coordinate frame
-first.
+first. Before performing any geometric operations in Blender, all input data was uniformly scaled up by 750\%. This initial upscaling was applied to improve numerical precision during computational and transformation steps within Blender's modeling environment (as further discussed in Section~\ref{sec:interp}) and resolved export scaling issues, ensuring the resulting STL file imported at a realistic scale in the 3D-printing slicing software. This uniform scaling is fully tolerable for the valve model, as its final absolute dimensions are ultimately constrained by the physical dimensions of the ventricular chambers developed by Machoritsch, allowing the valve's scale to be adjusted accordingly prior to final production.
 
 Aligning the two by their shapes directly is difficult, because the leaflet
 surface is smooth and curved and offers no clear matching landmarks to line up by
@@ -132,9 +131,16 @@ box. MeVisLab, 3D~Slicer and Blender each draw an axis-aligned bounding box
 around the volume, and this box is the same in all of them because it is derived
 from the same volume. Since everything was perfectly alligned in Blender I added 
 planes to the mesh that correspond to the bounding
-box of the volume, so that the mesh carries the same box as a built-in reference. Matching the
+box of the volume, so that the mesh carries the same box as a built-in reference. The resulting mesh is depicted in Figure~\ref{fig:blender_planes}. Matching the
 mesh's bounding planes to the volume's bounding box then defines the alignment
 completely, because the two boxes have to coincide.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\linewidth]{graphics/Blender_planes.png}
+  \caption{Planes added to the mesh in Blender to correspond to the bounding box of the volume.}
+  \label{fig:blender_planes}
+\end{figure}
 
 From this box-to-box correspondence a transformation matrix was obtained, which
 was applied to the mesh in 3D~Slicer. After applying it, the mesh sits inside the
@@ -175,7 +181,14 @@ perpendicular measurements are hard to obtain. The second is the thin outer brim
 of the leaflet, at the edge of the mesh, where measurements were also difficult
 to take cleanly. In between these two problem regions the data is clearer, so
 most of the measurements were taken there, where the tissue band is well defined
-and the intensity rule can be applied with confidence.
+and the intensity rule can be applied with confidence. The resulting locations where measurements were taken are shown in Figure~\ref{fig:Valve_measurments} although the numbers in the figure do not correspond to the actual indexing of the measurements in Table~\ref{tab:measurements}. \textit{It should be mentioned that the Aortic valve is shown as well in the figure and it was within the scope of the project to produce a model of the Aortic valve too, but due to the poor quality of the ultrasound data around it there were nearly any areas where measurements could be taken. Therefore, the Aortic valve was not included in the final model.}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\linewidth]{graphics/Valve_measurments.png}
+  \caption{Locations of the manual thickness measurements on the leaflets meshes.}
+  \label{fig:Valve_measurments}
+\end{figure}
 
 For the two difficult regions I made a deliberate simplification rather than
 forcing measurements the data does not support. For the noisy centre I took all
@@ -203,39 +216,65 @@ The measured points can be recorded as follows:
 
 \begin{table}[htbp]
   \centering
-  \begin{tabular}{clcc}
+  \begin{tabular}{c l c c c}
     \toprule
-    Point & Location & Leaflet & Thickness [mm] \\
+    Point & Location & Leaflet & Coordinates $(X, Y, Z)$ [mm] & Thickness [mm] \\
     \midrule
-    \multicolumn{4}{l}{\textbf{Mesh1}} \\
-    1  & Sample 1            & Mesh1 & 1.858 \\
-    2  & Sample 2            & Mesh1 & 1.695 \\
-    3  & Sample 3            & Mesh1 & 2.831 \\
-    4  & Sample 4            & Mesh1 & 1.493 \\
-    5  & Sample 5            & Mesh1 & 1.591 \\
-    6  & Sample 6            & Mesh1 & 2.703 \\
-    7  & Sample 7            & Mesh1 & 1.885 \\
-    8  & Sample 8            & Mesh1 & 1.418 \\
-    9  & Sample 9            & Mesh1 & 1.420 \\
-    10 & Sample 10           & Mesh1 & 1.660 \\
-    11 & Outer Rim (10 pts)  & Mesh1 & 2.634 \\
-    12 & Center (4 pts)      & Mesh1 & 1.420 \\
+    \multicolumn{5}{l}{\textbf{Mesh1}} \\
+     1 & Sample 1   & Mesh1 & (63.9590, 1.2938, -13.9180) & 1.858 \\
+     2 & Sample 2   & Mesh1 & (64.5597, 0.8593, -11.7677) & 1.695 \\
+     3 & Sample 3   & Mesh1 & (58.5578, -7.5698, -8.4560)  & 2.831 \\
+     4 & Sample 4   & Mesh1 & (65.7383, 16.3467, -7.1801) & 1.493 \\
+     5 & Sample 5   & Mesh1 & (64.7657, 14.2849, -9.8768) & 1.591 \\
+     6 & Sample 6   & Mesh1 & (65.3708, 26.0424, -4.8703) & 2.703 \\
+     7 & Sample 7   & Mesh1 & (64.9545, 2.3063, -3.0277)   & 1.885 \\
+     8 & Sample 8   & Mesh1 & (66.2014, 7.9130, 0.3569)    & 1.418 \\
+     9 & Sample 9   & Mesh1 & (65.9559, 3.1092, 5.0442)    & 1.420 \\
+    10 & Sample 10  & Mesh1 & (62.5210, 8.6762, -13.1107) & 1.660 \\
+    11 & Outer Rim 1 & Mesh1 & (60.0724, -5.3534, -13.0215) & 2.634 \\
+    12 & Outer Rim 2 & Mesh1 & (60.8634, 2.2560, -16.6014) & 2.634 \\
+    13 & Outer Rim 3 & Mesh1 & (59.9938, 8.3517, -15.4400) & 2.634 \\
+    14 & Outer Rim 4 & Mesh1 & (60.5665, 15.1949, -13.5914) & 2.634 \\
+    15 & Outer Rim 5 & Mesh1 & (62.8466, 20.5929, -11.7375) & 2.634 \\
+    16 & Outer Rim 6 & Mesh1 & (65.2000, 25.0223, -9.6075) & 2.634 \\
+    17 & Outer Rim 7 & Mesh1 & (65.8712, 27.4709, -6.3174) & 2.634 \\
+    18 & Outer Rim 8 & Mesh1 & (64.6092, 29.0350, 0.8741)  & 2.634 \\
+    19 & Outer Rim 9 & Mesh1 & (59.9680, 11.1331, -14.7723) & 2.634 \\
+    20 & Center 1   & Mesh1 & (63.6521, -0.7522, -0.0410) & 1.420 \\
+    21 & Center 2   & Mesh1 & (66.8656, 9.9355, 4.1078)   & 1.420 \\
+    22 & Center 3   & Mesh1 & (66.5859, 16.3126, 2.0336)  & 1.420 \\
+    23 & Center 4   & Mesh1 & (66.5978, 20.5522, 0.9076)  & 1.420 \\
     \midrule
-    \multicolumn{4}{l}{\textbf{Mesh2}} \\
-    13 & Sample 11           & Mesh2 & 2.391 \\
-    14 & Sample 12           & Mesh2 & 2.719 \\
-    15 & Sample 13           & Mesh2 & 1.444 \\
-    16 & Sample 14           & Mesh2 & 1.454 \\
-    17 & Sample 15           & Mesh2 & 2.013 \\
-    18 & Sample 16           & Mesh2 & 2.011 \\
-    19 & Sample 17           & Mesh2 & 2.634 \\
-    20 & Outer Rim (10 pts)  & Mesh2 & 2.634 \\
-    21 & Center (6 pts)      & Mesh2 & 1.420 \\
+    \multicolumn{5}{l}{\textbf{Mesh2}} \\
+    24 & Sample 11  & Mesh2 & (55.8837, -7.7487, 3.9077)  & 2.391 \\
+    25 & Sample 12  & Mesh2 & (56.0970, -4.6908, 8.6596)  & 2.719 \\
+    26 & Sample 13  & Mesh2 & (59.9952, -3.0386, 6.9769)  & 1.444 \\
+    27 & Sample 14  & Mesh2 & (60.6347, -3.7250, 2.8164)  & 1.454 \\
+    28 & Sample 15  & Mesh2 & (63.1115, 3.0225, 11.4841)  & 2.013 \\
+    29 & Sample 16  & Mesh2 & (65.1467, 5.8269, 8.7319)   & 2.011 \\
+    30 & Sample 17  & Mesh2 & (60.3688, 16.5809, 15.3959) & 2.634 \\
+    31 & Outer Rim 1  & Mesh2 & (63.7587, 28.0507, 2.7245)  & 2.634 \\
+    32 & Outer Rim 2  & Mesh2 & (63.4924, 25.6784, 7.3205)  & 2.634 \\
+    33 & Outer Rim 3  & Mesh2 & (61.9454, 21.5032, 11.7638) & 2.634 \\
+    34 & Outer Rim 4  & Mesh2 & (60.0886, 15.0826, 16.3647) & 2.634 \\
+    35 & Outer Rim 5  & Mesh2 & (58.0204, 8.4046, 18.1553)  & 2.634 \\
+    36 & Outer Rim 6  & Mesh2 & (56.3447, 3.7394, 17.3366)  & 2.634 \\
+    37 & Outer Rim 7  & Mesh2 & (55.1820, -0.8097, 13.2220) & 2.634 \\
+    38 & Outer Rim 8  & Mesh2 & (55.8221, -6.6502, 5.8992)  & 2.634 \\
+    39 & Outer Rim 9  & Mesh2 & (56.0250, -8.6121, 1.7725)  & 2.634 \\
+    40 & Outer Rim 10 & Mesh2 & (56.9056, -8.9694, -3.2529) & 2.634 \\
+    41 & Center 1   & Mesh2 & (63.7351, -1.3024, 0.4987)  & 1.420 \\
+    42 & Center 2   & Mesh2 & (64.8664, 1.7162, 5.0023)   & 1.420 \\
+    43 & Center 3   & Mesh2 & (66.8032, 5.1267, 6.6123)   & 1.420 \\
+    44 & Center 4   & Mesh2 & (66.8336, 9.7100, 4.8804)   & 1.420 \\
+    45 & Center 5   & Mesh2 & (66.7762, 14.3475, 3.3624)  & 1.420 \\
+    46 & Center 6   & Mesh2 & (66.1239, 20.7572, 1.0062)  & 1.420 \\
     \bottomrule
   \end{tabular}
-  \caption{Measured leaflet thickness at the sampled locations for Mesh1 and Mesh2.}
+  \caption{Applied leaflet thickness and 3D spatial coordinates from the Blender model at all sampled locations, outer rim points, and center points for Mesh1 and Mesh2.}
   \label{tab:measurements}
 \end{table}
+
 
 The simplest way to fill the gap would be to give the whole leaflet one average
 thickness. I rejected this because it would remove the variation between the base
@@ -257,9 +296,16 @@ basis functions on purpose. With only a handful of known values, the more
 advanced methods bring in extra assumptions and parameters that could not be
 checked with so little data. IDW, in contrast, makes no assumption about an
 underlying function, works with irregularly placed values, and is simple enough
-to explain and defend in full. For the power parameter, a value of two was used. This gives greater weight to nearby measurements while still providing a smooth transition between the measured points.
+to explain and defend in full. For the power parameter, a value of two was used. This gives greater weight to nearby measurements while still providing a smooth transition between the measured points. The resulting assignment of thickness values to the mesh is shown in Figure~\ref{fig:blender_weight_paint}. The outer brim of the leaflet is shown in red as it has the maximum thickness, while the centre of the leaflet, the thinnest part, is shown here in green which is roughly half of the maximum thickness and therefore not in blue, as blue would map to a thickness of zero. The transition between the two is smooth, as expected from the interpolation.
 
-The interpolation was carried out in Blender using a short Python script, as shown in Listing~\ref{lst:thickness_interpolation}. NumPy \cite{harris2020array} is used for the distance and weighted averaging calculations. For each vertex, the script calculates the Euclidean distance to all measured points, determines the corresponding inverse-distance weights, and computes the weighted average of the measured thickness values. For every vertex the script computes the distances to
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\linewidth]{graphics/Blender_weight_paint_topdown_view.jpg}
+  \caption{Top-down view of the leaflet mesh in Blender, showing the interpolated thickness values as a vertex group. The color gradient represents the thickness, with red indicating thicker regions and blue indicating thinner regions.}
+  \label{fig:blender_weight_paint}
+\end{figure}
+
+The interpolation itself was carried out in Blender using a short Python script, as shown in Listing~\ref{lst:thickness_interpolation}. NumPy \cite{harris2020array} is used for the distance and weighted averaging calculations. For each vertex, the script calculates the Euclidean distance to all measured points, determines the corresponding inverse-distance weights, and computes the weighted average of the measured thickness values. For every vertex the script computes the distances to
 the known values, forms the weights, and takes the weighted average. The result
 is stored on the mesh as a per-vertex weight, called a vertex group in Blender.
 Before storing, the values are scaled to the range zero to one by dividing by the
@@ -267,6 +313,7 @@ largest thickness, because the modifier used in the next step expects weights in
 that range.
 
 \input{chapters/files/blender_script}
+
 
 One limitation of this choice should be stated openly, because it also explains a
 later decision. IDW here uses straight-line (euclidean) distance through space,
