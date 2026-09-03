@@ -7,15 +7,16 @@
 \newblock Blender 5.2 LTS Manual, 2026.
 \newblock Accessed: 2026-08-27.
 
-\bibitem[edM]{edMorphologyDistance}
-{M}orphology - {D}istance {T}ransform --- homepages.inf.ed.ac.uk.
-\newblock \url{https://homepages.inf.ed.ac.uk/rbf/HIPR2/distance.htm}.
-\newblock [Accessed 26-08-2026].
-
 \bibitem[FBKC{\etalchar{+}}12]{fedorov20123d}
 Andriy Fedorov, Reinhard Beichel, Jayashree Kalpathy-Cramer, Julien Finet, Jean-Christophe Fillion-Robin, Sonia Pujol, Christian Bauer, Dominique Jennings, Fiona Fennessy, Milan Sonka, et~al.
 \newblock 3d slicer as an image computing platform for the quantitative imaging network.
 \newblock {\em Magnetic resonance imaging}, 30(9):1323--1341, 2012.
+
+\bibitem[FPWW]{edMorphologyDistance}
+Robert Fisher, Simon Perkins, Ashley Walker, and Erik Wolfart.
+\newblock {M}orphology - {D}istance {T}ransform --- homepages.inf.ed.ac.uk.
+\newblock \url{https://homepages.inf.ed.ac.uk/rbf/HIPR2/distance.htm}.
+\newblock [Accessed 26-08-2026].
 
 \bibitem[HMVDW{\etalchar{+}}20]{harris2020array}
 Charles~R Harris, K~Jarrod Millman, St{\'e}fan~J Van Der~Walt, Ralf Gommers, Pauli Virtanen, David Cournapeau, Eric Wieser, Julian Taylor, Sebastian Berg, Nathaniel~J Smith, et~al.
