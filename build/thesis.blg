@@ -8,48 +8,44 @@ A level-1 auxiliary file: chapters/results.aux
 A level-1 auxiliary file: chapters/conclusion.aux
 The style file: alpha.bst
 Database file #1: references.bib
-Warning--to sort, need author or key in recreusFilamentFilaflex90
-Warning--to sort, need author or key in recreusFilamentFilaflex82
-Warning--to sort, need author or key in recreusFilamentFilaflex60
 You've used 10 entries,
             2543 wiz_defined-function locations,
-            631 strings with 7116 characters,
-and the built_in function-call counts, 4280 in all, are:
-= -- 410
-> -- 259
-< -- 3
-+ -- 98
-- -- 95
+            632 strings with 7123 characters,
+and the built_in function-call counts, 4442 in all, are:
+= -- 422
+> -- 280
+< -- 6
++ -- 104
+- -- 101
 * -- 333
-:= -- 698
-add.period$ -- 33
+:= -- 755
+add.period$ -- 36
 call.type$ -- 10
-change.case$ -- 78
+change.case$ -- 81
 chr.to.int$ -- 8
-cite$ -- 16
-duplicate$ -- 134
-empty$ -- 291
-format.name$ -- 101
-if$ -- 863
+cite$ -- 10
+duplicate$ -- 137
+empty$ -- 285
+format.name$ -- 113
+if$ -- 881
 int.to.chr$ -- 3
 int.to.str$ -- 0
 missing$ -- 5
-newline$ -- 56
-num.names$ -- 21
-pop$ -- 103
+newline$ -- 59
+num.names$ -- 30
+pop$ -- 106
 preamble$ -- 1
-purify$ -- 88
+purify$ -- 91
 quote$ -- 0
 skip$ -- 107
 stack$ -- 0
-substring$ -- 187
+substring$ -- 184
 swap$ -- 20
-text.length$ -- 3
-text.prefix$ -- 2
+text.length$ -- 6
+text.prefix$ -- 5
 top$ -- 0
 type$ -- 80
-warning$ -- 3
-while$ -- 29
+warning$ -- 0
+while$ -- 35
 width$ -- 13
-write$ -- 129
-(There were 3 warnings)
+write$ -- 135

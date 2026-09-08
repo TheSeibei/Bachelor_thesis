@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.26)  3 SEP 2026 21:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.26)  8 SEP 2026 16:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1639,32 +1639,32 @@ Writing index file thesis.idx
 \glo@main@file=\write132
 \openout5 = `thesis.glo'.
 
-Package glossaries Info: Writing glossary file thesis.glo on input line 77.
+Package glossaries Info: Writing glossary file thesis.glo on input line 79.
 \glo@acronym@file=\write133
 \openout5 = `thesis.acn'.
 
-Package glossaries Info: Writing glossary file thesis.acn on input line 77.
+Package glossaries Info: Writing glossary file thesis.acn on input line 79.
 (build/thesis.aux (build/chapters/introduction.aux) (build/chapters/related_work.aux) (build/chapters/methodology.aux) (build/chapters/results.aux) (build/chapters/conclusion.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 125.
-LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1719,19 +1719,19 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \microtypecontext on input line 125.
-Package microtype Info: Applying patch `item' on input line 125.
-Package microtype Info: Applying patch `toc' on input line 125.
-Package microtype Info: Applying patch `eqnum' on input line 125.
-Package microtype Info: Applying patch `footnote' on input line 125.
-Package microtype Info: Applying patch `verbatim' on input line 125.
+LaTeX Info: Redefining \microtypecontext on input line 124.
+Package microtype Info: Applying patch `item' on input line 124.
+Package microtype Info: Applying patch `toc' on input line 124.
+Package microtype Info: Applying patch `eqnum' on input line 124.
+Package microtype Info: Applying patch `footnote' on input line 124.
+Package microtype Info: Applying patch `verbatim' on input line 124.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 125.
+LaTeX Info: Redefining \showhyphens on input line 124.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1748,7 +1748,7 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 125.
+Package hyperref Info: Link coloring OFF on input line 124.
  (build/thesis.out) (build/thesis.out)
 \@outlinefile=\write134
 \openout5 = `thesis.out'.
@@ -1787,7 +1787,7 @@ Package hyperref Info: Link coloring OFF on input line 125.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 131.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 130.
  (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1795,100 +1795,100 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 131.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 130.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 131.
+(Font)              scaled to size 10.40245pt on input line 130.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 28.49991pt on input line 131.
+(Font)              scaled to size 28.49991pt on input line 130.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <30> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 131.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 130.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 28.49991pt on input line 131.
+(Font)              scaled to size 28.49991pt on input line 130.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.99994pt on input line 131.
+(Font)              scaled to size 18.99994pt on input line 130.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 131.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 130.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.99994pt on input line 131.
+(Font)              scaled to size 18.99994pt on input line 130.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 16.14995pt on input line 131.
+(Font)              scaled to size 16.14995pt on input line 130.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 131.
+(Font)              scaled to size 11.39996pt on input line 130.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 131.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 130.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 16.14995pt on input line 131.
+(Font)              scaled to size 16.14995pt on input line 130.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.29996pt on input line 131.
+(Font)              scaled to size 13.29996pt on input line 130.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 131.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 130.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.29996pt on input line 131.
+(Font)              scaled to size 13.29996pt on input line 130.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.44997pt on input line 131.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 131.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 131.
+(Font)              scaled to size 10.44997pt on input line 130.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 130.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 130.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 131.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 130.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 131.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 130.
  (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 131.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 130.
  (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <11> on input line 131.
+(Font)              <11> on input line 130.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.69997> on input line 131.
+(Font)              <7.69997> on input line 130.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.5> on input line 131.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 131.
+(Font)              <5.5> on input line 130.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 130.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 131.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 130.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<graphics/Logo-schwarz.pdf, id=90, 380.32086pt x 57.013pt>
+<graphics/Logo-schwarz.pdf, id=106, 380.32086pt x 57.013pt>
 File: graphics/Logo-schwarz.pdf Graphic file (type pdf)
 <use graphics/Logo-schwarz.pdf>
-Package pdftex.def Info: graphics/Logo-schwarz.pdf  used on input line 131.
+Package pdftex.def Info: graphics/Logo-schwarz.pdf  used on input line 130.
 (pdftex.def)             Requested size: 208.7825pt x 31.29802pt.
 
 
 Class memoir Warning: The material used in the headers is too large
 (35.3779pt) for the given head height (31.29802pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 131.
+(in both cases you will find help in the memoir manual). on input line 130.
 
 
 Overfull \vbox (4.07988pt too high) has occurred while \output is active []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 131.
+(Font)              <10.95> on input line 130.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 131.
+(Font)              <8> on input line 130.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 131.
+(Font)              <6> on input line 130.
 \openout5 = `thesis.mw'.
 
  [1
@@ -2059,7 +2059,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 File: graphics/Logo-schwarz.pdf Graphic file (type pdf)
 <use graphics/Logo-schwarz.pdf>
-Package pdftex.def Info: graphics/Logo-schwarz.pdf  used on input line 132.
+Package pdftex.def Info: graphics/Logo-schwarz.pdf  used on input line 131.
 (pdftex.def)             Requested size: 208.7825pt x 31.29802pt.
 
 Overfull \vbox (4.07988pt too high) has occurred while \output is active []
@@ -2094,7 +2094,7 @@ Overfull \vbox (4.07988pt too high) has occurred while \output is active []
 ] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 136.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 135.
 \openout5 = `thesis.mw'.
 
  [7
@@ -2146,7 +2146,7 @@ Package hyperref Info: bookmark level for unknown todo defaults to 0 on input li
 
 \openout2 = `chapters/introduction.aux'.
 
- (./chapters/introduction.tex)
+ (./chapters/introduction.tex
 \openout5 = `thesis.mw'.
 
  [1
@@ -2159,12 +2159,42 @@ Package hyperref Info: bookmark level for unknown todo defaults to 0 on input li
 
 \openout5 = `thesis.mw'.
 
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+\openout5 = `thesis.mw'.
+
+ [2] (build/thesis.mw)
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+)
+\openout5 = `thesis.mw'.
+
+ [3] (build/thesis.mw)
+\openout5 = `thesis.mw'.
+
 \openout2 = `chapters/related_work.aux'.
 
  (./chapters/related_work.tex
 \openout5 = `thesis.mw'.
 
- [2
+ [4
 
 
 
@@ -2175,7 +2205,7 @@ Package hyperref Info: bookmark level for unknown todo defaults to 0 on input li
 )
 \openout5 = `thesis.mw'.
 
- [3] (build/thesis.mw)
+ [5] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
 \openout5 = `thesis.mw'.
@@ -2187,49 +2217,12 @@ Package hyperref Info: bookmark level for unknown todo defaults to 0 on input li
  (./chapters/methodology.tex
 \openout5 = `thesis.mw'.
 
- [4
+ [6
 
 
 
 
 ] (build/thesis.mw)
-\openout5 = `thesis.mw'.
-
-\openout5 = `thesis.mw'.
-
- [5] (build/thesis.mw)
-\openout5 = `thesis.mw'.
-
-\openout5 = `thesis.mw'.
-
-\openout5 = `thesis.mw'.
-
-\openout5 = `thesis.mw'.
-
-\openout5 = `thesis.mw'.
-
-\openout5 = `thesis.mw'.
-
-\openout5 = `thesis.mw'.
-
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 77.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `pcr' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-\openout5 = `thesis.mw'.
-
- [6] (build/thesis.mw)
-\openout5 = `thesis.mw'.
-
-\openout5 = `thesis.mw'.
-
 \openout5 = `thesis.mw'.
 
 \openout5 = `thesis.mw'.
@@ -2241,23 +2234,57 @@ Package microtype Info: Character `029' is missing
 
 \openout5 = `thesis.mw'.
 
-<graphics/Blender_planes.png, id=219, 811.53188pt x 557.08125pt>
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 72.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `pcr' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+\openout5 = `thesis.mw'.
+
+ [8] (build/thesis.mw)
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+ [9] (build/thesis.mw)
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+<graphics/Blender_planes.png, id=251, 811.53188pt x 557.08125pt>
 File: graphics/Blender_planes.png Graphic file (type png)
 <use graphics/Blender_planes.png>
-Package pdftex.def Info: graphics/Blender_planes.png  used on input line 140.
+Package pdftex.def Info: graphics/Blender_planes.png  used on input line 135.
 (pdftex.def)             Requested size: 313.69025pt x 215.33972pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout5 = `thesis.mw'.
 
- [8 <./graphics/Blender_planes.png>] (build/thesis.mw)
+ [10 <./graphics/Blender_planes.png>] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
-<graphics/Valve_measurments.png, id=231, 659.46375pt x 426.84468pt>
+<graphics/Valve_measurments.png, id=263, 659.46375pt x 426.84468pt>
 File: graphics/Valve_measurments.png Graphic file (type png)
 <use graphics/Valve_measurments.png>
-Package pdftex.def Info: graphics/Valve_measurments.png  used on input line 188.
+Package pdftex.def Info: graphics/Valve_measurments.png  used on input line 183.
 (pdftex.def)             Requested size: 313.69025pt x 203.04642pt.
 
 
@@ -2265,7 +2292,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout5 = `thesis.mw'.
 
-[9{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}] (build/thesis.mw)
+[11{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
 \openout5 = `thesis.mw'.
@@ -2274,26 +2301,26 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-LaTeX Warning: Float too large for page by 126.56711pt on input line 276.
+LaTeX Warning: Float too large for page by 126.56711pt on input line 271.
 
 \openout5 = `thesis.mw'.
 
-[10 <./graphics/Valve_measurments.png>] (build/thesis.mw)
-\openout5 = `thesis.mw'.
-
-\openout5 = `thesis.mw'.
-
+[12 <./graphics/Valve_measurments.png>] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
 \openout5 = `thesis.mw'.
 
- [11{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
-<graphics/Blender_weight_paint_topdown_view.jpg, id=258, 1579.9025pt x 889.3225pt>
+\openout5 = `thesis.mw'.
+
+ [13{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}] (build/thesis.mw)
+\openout5 = `thesis.mw'.
+
+<graphics/Blender_weight_paint_topdown_view.jpg, id=291, 1579.9025pt x 889.3225pt>
 File: graphics/Blender_weight_paint_topdown_view.jpg Graphic file (type jpg)
 <use graphics/Blender_weight_paint_topdown_view.jpg>
-Package pdftex.def Info: graphics/Blender_weight_paint_topdown_view.jpg  used on input line 303.
+Package pdftex.def Info: graphics/Blender_weight_paint_topdown_view.jpg  used on input line 298.
 (pdftex.def)             Requested size: 313.69025pt x 176.57219pt.
  (./chapters/files/blender_script.tex (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
@@ -2301,7 +2328,7 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1.
 \openout5 = `thesis.mw'.
 
- [12 <./graphics/Blender_weight_paint_topdown_view.jpg>] (build/thesis.mw)
+ [14 <./graphics/Blender_weight_paint_topdown_view.jpg>] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
@@ -2311,54 +2338,35 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout5 = `thesis.mw'.
 
- [13] (build/thesis.mw)
-\openout5 = `thesis.mw'.
-
-)
-\openout5 = `thesis.mw'.
-
- [14] (build/thesis.mw)
-\openout5 = `thesis.mw'.
-
-\openout5 = `thesis.mw'.
-
  [15] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
-\openout5 = `thesis.mw'.
-
-\openout5 = `thesis.mw'.
-
-\openout5 = `thesis.mw'.
-
-\openout5 = `thesis.mw'.
-
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 374.
- (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 \openout5 = `thesis.mw'.
 
- [16{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] (build/thesis.mw)
+ [16] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
-)
 \openout5 = `thesis.mw'.
 
  [17] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
-\openout2 = `chapters/results.aux'.
-
- (./chapters/results.tex
 \openout5 = `thesis.mw'.
 
- [18
+\openout5 = `thesis.mw'.
 
+\openout5 = `thesis.mw'.
 
+\openout5 = `thesis.mw'.
 
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 369.
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+\openout5 = `thesis.mw'.
 
-] (build/thesis.mw)
+ [18{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
 )
@@ -2367,13 +2375,9 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
  [19] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
-\openout5 = `thesis.mw'.
+\openout2 = `chapters/results.aux'.
 
-\openout5 = `thesis.mw'.
-
-\openout2 = `chapters/conclusion.aux'.
-
- (./chapters/conclusion.tex
+ (./chapters/results.tex
 \openout5 = `thesis.mw'.
 
  [20
@@ -2394,20 +2398,23 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 \openout5 = `thesis.mw'.
 
+\openout2 = `chapters/conclusion.aux'.
+
+ (./chapters/conclusion.tex
 \openout5 = `thesis.mw'.
 
  [22
 
 
 
+
 ] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
+)
 \openout5 = `thesis.mw'.
 
- [23
-
-] (build/thesis.mw)
+ [23] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
 \openout5 = `thesis.mw'.
@@ -2418,13 +2425,16 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
  [24
 
+
+
 ] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
- (build/thesis.lof)
 \openout5 = `thesis.mw'.
 
- [25] (build/thesis.mw)
+ [25
+
+] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
 \openout5 = `thesis.mw'.
@@ -2438,7 +2448,7 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
- (build/thesis.lot)
+ (build/thesis.lof)
 \openout5 = `thesis.mw'.
 
  [27] (build/thesis.mw)
@@ -2455,10 +2465,7 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
- (build/thesis.loa) (build/thesis.ind)
-No file thesis.gls.
-No file thesis.acr.
-(build/thesis.bbl
+ (build/thesis.lot)
 \openout5 = `thesis.mw'.
 
  [29] (build/thesis.mw)
@@ -2475,57 +2482,52 @@ No file thesis.acr.
 ] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
+ (build/thesis.loa) (build/thesis.ind)
+No file thesis.gls.
+No file thesis.acr.
+(build/thesis.bbl
+\openout5 = `thesis.mw'.
+
+ [31] (build/thesis.mw)
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+ [32
+
+] (build/thesis.mw)
+\openout5 = `thesis.mw'.
+
 
 bibitemlist
 
-Underfull \hbox (badness 3690) in paragraph at lines 37--40
-[]\T1/lmr/m/n/10.95 (+20) Filaflex 95A TPU Fil-a-ment is com-pat-i-ble with all 3d print-
- []
-
-
-Underfull \hbox (badness 6493) in paragraph at lines 37--40
-\T1/lmr/m/n/10.95 (+20) ers --- recreus.com.  []$\T1/pcr/m/n/10.95 https : / / recreus . com / en / products /
- []
-
-
-Underfull \hbox (badness 7796) in paragraph at lines 42--45
-[]\T1/lmr/m/n/10.95 (+20) TPU Fil-a-ment Fi-laflex 60A, flex-i-ble fil-a-ment for 3d print-
- []
-
-
-Underfull \hbox (badness 5893) in paragraph at lines 42--45
-\T1/lmr/m/n/10.95 (+20) ing --- recreus.com.  []$\T1/pcr/m/n/10.95 https : / / recreus . com / en / products /
+Underfull \hbox (badness 1590) in paragraph at lines 43--47
+[]\T1/lmr/m/n/10.95 (+20) Recreus.  TPU Fil-a-ment Fi-laflex 60A, flex-i-ble fil-a-ment for 3d
  []
 
 \openout5 = `thesis.mw'.
 
-[31] (build/thesis.mw)
+[33] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
 \openout5 = `thesis.mw'.
 
 \openout5 = `thesis.mw'.
-
-
-Underfull \hbox (badness 4084) in paragraph at lines 47--50
-[]\T1/lmr/m/n/10.95 (+20) TPU Fil-a-ment Fi-laflex 82A, Flex-i-ble Fil-a-ment for 3D Print-
- []
-
-
-Underfull \hbox (badness 5893) in paragraph at lines 47--50
-\T1/lmr/m/n/10.95 (+20) ing --- recreus.com.  []$\T1/pcr/m/n/10.95 https : / / recreus . com / en / products /
- []
 
 )
 
 Class memoir Warning: The material used in the headers is too large
 (35.3779pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 191.
+(in both cases you will find help in the memoir manual). on input line 190.
 
 \openout5 = `thesis.mw'.
 
-[32] (build/thesis.mw)
+[34] (build/thesis.mw)
 \openout5 = `thesis.mw'.
 
 
@@ -2672,6 +2674,22 @@ No complaints by nag.
 \openout5 = `thesis.mw'.
 
  (build/chapters/introduction.aux
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
+\openout5 = `thesis.mw'.
+
 \openout5 = `thesis.mw'.
 
 \openout5 = `thesis.mw'.
@@ -2869,7 +2887,7 @@ L3 programming layer <2020/03/25>
 \openout5 = `thesis.out'.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7F1F5DBC60BD23672B6F131ACFCC20E5;1327.
+(rerunfilecheck)             Checksum: DB660572BD590DDF320C790198D1FA32;1595.
 \openout5 = `thesis.idx'.
 
 \openout5 = `thesis.glo'.
@@ -2886,18 +2904,18 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 
  ) 
 Here is how much of TeX's memory you used:
- 49079 strings out of 474222
- 880010 string characters out of 5748733
+ 49146 strings out of 474222
+ 880836 string characters out of 5748733
  2168975 words of memory out of 5000000
- 69234 multiletter control sequences out of 15000+600000
- 663805 words of font info for 196 fonts, out of 8000000 for 9000
+ 69250 multiletter control sequences out of 15000+600000
+ 664264 words of font info for 200 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,16n,131p,2412b,3834s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on build/thesis.pdf (44 pages, 1649310 bytes).
+Output written on build/thesis.pdf (46 pages, 1662070 bytes).
 PDF statistics:
- 594 PDF objects out of 1000 (max. 8388607)
- 501 compressed objects within 6 object streams
- 172 named destinations out of 1000 (max. 500000)
- 50893 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 629 PDF objects out of 1000 (max. 8388607)
+ 534 compressed objects within 6 object streams
+ 181 named destinations out of 1000 (max. 500000)
+ 50925 words of extra memory for PDF output out of 51595 (max. 10000000)
 
