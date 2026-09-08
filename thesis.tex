@@ -9,7 +9,7 @@
 
 % Define convenience functions to use the author name and the thesis title in the PDF document properties.
 \newcommand{\authorname}{Sebastian Bolek} % The author name without titles.
-\newcommand{\thesistitle}{Title of the Thesis} % The title of the thesis. The English version should be used, if it exists.
+\newcommand{\thesistitle}{Towards Realistic Ultrasound Phantoms of Heart Valves} % The title of the thesis. The English version should be used, if it exists.
 
 % Create the XMP metadata file for the creation of PDF/A compatible documents.
 \begin{filecontents*}[overwrite]{\jobname.xmpdata}
@@ -51,6 +51,8 @@
 \usepackage{graphicx}
 \usepackage{float}
 
+\newcommand{\ph}[1]{\textcolor{red}{[#1]}}
+
 \lstset{
     basicstyle=\ttfamily\small,
     breaklines=true,
@@ -81,26 +83,23 @@
 %  {title before name}{name}{title after name}{gender}
 %  where both titles are optional (i.e. can be given as empty brackets {}).
 \setauthor{}{\authorname}{}{male}
-\setadvisor{
-Associate Prof. Dr.in}{Renata Georgia Raidou}{}{female}
+\setadvisor{Associate Prof. Dr.in}{Renata Georgia Raidou}{}{female}
 
 % For bachelor and master theses:
-\setfirstassistant{Pretitle}{Forename Surname}{Posttitle}{male}
-\setsecondassistant{Pretitle}{Forename Surname}{Posttitle}{male}
-\setthirdassistant{Pretitle}{Forename Surname}{Posttitle}{male}
+\setfirstassistant{Dr. techn.}{Alexey Karimov}{}{male}
 
 % For dissertations:
-\setfirstreviewer{Pretitle}{Forename Surname}{Posttitle}{male}
-\setsecondreviewer{Pretitle}{Forename Surname}{Posttitle}{male}
+%\setfirstreviewer{Pretitle}{Forename Surname}{Posttitle}{male}
+%\setsecondreviewer{Pretitle}{Forename Surname}{Posttitle}{male}
 
 % For dissertations at the PhD School and optionally for dissertations:
-\setsecondadvisor{Pretitle}{Forename Surname}{Posttitle}{male} % Comment to remove.
+%\setsecondadvisor{Pretitle}{Forename Surname}{Posttitle}{male} % Comment to remove.
 
 % Required data.
 \setregnumber{12323843}
 \setdate{01}{01}{2001} % Set date with 3 arguments: {day}{month}{year}.
-\settitle{\thesistitle}{Titel der Arbeit} % Sets English and German version of the title (both can be English or German). If your title contains commas, enclose it with additional curvy brackets (i.e., {{your title}}) or define it as a macro as done with \thesistitle.
-\setsubtitle{Optional Subtitle of the Thesis}{Optionaler Untertitel der Arbeit} % Sets English and German version of the subtitle (both can be English or German).
+\settitle{\thesistitle}{Towards Realistic Ultrasound Phantoms of Heart Valves} % Sets English and German version of the title (both can be English or German). If your title contains commas, enclose it with additional curvy brackets (i.e., {{your title}}) or define it as a macro as done with \thesistitle.
+\setsubtitle{Thickness Reconstruction and Manufacturing of Leaflet Structures from Volumetric Ultrasound Data}{Thickness Reconstruction and Manufacturing of Leaflet Structures from Volumetric Ultrasound Data} % Sets English and German version of the subtitle (both can be English or German).
 
 % Select the thesis type: bachelor / master / doctor.
 % Bachelor:
