@@ -1,8 +1,3 @@
-
-
-% Placeholder marker -- fill these in and then delete the \ph wrapper.
-\newcommand{\ph}[1]{\textcolor{red}{[#1]}}
-
 \chapter{Methodology}\label{chap:methodology}
 
 \section{Overview of the approach}\label{sec:overview}
@@ -75,7 +70,7 @@ background voxel, in other words the distance to the closest wall \cite{edMorpho
 of a leaflet, that distance is half the local thickness, so the thickness could
 in principle be read off as two times the distance value. This was set up in
 MeVisLab using an \texttt{OpenVDBLoad} module to load the volume, a
-\texttt{Threshold} module to make the binary mask (values above~0.2 set to~1,
+\texttt{Threshold} module to make the binary mask (values above about 0.2 set to~1,
 everything else to~0), and a \texttt{EuclideanDistanceTransform} module in 3D
 mode to produce the distance field.
 
