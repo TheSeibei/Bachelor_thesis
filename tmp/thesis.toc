@@ -5,10 +5,10 @@
 \babel@toc {english}{}\relax
 \babel@toc {english}{}\relax
 \babel@toc {english}{}\relax
-\contentsline {chapter}{Abstract}{ix}{chapter*.4}%
+\contentsline {chapter}{Abstract}{ix}{chapter*.7}%
 \babel@toc {english}{}\relax
 \babel@toc {english}{}\relax
-\contentsline {chapter}{Contents}{xi}{section*.6}%
+\contentsline {chapter}{Contents}{xi}{chapter*.9}%
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Aim of the Work}{2}{section.1.2}%
@@ -27,9 +27,9 @@
 \contentsline {chapter}{\chapternumberline {4}Results}{21}{chapter.4}%
 \contentsline {chapter}{\chapternumberline {5}Conclusion}{23}{chapter.5}%
 \babel@toc {english}{}\relax
-\contentsline {chapter}{Overview of Generative AI Tools Used}{25}{chapter*.12}%
+\contentsline {chapter}{Overview of Generative AI Tools Used}{25}{chapter*.16}%
 \babel@toc {english}{}\relax
-\contentsline {chapter}{List of Figures}{27}{section*.14}%
-\contentsline {chapter}{List of Tables}{29}{section*.15}%
-\contentsline {chapter}{List of Algorithms}{31}{chapter*.16}%
-\contentsline {chapter}{Bibliography}{33}{chapter*.17}%
+\contentsline {chapter}{List of Figures}{27}{chapter*.18}%
+\contentsline {chapter}{List of Tables}{29}{chapter*.19}%
+\contentsline {chapter}{List of Algorithms}{31}{chapter*.21}%
+\contentsline {chapter}{Bibliography}{33}{chapter*.23}%
