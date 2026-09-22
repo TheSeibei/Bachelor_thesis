@@ -11,9 +11,9 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Planes added to the mesh in Blender to correspond to the bounding box of the volume.}}{10}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Locations of the manual thickness measurements on the leaflets meshes.}}{12}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Top-down view of the leaflet mesh in Blender, showing the interpolated thickness values as a vertex group. The color gradient represents the thickness, with red indicating thicker regions and blue indicating thinner regions.}}{14}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Planes added to the mesh in Blender to correspond to the bounding box of the volume.}}{12}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Locations of the manual thickness measurements on the leaflets meshes.}}{14}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Top-down view of the leaflet mesh in Blender, showing the interpolated thickness values as a vertex group. The color gradient represents the thickness, with red indicating thicker regions and blue indicating thinner regions.}}{16}{figure.caption.13}%
 \addvspace {10pt}
 \addvspace {10pt}
 \babel@toc {english}{}\relax

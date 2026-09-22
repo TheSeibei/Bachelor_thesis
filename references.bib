@@ -93,3 +93,60 @@
 	year = {},
 	note = {[Accessed 27-08-2026]},
 }
+
+@article{BAILLARGEON201438,
+title = {The Living Heart Project: A robust and integrative simulator for human heart function},
+journal = {European Journal of Mechanics - A/Solids},
+volume = {48},
+pages = {38-47},
+year = {2014},
+note = {Frontiers in Finite-Deformation Electromechanics},
+issn = {0997-7538},
+doi = {https://doi.org/10.1016/j.euromechsol.2014.04.001},
+url = {https://www.sciencedirect.com/science/article/pii/S0997753814000564},
+author = {Brian Baillargeon and Nuno Rebelo and David D. Fox and Robert L. Taylor and Ellen Kuhl},
+keywords = {Electro-mechanics, Cardiac mechanics, Abaqus},
+abstract = {The heart is not only our most vital, but also our most complex organ: Precisely controlled by the interplay of electrical and mechanical fields, it consists of four chambers and four valves, which act in concert to regulate its filling, ejection, and overall pump function. While numerous computational models exist to study either the electrical or the mechanical response of its individual chambers, the integrative electro-mechanical response of the whole heart remains poorly understood. Here we present a proof-of-concept simulator for a four-chamber human heart model created from computer topography and magnetic resonance images. We illustrate the governing equations of excitation–contraction coupling and discretize them using a single, unified finite element environment. To illustrate the basic features of our model, we visualize the electrical potential and the mechanical deformation across the human heart throughout its cardiac cycle. To compare our simulation against common metrics of cardiac function, we extract the pressure–volume relationship and show that it agrees well with clinical observations. Our prototype model allows us to explore and understand the key features, physics, and technologies to create an integrative, predictive model of the living human heart. Ultimately, our simulator will open opportunities to probe landscapes of clinical parameters, and guide device design and treatment planning in cardiac diseases such as stenosis, regurgitation, or prolapse of the aortic, pulmonary, tricuspid, or mitral valve.}
+}
+
+@article{FEDELE2023115983,
+title = {A comprehensive and biophysically detailed computational model of the whole human heart electromechanics},
+journal = {Computer Methods in Applied Mechanics and Engineering},
+volume = {410},
+pages = {115983},
+year = {2023},
+issn = {0045-7825},
+doi = {https://doi.org/10.1016/j.cma.2023.115983},
+url = {https://www.sciencedirect.com/science/article/pii/S0045782523001068},
+author = {Marco Fedele and Roberto Piersanti and Francesco Regazzoni and Matteo Salvador and Pasquale Claudio Africa and Michele Bucelli and Alberto Zingaro and Luca Dedé and Alfio Quarteroni},
+keywords = {Multiphysics and multiscale modeling, Whole-heart modeling, Cardiac electromechanics, Computational cardiology, High performance computing, Cardiac digital twin},
+abstract = {While ventricular electromechanics is extensively studied in both physiological and pathological conditions, four-chamber heart models have only been addressed recently; most of these works however neglect atrial contraction. Indeed, as atria are characterized by a complex anatomy and a physiology that is strongly influenced by the ventricular function, developing computational models able to capture the physiological atrial function and atrioventricular interaction is very challenging. In this paper, we propose a biophysically detailed electromechanical model of the whole human heart that considers both atrial and ventricular contraction. Our model includes: (i) an anatomically accurate whole-heart geometry; (ii) a comprehensive myocardial fiber architecture; (iii) a biophysically detailed microscale model for the active force generation; (iv) a 0D closed-loop model of the circulatory system, fully-coupled with the mechanical model of the heart; (v) the fundamental interactions among the different core models, such as the mechano-electric feedback or the fibers-stretch and fibers-stretch-rate feedbacks; (vi) specific constitutive laws and model parameters for each cardiac region. Concerning the numerical discretization, we propose an efficient segregated-intergrid-staggered scheme that includes a computationally efficient strategy to handle the non-conductive regions. We also propose extending recent stabilization techniques – regarding the circulation and the fibers-stretch-rate feedback – to the whole heart, demonstrating their cruciality for obtaining a stable formulation in a four-chamber scenario. We are able to reproduce the healthy cardiac function for all the heart chambers, in terms of pressure–volume loops, time evolution of pressures, volumes and fluxes, and three-dimensional cardiac deformation, with volumetric indexes within reference ranges for cardiovascular magnetic resonance. We also show the importance of considering atrial contraction, fibers-stretch-rate feedback and the proposed stabilization techniques, by comparing the results obtained with and without these features in the model. In particular, we show that the fibers-stretch-rate feedback, often neglected due to the numerical challenges that it entails, plays a fundamental role in the regulation of the blood flux ejected by ventricles. The proposed model represents the state-of-the-art electromechanical model of the iHEART ERC project – an Integrated Heart Model for the Simulation of the Cardiac Function – and is a fundamental step toward the building of physics-based digital twins of the human heart.}
+}
+
+@article{SUGIURA2012380,
+title = {Multi-scale simulations of cardiac electrophysiology and mechanics using the University of Tokyo heart simulator},
+journal = {Progress in Biophysics and Molecular Biology},
+volume = {110},
+number = {2},
+pages = {380-389},
+year = {2012},
+note = {SI: Beating Heart},
+issn = {0079-6107},
+doi = {https://doi.org/10.1016/j.pbiomolbio.2012.07.001},
+url = {https://www.sciencedirect.com/science/article/pii/S0079610712000466},
+author = {Seiryo Sugiura and Takumi Washio and Asuka Hatano and Junichi Okada and Hiroshi Watanabe and Toshiaki Hisada},
+keywords = {Heart model, Computer simulation, Electrophysiology, Cooperativity, Fluid-structure interaction, Cardiac metabolism},
+abstract = {The importance and need for an integrative mathematical modeling approach in the biological and medical fields is currently well recognized. Such an approach is crucial in understanding the complexity of hierarchical biological systems increasingly revealed by active researches in molecular and cellular biology. Particularly in cardiac functioning, modeling must cover such diverse phenomena as solid mechanics, fluid dynamics, electricity and biochemistry. Recent advancements in computational science and the development of high-performance computers have enabled the creation of multi-scale, multi-physics simulation heart models using the finite element method. Although whole heart or ventricular models of electrophysiology involving electro-mechanics with or without blood flow dynamics have been reported, to our knowledge no single model has yet succeeded in completely reproducing the behavior of the heart from the subcellular to whole organ levels. In this article, we present a brief methodology-focused review on some of the essential components for multi-scale, multi-physics heart modeling. A perspective of heart modeling in the era of high performance computing is also presented.}
+}
+
+@mastersthesis{lee2026ventricular,
+  author  = {Lee, Junheon},
+  title   = {Design and Development of a Bench-Top Left Ventricular
+             Simulator for Reproducing Physiological Pressure--Volume Dynamics},
+  school  = {Seoul National University},
+  type    = {Master's thesis},
+  address = {Seoul, South Korea},
+  year    = {2026},
+  month   = feb,
+  note    = {Available at: \url{https://hdl.handle.net/10371/232758}}
+}

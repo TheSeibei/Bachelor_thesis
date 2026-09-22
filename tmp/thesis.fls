@@ -1167,6 +1167,16 @@ OUTPUT tmp/thesis.mw
 INPUT tmp/thesis.mw
 OUTPUT tmp/thesis.mw
 OUTPUT tmp/thesis.mw
+INPUT /opt/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT tmp/thesis.mw
+OUTPUT tmp/thesis.mw
+OUTPUT tmp/thesis.mw
+INPUT tmp/thesis.mw
+OUTPUT tmp/thesis.mw
+OUTPUT tmp/thesis.mw
+INPUT tmp/thesis.mw
+OUTPUT tmp/thesis.mw
+OUTPUT tmp/thesis.mw
 INPUT tmp/thesis.mw
 OUTPUT tmp/thesis.mw
 OUTPUT tmp/thesis.mw
@@ -1225,7 +1235,6 @@ INPUT ./graphics/Valve_measurments.png
 INPUT ./graphics/Valve_measurments.png
 INPUT ./graphics/Valve_measurments.png
 OUTPUT tmp/thesis.mw
-INPUT /opt/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT tmp/thesis.mw
 OUTPUT tmp/thesis.mw
 OUTPUT tmp/thesis.mw
@@ -1518,6 +1527,9 @@ OUTPUT tmp/thesis.mw
 INPUT tmp/chapters/related_work.aux
 INPUT tmp/chapters/related_work.aux
 INPUT tmp/chapters/related_work.aux
+OUTPUT tmp/thesis.mw
+INPUT tmp/thesis.mw
+OUTPUT tmp/thesis.mw
 OUTPUT tmp/thesis.mw
 INPUT tmp/thesis.mw
 OUTPUT tmp/thesis.mw
