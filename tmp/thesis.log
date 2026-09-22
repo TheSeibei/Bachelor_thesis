@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.19)  22 SEP 2026 12:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.19)  22 SEP 2026 14:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3183,6 +3183,9 @@ Chapter 2.
 
 \openout5 = `thesis.mw'.
 
+
+Underfull \vbox (badness 4024) has occurred while \output is active []
+
 \openout5 = `thesis.mw'.
 
  [6] (tmp/thesis.mw)
@@ -3252,7 +3255,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 \openout5 = `thesis.mw'.
 
-<graphics/Blender_planes.png, id=281, 811.53188pt x 557.08125pt>
+<graphics/Blender_planes.png, id=285, 811.53188pt x 557.08125pt>
 File: graphics/Blender_planes.png Graphic file (type png)
 <use graphics/Blender_planes.png>
 Package pdftex.def Info: graphics/Blender_planes.png  used on input line 135.
@@ -3265,7 +3268,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [12 <./graphics/Blender_planes.png>] (tmp/thesis.mw)
 \openout5 = `thesis.mw'.
 
-<graphics/Valve_measurments.png, id=293, 659.46375pt x 426.84468pt>
+<graphics/Valve_measurments.png, id=297, 659.46375pt x 426.84468pt>
 File: graphics/Valve_measurments.png Graphic file (type png)
 <use graphics/Valve_measurments.png>
 Package pdftex.def Info: graphics/Valve_measurments.png  used on input line 183.
@@ -3301,7 +3304,7 @@ LaTeX Warning: Float too large for page by 126.56711pt on input line 271.
  [15{/opt/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] (tmp/thesis.mw)
 \openout5 = `thesis.mw'.
 
-<graphics/Blender_weight_paint_topdown_view.jpg, id=321, 1579.9025pt x 889.3225pt>
+<graphics/Blender_weight_paint_topdown_view.jpg, id=325, 1579.9025pt x 889.3225pt>
 File: graphics/Blender_weight_paint_topdown_view.jpg Graphic file (type jpg)
 <use graphics/Blender_weight_paint_topdown_view.jpg>
 Package pdftex.def Info: graphics/Blender_weight_paint_topdown_view.jpg  used on input line 298.
@@ -3502,7 +3505,7 @@ bibitemlist
 \openout5 = `thesis.mw'.
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 60--64
+Underfull \hbox (badness 1590) in paragraph at lines 65--69
 []\T1/lmr/m/n/10.95 (+20) Recreus.  TPU Fil-a-ment Fi-laflex 60A, flex-i-ble fil-a-ment for 3d
  []
 
@@ -3896,18 +3899,18 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 
  ) 
 Here is how much of TeX's memory you used:
- 50744 strings out of 467099
- 948732 string characters out of 5383402
- 1873542 words of memory out of 5000000
- 77925 multiletter control sequences out of 15000+600000
+ 50748 strings out of 467099
+ 948830 string characters out of 5383402
+ 1873652 words of memory out of 5000000
+ 77927 multiletter control sequences out of 15000+600000
  734129 words of font info for 206 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,16n,131p,2540b,3847s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr17.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr7.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri10.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmss12.pfb></opt/texlive/2026/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></opt/texlive/2026/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></opt/texlive/2026/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></opt/texlive/2026/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></opt/texlive/2026/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on tmp/thesis.pdf (48 pages, 1672996 bytes).
+Output written on tmp/thesis.pdf (48 pages, 1673967 bytes).
 PDF statistics:
- 664 PDF objects out of 1000 (max. 8388607)
- 567 compressed objects within 6 object streams
- 194 named destinations out of 1000 (max. 500000)
+ 668 PDF objects out of 1000 (max. 8388607)
+ 571 compressed objects within 6 object streams
+ 196 named destinations out of 1000 (max. 500000)
  50933 words of extra memory for PDF output out of 51595 (max. 10000000)
 

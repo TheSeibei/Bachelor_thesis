@@ -13,6 +13,11 @@ Brian Baillargeon, Nuno Rebelo, David~D. Fox, Robert~L. Taylor, and Ellen Kuhl.
 \newblock {\em European Journal of Mechanics - A/Solids}, 48:38--47, 2014.
 \newblock Frontiers in Finite-Deformation Electromechanics.
 
+\bibitem[ESP{\etalchar{+}}19]{engelhardt2019flexible}
+Sandy Engelhardt, Simon Sauerzapf, Bernhard Preim, Matthias Karck, Ivo Wolf, and Raffaele De~Simone.
+\newblock Flexible and comprehensive patient-specific mitral valve silicone models with chordae tendineae made from 3d-printable molds.
+\newblock {\em International journal of computer assisted radiology and surgery}, 14(7):1177--1186, 2019.
+
 \bibitem[FBKC{\etalchar{+}}12]{fedorov20123d}
 Andriy Fedorov, Reinhard Beichel, Jayashree Kalpathy-Cramer, Julien Finet, Jean-Christophe Fillion-Robin, Sonia Pujol, Christian Bauer, Dominique Jennings, Fiona Fennessy, Milan Sonka, et~al.
 \newblock 3d slicer as an image computing platform for the quantitative imaging network.
@@ -72,6 +77,11 @@ Recreus.
 Donald Shepard.
 \newblock A two-dimensional interpolation function for irregularly-spaced data.
 \newblock In {\em Proceedings of the 1968 23rd ACM National Conference}, pages 517--524. Association for Computing Machinery, 1968.
+
+\bibitem[SPF{\etalchar{+}}24]{sobbi2024development}
+Shokoufeh~Cheheili Sobbi, Milou Pauli, Marvin Fillet, Jos~G Maessen, and Peyman~Sardari Nia.
+\newblock The development of direct 3-dimensional printing of patient-specific mitral valve in soft material for simulation and procedural planning.
+\newblock {\em JTCVS techniques}, 27:104--111, 2024.
 
 \bibitem[SWH{\etalchar{+}}12]{SUGIURA2012380}
 Seiryo Sugiura, Takumi Washio, Asuka Hatano, Junichi Okada, Hiroshi Watanabe, and Toshiaki Hisada.
