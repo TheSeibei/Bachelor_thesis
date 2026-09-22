@@ -1,8 +1,17 @@
+% ----- PLAN -----
+
+%Computational cardiac simulations ✅
+%Physical cardiac simulators and flow-loop systems
+%Patient-specific cardiac and valve phantoms
+%Reconstruction and modelling of valve-leaflet geometry and thickness
+%Manufacturing methods and ultrasound-compatible materials
+%Summary of the research gap%
+
+
 \chapter{Related Work}\label{chap:related_work}
 Research related to the present work spans several domains, as the development of a realistic cardiovascular phantom involves anatomical reconstruction, fluid dynamics, physical simulation, and manufacturing. From a fluid-dynamic perspective, it is necessary to first consider what can already be achieved using purely computational simulations. Such models make it possible to study cardiac motion, blood flow, and the interaction between different parts of the cardiovascular system under controlled conditions \cite{BAILLARGEON201438,SUGIURA2012380,FEDELE2023115983}. At the same time, their results depend on assumptions and simplifications concerning the geometry, material properties, and physiological behaviour of the modelled structures.
 
 In contrast, physical cardiovascular simulators and phantoms provide an experimental environment in which blood flow, imaging methods, and medical devices can be examined directly. This raises the question of which advantages a physical reconstruction offers compared with a purely computational model and how such a reconstruction can be adapted to the anatomy of an individual patient. Patient-specific models require suitable methods for extracting anatomical information from medical image data and converting it into a manufacturable geometry. Several approaches for producing such prototypes have already been presented, including additive manufacturing and mould-based fabrication techniques \cite{sobbi2024development,engelhardt2019flexible}. This chapter therefore reviews computational cardiac simulations, physical cardiovascular simulators, patient-specific phantoms, and the manufacturing methods used to produce them. Particular attention is given to approaches relevant to the reconstruction and fabrication of anatomically accurate heart-valve structures.
-
 
 \section{Computational Cardiovascular System Simulation}\label{sec:related_work_computational}
 Using computational models to simulate the cardiovascular system can be used to study how the heart performs under healthy as well as diseased conditions. The benefit of adapting these methods instead of reverting to experiments involving patients or animals is for one the ethical aspect of completely eliminating the need for living subjects but also, when not relying on artificial physical replicas, a way to study the cardiovascular system in a highly controllable and reproducible environment. The level of detail can hereby vary widely. While some models shift their attention to the subcellular level, others describe the movement of the ventricles, the flow of blood, or even the behaviour of the entire heart. Combining these different levels is challanging because the electrical activation of the heart, the contraction of the muscles, and the resulting blood flow all influence each other. The University of Tokyo heart simulator is an example of an approach that combines several of these processes within one computational framework. It connects models of electrical activity, muscle contraction, cardiac deformation, and blood flow. This allows the relationship between processes at the cellular level and the resulting behaviour of the heart to be investigated. However, adding more physiological detail also increases the computational effort and introduces more parameters that must be estimated or validated using experimental or clinical data \cite{SUGIURA2012380}.
@@ -14,5 +23,6 @@ Fedele et al.\ presented a more recent whole-heart model that includes additiona
 Therefore computational models are useful for studying the interaction between electrical activation, cardiac contraction, and blood flow. They can also be used to compare different physiological conditions and investigate processes that are difficult to observe directly. Nevertheless, their results depend on the assumptions, input data, and parameter values used to construct the model. In addition, a computational model cannot replace every type of physical experiment. Physical cardiac simulators and phantoms provide a complementary approach by creating a tangible model that can be used for experimental measurements and medical-device testing \cite{lee2026ventricular}. This makes physical phantoms particularly relevant when the geometry and physical properties of a specific anatomical structure, such as the mitral valve of a singe patient, is the main subject of investigation. 
 
 \section{Physical Cardiovascular Simulators and Phantoms}\label{sec:related_work_physical}
+
 
 
