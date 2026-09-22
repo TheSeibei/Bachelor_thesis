@@ -1182,6 +1182,9 @@ OUTPUT tmp/thesis.mw
 OUTPUT tmp/thesis.mw
 INPUT tmp/thesis.mw
 OUTPUT tmp/thesis.mw
+OUTPUT tmp/thesis.mw
+INPUT tmp/thesis.mw
+OUTPUT tmp/thesis.mw
 INPUT ./chapters/methodology.tex
 INPUT ./chapters/methodology.tex
 OUTPUT tmp/chapters/methodology.aux
@@ -1527,6 +1530,9 @@ OUTPUT tmp/thesis.mw
 INPUT tmp/chapters/related_work.aux
 INPUT tmp/chapters/related_work.aux
 INPUT tmp/chapters/related_work.aux
+OUTPUT tmp/thesis.mw
+INPUT tmp/thesis.mw
+OUTPUT tmp/thesis.mw
 OUTPUT tmp/thesis.mw
 INPUT tmp/thesis.mw
 OUTPUT tmp/thesis.mw
