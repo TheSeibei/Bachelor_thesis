@@ -1243,6 +1243,13 @@ OUTPUT tmp/thesis.mw
 OUTPUT tmp/thesis.mw
 INPUT tmp/thesis.mw
 OUTPUT tmp/thesis.mw
+INPUT /opt/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
+INPUT /opt/texlive/2026/texmf-dist/fonts/tfm/public/lm/rm-lmr5.tfm
+INPUT /opt/texlive/2026/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
+INPUT /opt/texlive/2026/texmf-dist/fonts/tfm/public/lm/lmsy5.tfm
+INPUT /opt/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /opt/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /opt/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmbx8.tfm
 OUTPUT tmp/thesis.mw
 INPUT tmp/thesis.mw
 OUTPUT tmp/thesis.mw
@@ -1683,8 +1690,9 @@ OUTPUT tmp/thesis.lot
 OUTPUT tmp/thesis.loa
 INPUT /opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
+INPUT /opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx8.pfb
 INPUT /opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
-INPUT /opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
+INPUT /opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
 INPUT /opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT /opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr17.pfb
 INPUT /opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr7.pfb

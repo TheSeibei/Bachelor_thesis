@@ -1,4 +1,5 @@
 \chapter{Methodology}\label{chap:methodology}
+\raggedbottom
 
 \section{Overview of the approach}\label{sec:overview}
 
@@ -178,7 +179,7 @@ to take cleanly. In between these two problem regions the data is clearer, so
 most of the measurements were taken there, where the tissue band is well defined
 and the intensity rule can be applied with confidence. The resulting locations where measurements were taken are shown in Figure~\ref{fig:Valve_measurments} although the numbers in the figure do not correspond to the actual indexing of the measurements in Table~\ref{tab:measurements}. \textit{It should be mentioned that the Aortic valve is shown as well in the figure and it was within the scope of the project to produce a model of the Aortic valve too, but due to the poor quality of the ultrasound data around it there were nearly any areas where measurements could be taken. Therefore, the Aortic valve was not included in the final model.}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth]{graphics/Valve_measurments.png}
   \caption{Locations of the manual thickness measurements on the leaflets meshes.}
@@ -211,6 +212,9 @@ The measured points can be recorded as follows in Table~\ref{tab:measurements}, 
 
 \begin{table}[htbp]
   \centering
+  \scriptsize
+  \setlength{\tabcolsep}{10pt}
+  \renewcommand{\arraystretch}{1.00}
   \begin{tabular}{c l c c c}
     \toprule
     Point & Location & Leaflet & Coordinates $(X, Y, Z)$ [mm] & Thickness [mm] \\
@@ -293,7 +297,7 @@ checked with so little data. IDW, in contrast, makes no assumption about an
 underlying function, works with irregularly placed values, and is simple enough
 to explain and defend in full. For the power parameter, a value of two was used. This gives greater weight to nearby measurements while still providing a smooth transition between the measured points. The resulting assignment of thickness values to the mesh is shown in Figure~\ref{fig:blender_weight_paint}. The outer brim of the leaflet is shown in red as it has the maximum thickness, while the centre of the leaflet, the thinnest part, is shown here in green which is roughly half of the maximum thickness and therefore not in blue, as blue would map to a thickness of zero. The transition between the two is smooth, as expected from the interpolation.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth]{graphics/Blender_weight_paint_topdown_view.jpg}
   \caption{Top-down view of the leaflet mesh in Blender, showing the interpolated thickness values as a vertex group. The color gradient represents the thickness, with red indicating thicker regions and blue indicating thinner regions.}

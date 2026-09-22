@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.19)  22 SEP 2026 15:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.19)  22 SEP 2026 15:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3233,7 +3233,7 @@ Chapter 3.
 
 \openout5 = `thesis.mw'.
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 72.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 73.
  (/opt/texlive/2026/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
@@ -3262,11 +3262,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 <graphics/Blender_planes.png, id=290, 811.53188pt x 557.08125pt>
 File: graphics/Blender_planes.png Graphic file (type png)
 <use graphics/Blender_planes.png>
-Package pdftex.def Info: graphics/Blender_planes.png  used on input line 135.
+Package pdftex.def Info: graphics/Blender_planes.png  used on input line 136.
 (pdftex.def)             Requested size: 313.69025pt x 215.33972pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 \openout5 = `thesis.mw'.
 
  [12 <./graphics/Blender_planes.png>] (tmp/thesis.mw)
@@ -3275,28 +3272,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <graphics/Valve_measurments.png, id=303, 659.46375pt x 426.84468pt>
 File: graphics/Valve_measurments.png Graphic file (type png)
 <use graphics/Valve_measurments.png>
-Package pdftex.def Info: graphics/Valve_measurments.png  used on input line 183.
+Package pdftex.def Info: graphics/Valve_measurments.png  used on input line 184.
 (pdftex.def)             Requested size: 313.69025pt x 203.04642pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 \openout5 = `thesis.mw'.
 
-[13] (tmp/thesis.mw)
+ [13] (tmp/thesis.mw)
 \openout5 = `thesis.mw'.
 
 \openout5 = `thesis.mw'.
 
 \openout5 = `thesis.mw'.
 
-
-
-LaTeX Warning: Float too large for page by 126.56711pt on input line 271.
-
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 218.
 \openout5 = `thesis.mw'.
 
-[14 <./graphics/Valve_measurments.png>] (tmp/thesis.mw)
+ [14 <./graphics/Valve_measurments.png>] (tmp/thesis.mw)
 \openout5 = `thesis.mw'.
 
 \openout5 = `thesis.mw'.
@@ -3308,10 +3299,10 @@ LaTeX Warning: Float too large for page by 126.56711pt on input line 271.
  [15{/opt/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] (tmp/thesis.mw)
 \openout5 = `thesis.mw'.
 
-<graphics/Blender_weight_paint_topdown_view.jpg, id=330, 1579.9025pt x 889.3225pt>
+<graphics/Blender_weight_paint_topdown_view.jpg, id=331, 1579.9025pt x 889.3225pt>
 File: graphics/Blender_weight_paint_topdown_view.jpg Graphic file (type jpg)
 <use graphics/Blender_weight_paint_topdown_view.jpg>
-Package pdftex.def Info: graphics/Blender_weight_paint_topdown_view.jpg  used on input line 298.
+Package pdftex.def Info: graphics/Blender_weight_paint_topdown_view.jpg  used on input line 302.
 (pdftex.def)             Requested size: 313.69025pt x 176.57219pt.
  (./chapters/files/blender_script.tex (/opt/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
@@ -3324,9 +3315,6 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
 
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 29.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 \openout5 = `thesis.mw'.
 
  [17] (tmp/thesis.mw)
@@ -3351,7 +3339,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout5 = `thesis.mw'.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 369.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 373.
  (/opt/texlive/2026/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -3907,18 +3895,18 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 
  ) 
 Here is how much of TeX's memory you used:
- 50760 strings out of 467099
- 948982 string characters out of 5383402
- 1874338 words of memory out of 5000000
- 77930 multiletter control sequences out of 15000+600000
- 734259 words of font info for 207 fonts, out of 8000000 for 9000
+ 50793 strings out of 467099
+ 949414 string characters out of 5383402
+ 1874363 words of memory out of 5000000
+ 77946 multiletter control sequences out of 15000+600000
+ 744727 words of font info for 220 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,16n,131p,2540b,3847s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr17.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr7.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri10.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmss12.pfb></opt/texlive/2026/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></opt/texlive/2026/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></opt/texlive/2026/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></opt/texlive/2026/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></opt/texlive/2026/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on tmp/thesis.pdf (48 pages, 1674256 bytes).
+</opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr17.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr7.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri10.pfb></opt/texlive/2026/texmf-dist/fonts/type1/public/lm/lmss12.pfb></opt/texlive/2026/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></opt/texlive/2026/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></opt/texlive/2026/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></opt/texlive/2026/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></opt/texlive/2026/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on tmp/thesis.pdf (48 pages, 1723357 bytes).
 PDF statistics:
- 673 PDF objects out of 1000 (max. 8388607)
- 576 compressed objects within 6 object streams
+ 678 PDF objects out of 1000 (max. 8388607)
+ 579 compressed objects within 6 object streams
  197 named destinations out of 1000 (max. 500000)
- 50941 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 57085 words of extra memory for PDF output out of 61914 (max. 10000000)
 
