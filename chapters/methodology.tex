@@ -177,12 +177,12 @@ perpendicular measurements are hard to obtain. The second is the thin outer brim
 of the leaflet, at the edge of the mesh, where measurements were also difficult
 to take cleanly. In between these two problem regions the data is clearer, so
 most of the measurements were taken there, where the tissue band is well defined
-and the intensity rule can be applied with confidence. The resulting locations where measurements were taken are shown in Figure~\ref{fig:Valve_measurments} although the numbers in the figure do not correspond to the actual indexing of the measurements in Table~\ref{tab:measurements}. \textit{It should be mentioned that the Aortic valve is shown as well in the figure and it was within the scope of the project to produce a model of the Aortic valve too, but due to the poor quality of the ultrasound data around it there were nearly any areas where measurements could be taken. Therefore, the Aortic valve was not included in the final model.}
+and the intensity rule can be applied with confidence. The resulting locations where measurements were taken are shown in Figure~\ref{fig:Valve_measurments} although the numbers in the figure do not correspond to the actual indexing of the measurements in Table~\ref{tab:measurements}. It should be mentioned that the aortic valve is shown as well in the figure and it was within the scope of the project to produce a model of the aortic valve too, but due to the poor quality of the ultrasound data around it there were nearly any areas where measurements could be taken. Therefore, the aortic valve was not included in the final model.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth]{graphics/Valve_measurments.png}
-  \caption{Locations of the manual thickness measurements on the leaflets meshes.}
+  \caption{Valve mesh with volume and locations of the manual thickness measurements on the leaflets meshes from 3D-Slicer. Mesh depicted in yellow, ultrasound volume in blue/turquoise and measurement points in red}
   \label{fig:Valve_measurments}
 \end{figure}
 
@@ -378,4 +378,4 @@ This resulted in a print using the desired material that appeared intact at firs
 
 However, there were concerns that the TPU might not adhere sufficiently to the PVA supports during printing, potentially resulting in print defects in the model. Therefore, PLA supports were initially used instead. Ultimately, this proved to be the right choice for this particular application, as the PLA and TPU adhered strongly enough to ensure a successful print while still allowing the valve to be easily peeled away from the support material after completion. As hoped, this resulted in a perfectly smooth underside. Furthermore, the gap within the valve opening was preserved.
 
-The only remaining step was to manually remove any excess stands of filament and create a small incision in the opening using a scalpel. This was necessary because 3D printing small openings generally leaves behind thin strands of filament, a phenomenon known as \textit{stringing}, which can cause the opening to become partially sealed. The completed prototype, including the support structures, was handed over to Siemens Healthineers, where the valve is currently undergoing further testing. \todo{change if Siemens gets back with results}
+The only remaining step was to manually remove any excess stands of filament and create a small incision in the opening using a scalpel. This was necessary because 3D printing small openings generally leaves behind thin strands of filament, a phenomenon known as \emph{stringing}, which can cause the opening to become partially sealed. The completed prototype, including the support structures, was handed over to Siemens Healthineers, where the valve is currently undergoing further testing. \todo{change if Siemens gets back with results}
