@@ -102,7 +102,7 @@ this data.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.75\linewidth]{graphics/speckles.jpg}
-  \caption{Thresholded ultrasound slices illustrating segmentation artifacts in the valvular material. (A) Discontinuity of the segmented membrane near the valve edge. (B) Substantial noise and spurious segmentation within the central region. Regions of interest are highlighted by red boxes.}
+  \caption{Thresholded ultrasound slices illustrating segmentation artifacts in the valvular material. (A) Discontinuity of the segmented membrane near the valve edge. (B) Substantial noise and false segmentation within the central region. Regions of interest are highlighted by red boxes.}
   \label{fig:speckles}
 \end{figure}
 
@@ -124,7 +124,7 @@ measuring was to align the two entities.
 
 \section{Aligning the Mesh and the Volume}\label{sec:align}
 
-The mesh and the volume did not overlap when they were first loaded together in both MeVisLab and 3D Slicer - only Blender could directly open the .usda file which preserved both coordinate systems in the correct orientation. In MeVisLab and 3D Slicer they sat in different coordinate systems. This alignment matters here because, as
+The mesh and the volume did not overlap when they were first loaded together in both MeVisLab and 3D Slicer --- only Blender could directly open the .usda file which preserved both coordinate systems in the correct orientation. In MeVisLab and 3D Slicer they sat in different coordinate systems. This alignment matters here because, as
 described in Section~\ref{sec:measure}, the thickness is measured along lines
 perpendicular to the mesh surface. If the mesh is in the wrong place, those
 perpendicular lines start in the wrong place, and the measurement is meaningless.
@@ -169,7 +169,7 @@ repeatable.
 I chose not to judge the leaflet edges purely by eye, and I also chose not to
 threshold the whole volume, for the reasons given in
 Section~\ref{sec:recover}. Instead, I used a local intensity criterion, applied
-only at the spot being measured. As an acceptable tradeoff, considering the available data and its quality, I chose to interpret everything from an intensity of ~0.2 and upward as actual tissue as this offered a decent amount of area to take measurements from but would also not include too much tissue which clearly was not part of the mitral valve. Each measurement line was placed perpendicular to the mesh surface at
+only at the spot being measured. As an acceptable tradeoff, considering the available data and its quality, I selected to interpret everything from an intensity of ~0.2 and upward as actual tissue as this offered a decent amount of area to take measurements from but would also not include too much tissue which clearly was not part of the mitral valve. Each measurement line was placed perpendicular to the mesh surface at
 the chosen location. Along that line, the measurement starts where the intensity
 first rises to~0.2 and ends where it falls back on or below~0.2, and the thickness is
 the length of that span. This is the same kind of intensity criterion that the
