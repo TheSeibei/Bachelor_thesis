@@ -4,10 +4,9 @@
 \section{Overview of the Approach}\label{sec:overview}
 
 The goal of this work is a 3D-printed prototype of a thickness-accurate 3D model of the valve
-leaflets that can serve as the basis for an ultrasound phantom. The starting
-point is two things: a volumetric ultrasound scan of the valve, stored as a VDB
+leaflets that can serve as the basis for an ultrasound phantom. We start with a volumetric ultrasound scan of the valve, stored as a VDB
 volume, and a surface mesh of the leaflets. The problem is that these two do not
-directly provide what is needed. The scan contains the full valve, but only as a
+provide all parameters that are necessary for the production for a full tangle model. The scan contains the full valve, but only as a
 grid of grayscale values with no explicit geometry. The mesh has clean geometry,
 but it is only a single surface with no thickness, so on its own it cannot be
 turned into a physical object with a wall.
@@ -18,9 +17,9 @@ thickness from the volume, to transfer that thickness to the mesh, and to turn
 the single surface into a closed solid.
 
 I did not carry out all of this in a single program, because no single tool does
-every part well. Instead the work is split across three: MeVisLab is used to load
-and prepare the volume, 3D~Slicer is used to align the mesh with the volume and
-to take the thickness measurements, and Blender is used to interpolate the
+every part well. Instead the work is split across three: MeVisLab \cite{mevislab} is used to load
+and prepare the volume, 3D~Slicer \cite{fedorov20123d} is used to align the mesh with the volume and
+to take the thickness measurements, and Blender \cite{blender} is used to interpolate the
 measurements over the mesh and build the solid. Some smaller steps, mainly the
 interpolation, were done with short Python scripts using the numpy library. The following sections describe each part, and, more importantly, why
 each choice was made and not one of the other possible ones.
@@ -53,8 +52,7 @@ a leaflet was examined. If the mesh were a midsurface, it would run through the
 middle of the bright leaflet band. In this case the surface sits on one side of
 the band, which means it is the underside (a boundary surface), not the middle.
 This has a direct consequence for the later steps: the full measured thickness
-has to be added on one side, and there is no division by two. I come back to this
-in Section~\ref{sec:solid}.
+has to be added on one side, and there is no division by two.
 
 \section{Modality of Thickness Recovery}\label{sec:recover}
 
@@ -63,53 +61,66 @@ grayscale volume. There were two reasonable ways to do this, and it is worth
 explaining both, because the reason for choosing the second one is part of the
 method.
 
-The first idea was to compute the thickness fully automatically with a distance
-transform. The steps would be: turn the volume into a binary mask, where material
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\linewidth]{graphics/distance_field_workflow.jpg}
+  \caption{(A) Original ultrasound image. (B) Ultrasound image with a threshold set at >0.2. (C) Ultrasound image after the Euclidean Distance Transform. (D) Mesh mapped onto the Euclidean Distance Transformed image --- all images captured from the identical slice}
+  \label{fig:EDT}
+\end{figure}
+
+The initial concept for the pipeline was to compute the thickness fully automatically with a distance
+transform. The steps would be as depicted in Figure~\ref{fig:EDT}: turn the unaltered volume (A) into a binary mask (B), where material
 is~1 and everything else is~0, and then run a distance transform on that mask. A
 distance transform gives, for every inside voxel, the distance to the nearest
-background voxel, in other words the distance to the closest wall \cite{edMorphologyDistance}. In the middle
+background voxel, in other words the distance to the closest wall resulting in image (C) \cite{edMorphologyDistance}. In the middle
 of a leaflet, that distance is half the local thickness, so the thickness could
 in principle be read off as two times the distance value. This was set up in
 MeVisLab using an \texttt{OpenVDBLoad} module to load the volume, a
 \texttt{Threshold} module to make the binary mask (values above about 0.2 set to~1,
 everything else to~0), and a \texttt{EuclideanDistanceTransform} module in 3D
-mode to produce the distance field.
+mode to produce the distance field. As we can see in image (D) the mesh is not a midsurface as it is positioned on the underside.
 
 The reason this idea is attractive is that it is automatic and dense: it would
 give a thickness value everywhere on the leaflet at once, without any manual
-work. In the end, though, I decided not to use it, for a few reasons that add up.
+work. Ultimately I abandoned this method, for a few reasons that add up.
 
 First, there is a practical problem with reading the result. To get thickness at
 the mesh, the distance field has to be sampled exactly at the positions of the
-mesh points. MeVisLab does not have a simple, ready-made module for ``sample this
-volume at the vertices of that mesh'', and the scripting module has no image
+mesh points. MeVisLab does not provide a simple, ready-made module for ``sampling from
+volume X at the vertices of mesh Y'', and the scripting module has no image
 input or output that would let this be done directly inside the network. It would
 mean exporting the distance field and doing the sampling externally in Python,
 which is possible but adds another step that would itself have to be checked.
 
 Second, the simple ``two times the distance'' rule only holds if the mesh is a
-midsurface. As shown in Section~\ref{sec:input}, the mesh here is the underside.
+midsurface. As shown in Section~\ref{sec:input} and depicted in Figure~\ref{fig:EDT} (D), the mesh here is the underside.
 For a boundary surface the correct value would be the distance from the underside
 across to the top wall, which is not what a symmetric distance transform gives
 without extra work. So the clean version of the method does not actually match
 this data.
 
-Third, and most importantly, the whole result depends on one global threshold
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\linewidth]{graphics/speckles.jpg}
+  \caption{Thresholded ultrasound slices illustrating segmentation artifacts in the valvular material. (A) Discontinuity of the segmented membrane near the valve edge. (B) Substantial noise and spurious segmentation within the central region. Regions of interest are highlighted by red boxes.}
+  \label{fig:speckles}
+\end{figure}
+
+Third, the whole result depends on one global threshold
 that separates material from background, and the volume is not clean enough for
-that. The Ultrasound volume has speckled and blurred edges, and this scan has an
-especially noisy region in the centre of the valve. A single fixed threshold
-applied to the whole volume would turn that noise into false geometry exactly
+that. Figure~\ref{fig:speckles} helps to illustrates the issue. Image (A) shows the interrupted tissue of the valve. The Ultrasound volume has speckled and blurred edges, and this scan has an
+especially noisy region in the centre of the valve as can be seen in image (B). The highlighted region marks the area where the valve is meant to be but due to severe noise it cannot be identified. A single fixed threshold
+applied to the whole volume turns that noise into false geometry exactly
 where the data is worst, and there would be no easy way to notice that it had
-happened. A dense automatic field of numbers is only useful if it can be trusted,
-and here it could not be.
+happened. Changing the threshold does not solve the issue since lowering it would result in perhaps more continuous regions but also artifacts not actually within the leaflets therefore resulting in larger thickness readings than the true value. Increasing the threshold results in even less surface area to measure from. Resolving these difficulties with preprocessing and interpolation would be possible to some extent but again add several steps to the entire pipeline.
 
 Taken together, these points describe a method that would produce a lot of
-numbers that could not be properly checked. For a bachelor's thesis, a dense
+numbers that could not be properly checked. For the extent of this thesis, a dense
 automatic result that cannot be verified is worse than a smaller set of values
-that can. This is the reason I chose to measure the thickness by hand at a
+that can. This is the reason I chose to measure the thickness manually at a
 limited number of well-imaged locations instead. Measuring by hand, however, only
 works if the mesh is correctly placed inside the volume, so the first step before
-measuring was to align the two. This is described next.
+measuring was to align the two entities.
 
 \section{Aligning the Mesh and the Volume}\label{sec:align}
 
@@ -158,8 +169,7 @@ repeatable.
 I chose not to judge the leaflet edges purely by eye, and I also chose not to
 threshold the whole volume, for the reasons given in
 Section~\ref{sec:recover}. Instead, I used a local intensity criterion, applied
-only at the spot being measured. Tissue was defined as an intensity of ~0.2
-or higher. Each measurement line was placed perpendicular to the mesh surface at
+only at the spot being measured. As an acceptable tradeoff, considering the available data and its quality, I chose to interpret everything from an intensity of ~0.2 and upward as actual tissue as this offered a decent amount of area to take measurements from but would also not include too much tissue which clearly was not part of the mitral valve. Each measurement line was placed perpendicular to the mesh surface at
 the chosen location. Along that line, the measurement starts where the intensity
 first rises to~0.2 and ends where it falls back on or below~0.2, and the thickness is
 the length of that span. This is the same kind of intensity criterion that the

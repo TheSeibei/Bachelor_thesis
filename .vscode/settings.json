@@ -14,11 +14,13 @@
         "pseudoanonymised",
         "silico",
         "TEER",
+        "Thresholded",
         "thresholding",
         "TMVR",
         "Transcatheter",
         "Transesophageal",
         "Transthoracic",
+        "uncontinuous",
         "unthickened"
     ]
 }
