@@ -1,7 +1,7 @@
 \chapter{Methodology}\label{chap:methodology}
 \raggedbottom
 
-\section{Overview of the approach}\label{sec:overview}
+\section{Overview of the Approach}\label{sec:overview}
 
 The goal of this work is a 3D-printed prototype of a thickness-accurate 3D model of the valve
 leaflets that can serve as the basis for an ultrasound phantom. The starting
@@ -25,7 +25,7 @@ measurements over the mesh and build the solid. Some smaller steps, mainly the
 interpolation, were done with short Python scripts using the numpy librariy. The following sections describe each part, and, more importantly, why
 each choice was made and not one of the other possible ones.
 
-\section{Input data}\label{sec:input}
+\section{Input Data}\label{sec:input}
 
 The first input is the volumetric scan. It is a 3D grayscale field where bright
 voxels roughly correspond to tissue and dark voxels to the surrounding space. It
@@ -56,7 +56,7 @@ This has a direct consequence for the later steps: the full measured thickness
 has to be added on one side, and there is no division by two. I come back to this
 in Section~\ref{sec:solid}.
 
-\section{Choosing how to recover thickness}\label{sec:recover}
+\section{Modality of Thickness Recovery}\label{sec:recover}
 
 Thickness is not stored anywhere in the data. It has to be recovered from the
 grayscale volume. There were two reasonable ways to do this, and it is worth
@@ -111,7 +111,7 @@ limited number of well-imaged locations instead. Measuring by hand, however, onl
 works if the mesh is correctly placed inside the volume, so the first step before
 measuring was to align the two. This is described next.
 
-\section{Aligning the mesh and the volume}\label{sec:align}
+\section{Aligning the Mesh and the Volume}\label{sec:align}
 
 The mesh and the volume did not overlap when they were first loaded together in both MeVisLab and 3D Slicer - only Blender could directly open the .usda file which preserved both coordinate systems in the correct orientation. In MeVisLab and 3D Slicer they sat in different coordinate systems. This alignment matters here because, as
 described in Section~\ref{sec:measure}, the thickness is measured along lines
@@ -147,7 +147,7 @@ surfaces against each other, and it keeps the alignment reproducible, because th
 box is defined by the data and not by a subjective judgement of where the
 surfaces should meet.
 
-\section{Measuring leaflet thickness in 3D~Slicer}\label{sec:measure}
+\section{Measuring Leaflet Thickness in 3D~Slicer}\label{sec:measure}
 
 With the mesh aligned, the thickness was measured in 3D~Slicer \cite{fedorov20123d}. The tool used is
 the line (ruler) markup, which gives a direct distance reading in millimetres
@@ -199,7 +199,7 @@ stated as such, but it is a reasonable one: the data in those regions is not goo
 enough to justify anything finer, and a single well-chosen value is more honest
 than a set of unreliable point measurements.
 
-\section{Spreading the measurements over the mesh}\label{sec:interp}
+\section{Spreading the Measurements over the Mesh}\label{sec:interp}
 
 At this point there is, for each leaflet, a set of thickness values: several point
 measurements in the well-imaged middle region, plus one constant value for the
@@ -325,7 +325,7 @@ cannot leak across the gap onto the other. Within a single, fairly flat leaflet
 the difference between straight-line distance and along-surface distance is small
 enough to accept for the purpose of this work.
 
-\section{Building the solid model}\label{sec:solid}
+\section{Constructing the Solid Model}\label{sec:solid}
 
 The last step has this problem to solve: there is now a thickness value at every
 vertex, and a single surface that represents the underside of the leaflet, and
@@ -367,7 +367,7 @@ between them, for the reason given in Section~\ref{sec:interp}.
 The output of this step is a single solid mesh in which the leaflet walls have the
 measured, locally varying thickness.
 
-\section{Printing the complete model}\label{sec:print}
+\section{Printing the Complete Model}\label{sec:print}
 Once a sufficiently accurate approximation, or model, of the mitral valve had been successfully developed, the actual objective and core of this work was addressed: the fabrication of a realistic ultrasound phantom. As accuracy and realism were prioritized over ease of production and scalability, FDM 3D printing was selected as the manufacturing method \cite{medellin2019design}. Modern 3D printers provide sufficient detail resolution and, importantly for this project, the ability to work with flexible materials such as TPU. The fabrication of flexible structures using molds and a material such as silicone would also have been possible and could even have enabled scalable production. However, 3D printing was ultimately chosen because it allows for easy modifications to the model and eliminates the need to consider how the mold can be removed after casting.
 
 Throughout the project, while the thickness measurements were being determined, test prints were conducted in parallel to identify the approach that would yield the best possible result. It was apparent that the heart valve would require support structures during printing, as the convex geometry would need to rest as flat as possible on the build plate, resulting in overhangs of well above 60° \cite{medellin2019design}. Printing the model vertically slightly reduced the cross-sectional area requiring support, but not to a significant extent. Furthermore, this orientation caused the structure to become unstable during printing, as the build plate moves back and forth along the Y-axis. The higher the print progressed, the more pronounced this movement became, causing the structure to wobble.
