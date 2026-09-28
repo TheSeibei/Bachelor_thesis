@@ -22,7 +22,7 @@ every part well. Instead the work is split across three: MeVisLab is used to loa
 and prepare the volume, 3D~Slicer is used to align the mesh with the volume and
 to take the thickness measurements, and Blender is used to interpolate the
 measurements over the mesh and build the solid. Some smaller steps, mainly the
-interpolation, were done with short Python scripts using the numpy librariy. The following sections describe each part, and, more importantly, why
+interpolation, were done with short Python scripts using the numpy library. The following sections describe each part, and, more importantly, why
 each choice was made and not one of the other possible ones.
 
 \section{Input Data}\label{sec:input}
@@ -125,7 +125,7 @@ surface is smooth and curved and offers no clear matching landmarks to line up b
 eye. Instead, I used a reference that all three programs agree on: the bounding
 box. MeVisLab, 3D~Slicer and Blender each draw an axis-aligned bounding box
 around the volume, and this box is the same in all of them because it is derived
-from the same volume. Since everything was perfectly alligned in Blender I added 
+from the same volume. Since everything was perfectly aligned in Blender I added 
 planes to the mesh that correspond to the bounding
 box of the volume, so that the mesh carries the same box as a built-in reference. The resulting mesh is depicted in Figure~\ref{fig:blender_planes}. Matching the
 mesh's bounding planes to the volume's bounding box then defines the alignment
@@ -150,7 +150,7 @@ surfaces should meet.
 \section{Measuring Leaflet Thickness in 3D~Slicer}\label{sec:measure}
 
 With the mesh aligned, the thickness was measured in 3D~Slicer \cite{fedorov20123d}. The tool used is
-the line (ruler) markup, which gives a direct distance reading in millimetres
+the line (ruler) markup, which gives a direct distance reading in millimeters
 between two points. The important part is not the tool but the rule I followed
 for placing the two points, because a clear rule is what makes the measurements
 repeatable.
@@ -210,71 +210,6 @@ measured values have to be spread over the whole surface.
 
 The measured points can be recorded as follows in Table~\ref{tab:measurements}, which lists the coordinates of each measured point and the corresponding thickness value. The table is split into two parts, one for each leaflet mesh, and it includes the sample points, the outer rim points, and the centre points. The outer rim and centre points are treated as having constant thickness values, as described in Section~\ref{sec:measure}.
 
-\begin{table}[htbp]
-  \centering
-  \scriptsize
-  \setlength{\tabcolsep}{10pt}
-  \renewcommand{\arraystretch}{1.00}
-  \begin{tabular}{c l c c c}
-    \toprule
-    Point & Location & Leaflet & Coordinates $(X, Y, Z)$ [mm] & Thickness [mm] \\
-    \midrule
-    \multicolumn{5}{l}{\textbf{Mesh1}} \\
-     1 & Sample 1   & Mesh1 & (63.9590, 1.2938, -13.9180) & 1.858 \\
-     2 & Sample 2   & Mesh1 & (64.5597, 0.8593, -11.7677) & 1.695 \\
-     3 & Sample 3   & Mesh1 & (58.5578, -7.5698, -8.4560)  & 2.831 \\
-     4 & Sample 4   & Mesh1 & (65.7383, 16.3467, -7.1801) & 1.493 \\
-     5 & Sample 5   & Mesh1 & (64.7657, 14.2849, -9.8768) & 1.591 \\
-     6 & Sample 6   & Mesh1 & (65.3708, 26.0424, -4.8703) & 2.703 \\
-     7 & Sample 7   & Mesh1 & (64.9545, 2.3063, -3.0277)   & 1.885 \\
-     8 & Sample 8   & Mesh1 & (66.2014, 7.9130, 0.3569)    & 1.418 \\
-     9 & Sample 9   & Mesh1 & (65.9559, 3.1092, 5.0442)    & 1.420 \\
-    10 & Sample 10  & Mesh1 & (62.5210, 8.6762, -13.1107) & 1.660 \\
-    11 & Outer Rim 1 & Mesh1 & (60.0724, -5.3534, -13.0215) & 2.634 \\
-    12 & Outer Rim 2 & Mesh1 & (60.8634, 2.2560, -16.6014) & 2.634 \\
-    13 & Outer Rim 3 & Mesh1 & (59.9938, 8.3517, -15.4400) & 2.634 \\
-    14 & Outer Rim 4 & Mesh1 & (60.5665, 15.1949, -13.5914) & 2.634 \\
-    15 & Outer Rim 5 & Mesh1 & (62.8466, 20.5929, -11.7375) & 2.634 \\
-    16 & Outer Rim 6 & Mesh1 & (65.2000, 25.0223, -9.6075) & 2.634 \\
-    17 & Outer Rim 7 & Mesh1 & (65.8712, 27.4709, -6.3174) & 2.634 \\
-    18 & Outer Rim 8 & Mesh1 & (64.6092, 29.0350, 0.8741)  & 2.634 \\
-    19 & Outer Rim 9 & Mesh1 & (59.9680, 11.1331, -14.7723) & 2.634 \\
-    20 & Center 1   & Mesh1 & (63.6521, -0.7522, -0.0410) & 1.420 \\
-    21 & Center 2   & Mesh1 & (66.8656, 9.9355, 4.1078)   & 1.420 \\
-    22 & Center 3   & Mesh1 & (66.5859, 16.3126, 2.0336)  & 1.420 \\
-    23 & Center 4   & Mesh1 & (66.5978, 20.5522, 0.9076)  & 1.420 \\
-    \midrule
-    \multicolumn{5}{l}{\textbf{Mesh2}} \\
-    24 & Sample 11  & Mesh2 & (55.8837, -7.7487, 3.9077)  & 2.391 \\
-    25 & Sample 12  & Mesh2 & (56.0970, -4.6908, 8.6596)  & 2.719 \\
-    26 & Sample 13  & Mesh2 & (59.9952, -3.0386, 6.9769)  & 1.444 \\
-    27 & Sample 14  & Mesh2 & (60.6347, -3.7250, 2.8164)  & 1.454 \\
-    28 & Sample 15  & Mesh2 & (63.1115, 3.0225, 11.4841)  & 2.013 \\
-    29 & Sample 16  & Mesh2 & (65.1467, 5.8269, 8.7319)   & 2.011 \\
-    30 & Sample 17  & Mesh2 & (60.3688, 16.5809, 15.3959) & 2.634 \\
-    31 & Outer Rim 1  & Mesh2 & (63.7587, 28.0507, 2.7245)  & 2.634 \\
-    32 & Outer Rim 2  & Mesh2 & (63.4924, 25.6784, 7.3205)  & 2.634 \\
-    33 & Outer Rim 3  & Mesh2 & (61.9454, 21.5032, 11.7638) & 2.634 \\
-    34 & Outer Rim 4  & Mesh2 & (60.0886, 15.0826, 16.3647) & 2.634 \\
-    35 & Outer Rim 5  & Mesh2 & (58.0204, 8.4046, 18.1553)  & 2.634 \\
-    36 & Outer Rim 6  & Mesh2 & (56.3447, 3.7394, 17.3366)  & 2.634 \\
-    37 & Outer Rim 7  & Mesh2 & (55.1820, -0.8097, 13.2220) & 2.634 \\
-    38 & Outer Rim 8  & Mesh2 & (55.8221, -6.6502, 5.8992)  & 2.634 \\
-    39 & Outer Rim 9  & Mesh2 & (56.0250, -8.6121, 1.7725)  & 2.634 \\
-    40 & Outer Rim 10 & Mesh2 & (56.9056, -8.9694, -3.2529) & 2.634 \\
-    41 & Center 1   & Mesh2 & (63.7351, -1.3024, 0.4987)  & 1.420 \\
-    42 & Center 2   & Mesh2 & (64.8664, 1.7162, 5.0023)   & 1.420 \\
-    43 & Center 3   & Mesh2 & (66.8032, 5.1267, 6.6123)   & 1.420 \\
-    44 & Center 4   & Mesh2 & (66.8336, 9.7100, 4.8804)   & 1.420 \\
-    45 & Center 5   & Mesh2 & (66.7762, 14.3475, 3.3624)  & 1.420 \\
-    46 & Center 6   & Mesh2 & (66.1239, 20.7572, 1.0062)  & 1.420 \\
-    \bottomrule
-  \end{tabular}
-  \caption{Applied leaflet thickness and 3D spatial coordinates from the Blender model at all sampled locations, outer rim points, and center points for Mesh1 and Mesh2.}
-  \label{tab:measurements}
-\end{table}
-
-
 The simplest way to fill the gap would be to give the whole leaflet one average
 thickness. I rejected this because it would remove the variation between the base
 and the edge that I went to the trouble of capturing. So some form of
@@ -310,9 +245,6 @@ is stored on the mesh as a per-vertex weight, called a vertex group in Blender.
 Before storing, the values are scaled to the range zero to one by dividing by the
 largest thickness, because the modifier used in the next step expects weights in
 that range.
-
-\input{chapters/files/blender_script}
-
 
 One limitation of this choice should be stated openly, because it also explains a
 later decision. IDW here uses straight-line (euclidean) distance through space,
@@ -362,9 +294,7 @@ are each given their own modifier with their own maximum thickness. Only after t
 thickness has been fixed into the geometry, by applying the modifier, are the two
 meshes joined into one object. Joining them earlier would force a single shared
 thickness on both, and would also let the interpolation bleed across the gap
-between them, for the reason given in Section~\ref{sec:interp}.
-
-The output of this step is a single solid mesh in which the leaflet walls have the
+between them, for the reason given in Section~\ref{sec:interp}. The output of this step is a single solid mesh in which the leaflet walls have the
 measured, locally varying thickness.
 
 \section{Printing the Complete Model}\label{sec:print}
@@ -378,4 +308,4 @@ This resulted in a print using the desired material that appeared intact at firs
 
 However, there were concerns that the TPU might not adhere sufficiently to the PVA supports during printing, potentially resulting in print defects in the model. Therefore, PLA supports were initially used instead. Ultimately, this proved to be the right choice for this particular application, as the PLA and TPU adhered strongly enough to ensure a successful print while still allowing the valve to be easily peeled away from the support material after completion. As hoped, this resulted in a perfectly smooth underside. Furthermore, the gap within the valve opening was preserved.
 
-The only remaining step was to manually remove any excess stands of filament and create a small incision in the opening using a scalpel. This was necessary because 3D printing small openings generally leaves behind thin strands of filament, a phenomenon known as \emph{stringing}, which can cause the opening to become partially sealed. The completed prototype, including the support structures, was handed over to Siemens Healthineers, where the valve is currently undergoing further testing. \todo{change if Siemens gets back with results}
+The only remaining step was to manually remove any excess stands of filament and create a small incision in the opening using a scalpel. This was necessary because 3D printing small openings generally leaves behind thin strands of filament, a phenomenon known as \emph{stringing}, which can cause the opening to become partially sealed \cite{prusa_stringing_oozing}. The completed prototype, including the support structures, was handed over to Siemens Healthineers, where the valve is currently undergoing further testing. \todo{change if Siemens gets back with results}

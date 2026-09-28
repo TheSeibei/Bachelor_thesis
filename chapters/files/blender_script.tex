@@ -1,7 +1,10 @@
-\begin{lstlisting}[language=Python, caption={Interpolation of the thickness distribution in Blender using inverse distance weighting.}, label={lst:thickness_interpolation}]
+\begin{lstlisting}[
+    language=Python, 
+    caption={Interpolation of the thickness distribution in Blender using inverse distance weighting.}, 
+    label={lst:thickness_interpolation}, 
+    captionpos=t]
 import bpy
 import numpy as np
-
 
 def apply_thickness(obj_name, known_pos, known_val, power=2):
     obj = bpy.data.objects[obj_name]
