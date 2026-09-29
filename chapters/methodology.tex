@@ -120,14 +120,13 @@ measuring was to align the two entities.
 
 The mesh and the volume did not overlap when they were first loaded together in both MeVisLab and 3D Slicer --- only Blender could directly open the .usda file which preserved both coordinate systems in the correct orientation. In MeVisLab and 3D Slicer they sat in different coordinate systems. This alignment matters here because, as
 described in Section~\ref{sec:measure}, the thickness is measured along lines
-perpendicular to the mesh surface. If the mesh is in the wrong place, those
-perpendicular lines start in the wrong place, and the measurement is meaningless.
+perpendicular to the mesh surface. If the mesh is offset, those
+perpendicular lines start offset, and the measurement is not precise.
 So the mesh and the volume had to be brought into the same coordinate frame
 first. Before performing any geometric operations in Blender, all input data was uniformly scaled up by 750\%. This initial upscaling was applied to improve numerical precision during computational and transformation steps within Blender's modeling environment (as further discussed in Section~\ref{sec:interp}) and resolved export scaling issues, ensuring the resulting STL file imported at a realistic scale in the 3D-printing slicing software. This uniform scaling is fully tolerable for the valve model, as its final absolute dimensions are ultimately constrained by the physical dimensions of the ventricular chambers developed by Machoritsch, allowing the valve's scale to be adjusted accordingly prior to final production.
 
 Aligning the two by their shapes directly is difficult, because the leaflet
-surface is smooth and curved and offers no clear matching landmarks to line up by
-eye. Instead, I used a reference that all three programs agree on: the bounding
+surface is smooth and curved and offers no clear matching landmarks to either decide on an aligning transformation nor check if they are overlapping correctly. The latter being particularly crucial. Instead, I used a reference that all three programs can interpret correctly: the bounding
 box. MeVisLab, 3D~Slicer and Blender each draw an axis-aligned bounding box
 around the volume, and this box is the same in all of them because it is derived
 from the same volume. Since everything was perfectly aligned in Blender I added 
@@ -144,10 +143,10 @@ completely, because the two boxes have to coincide.
 \end{figure}
 
 From this box-to-box correspondence a transformation matrix was obtained, which
-was applied to the mesh in 3D~Slicer. After applying it, the mesh sits inside the
+was applied to the mesh in 3D~Slicer. After applying it, the mesh is aligned inside the
 volume in the correct position and orientation, so that a leaflet in the mesh
-lines up with the corresponding bright band in the scan. Using the bounding box
-as a shared reference is more reliable here than trying to register the curved
+corresponds to a bright band in the scan. Using the bounding box
+as a shared reference is more reliable here than utilizing a method which registers the curved
 surfaces against each other, and it keeps the alignment reproducible, because the
 box is defined by the data and not by a subjective judgement of where the
 surfaces should meet.
@@ -156,14 +155,13 @@ surfaces should meet.
 
 With the mesh aligned, the thickness was measured in 3D~Slicer \cite{fedorov20123d}. The tool used is
 the line (ruler) markup, which gives a direct distance reading in millimeters
-between two points. The important part is not the tool but the rule I followed
-for placing the two points, because a clear rule is what makes the measurements
-repeatable.
+between two points. The important part here is the rule I followed
+for placing the two points achieving repeatability for the measurements.
 
-I chose not to judge the leaflet edges purely by eye, and I also chose not to
+I did not to determine the leaflet edges purely by eye, and I also chose not to
 threshold the whole volume, for the reasons given in
 Section~\ref{sec:recover}. Instead, I used a local intensity criterion, applied
-only at the spot being measured. As an acceptable tradeoff, considering the available data and its quality, I selected to interpret everything from an intensity of ~0.2 and upward as actual tissue as this offered a decent amount of area to take measurements from but would also not include too much tissue which clearly was not part of the mitral valve. Each measurement line was placed perpendicular to the mesh surface at
+only at the spot being measured. As an acceptable tradeoff, considering the available data and its quality, I selected to interpret everything from an intensity of ~0.2 and upward as actual tissue as this offered a decent amount of area to take measurements from but would also not overestimate on tissue which clearly was not part of the mitral valve. Each measurement line was placed perpendicular to the mesh surface at
 the chosen location. Along that line, the measurement starts where the intensity
 first rises to~0.2 and ends where it falls back on or below~0.2, and the thickness is
 the length of that span. This is the same kind of intensity criterion that the
@@ -174,10 +172,10 @@ decided where the tissue began and ended.
 
 Where the measurements were taken was itself a choice driven by the data quality.
 Thickness is not the same everywhere on a leaflet, so I wanted to sample across
-the surface, but two regions turned out to be hard to measure. The first is the
+the surface, but two regions in particular are challenging to measure. The first is the
 centre of the valve, around the opening, where the probe left a noisy hole in the
 scan. In that region it is difficult to see a clean tissue band, so reliable
-perpendicular measurements are hard to obtain. The second is the thin outer brim
+perpendicular measurements are not easy to obtain. The second is the thin outer brim
 of the leaflet, at the edge of the mesh, where measurements were also difficult
 to take cleanly. In between these two problem regions the data is clearer, so
 most of the measurements were taken there, where the tissue band is well defined
@@ -191,50 +189,49 @@ and the intensity rule can be applied with confidence. The resulting locations w
 \end{figure}
 
 For the two difficult regions I made a deliberate simplification rather than
-forcing measurements the data does not support. For the noisy centre I took all
-the measurements I could obtain there and reduced them to a single value, the
-median, and treated the thickness across the whole centre region as constant at
-that value. I did the same for the outer edge, taking the median of the edge
+forcing measurements the data does not support. For the noisy centre I sampled all
+the measurements I could obtain in this region and selected the
+median and treated the thickness across the whole centre region as constant at
+that value. I did the same for the outer edge, selecting the median of the edge
 measurements and treating the edge as having one constant thickness. The median
-was used rather than the mean because it is less affected by the occasional bad
-reading, which is exactly what one expects in these noisy regions. Assuming a
+was used rather than the mean because it is less affected by bad
+readings, which is exactly what is expected in these noisy regions. Assuming a
 homogeneous thickness in the centre and at the edge is a simplification, and it is
-stated as such, but it is a reasonable one: the data in those regions is not good
-enough to justify anything finer, and a single well-chosen value is more honest
+stated as such, but it is a reasonable in this case: the data in those regions is not good
+enough to justify anything finer, and a single well-chosen value is more justifiable
 than a set of unreliable point measurements.
 
 \section{Spreading the Measurements over the Mesh}\label{sec:interp}
 
-At this point there is, for each leaflet, a set of thickness values: several point
+For each leaflet I obtained a set of thickness values: several point
 measurements in the well-imaged middle region, plus one constant value for the
 noisy centre and one constant value for the outer edge. The mesh, however, has
 several thousand vertices, and the step that builds the solid
 (Section~\ref{sec:solid}) needs a thickness value at every single vertex. So the
-measured values have to be spread over the whole surface.
+measured values have to be distributed over the whole surface.
 
 The measured points can be recorded as follows in Table~\ref{tab:measurements}, which lists the coordinates of each measured point and the corresponding thickness value. The table is split into two parts, one for each leaflet mesh, and it includes the sample points, the outer rim points, and the centre points. The outer rim and centre points are treated as having constant thickness values, as described in Section~\ref{sec:measure}.
 
-The simplest way to fill the gap would be to give the whole leaflet one average
+The simplest way to solve this would be to give the whole leaflet one average
 thickness. I rejected this because it would remove the variation between the base
-and the edge that I went to the trouble of capturing. So some form of
+and the edge, resulting not in a desired realistic model. Therefore a type of
 interpolation is needed for the region that is well sampled, while the centre and
 the edge keep their constant median values as described in
 Section~\ref{sec:measure}.
 
 For the interpolation I chose inverse distance weighting (IDW) \cite{shepard1968two}. The idea is easy
 to state: each vertex is given a thickness that is a weighted average of the known
-values, and values that are closer to the vertex count more than ones further
+values, and values that are closer to the vertex have more significance than ones further
 away. The weight of each value falls off with distance, following one over the
-distance raised to a power. A vertex sitting right next to a known value gets
+distance raised to a power. A vertex located right next to a known value gets
 almost exactly that value, and a vertex halfway between two of them gets roughly
 their average.
 
 I chose IDW over more advanced interpolation methods such as kriging or radial
-basis functions on purpose. With only a handful of known values, the more
+basis functions. With only a finite set of known values, the more
 advanced methods bring in extra assumptions and parameters that could not be
 checked with so little data. IDW, in contrast, makes no assumption about an
-underlying function, works with irregularly placed values, and is simple enough
-to explain and defend in full. For the power parameter, a value of two was used. This gives greater weight to nearby measurements while still providing a smooth transition between the measured points. The resulting assignment of thickness values to the mesh is shown in Figure~\ref{fig:blender_weight_paint}. The outer brim of the leaflet is shown in red as it has the maximum thickness, while the centre of the leaflet, the thinnest part, is shown here in green which is roughly half of the maximum thickness and therefore not in blue, as blue would map to a thickness of zero. The transition between the two is smooth, as expected from the interpolation.
+underlying function, works with irregularly placed values, simple and perfectly adequate in this case. For the power parameter, a value of two was used. This gives greater weight to nearby measurements while still providing a smooth transition between the measured points. The resulting assignment of thickness values to the mesh is shown in Figure~\ref{fig:blender_weight_paint}. The outer brim of the leaflet is shown in red as it has the maximum thickness, while the centre of the leaflet, the thinnest part, is shown here in green which is roughly half of the maximum thickness and therefore not in blue, as blue would map to a thickness of zero. The transition between the two is smooth, as expected from the interpolation.
 
 \begin{figure}[ht]
   \centering
