@@ -225,7 +225,7 @@ interpolation is needed for the region that is well sampled, while the centre an
 the edge keep their constant median values as described in
 Section~\ref{sec:measure}.
 
-For the interpolation I chose inverse distance weighting (IDW) \cite{shepard1968two}. The idea is easy
+For the interpolation I chose inverse distance weighting (\emph{IDW}) \cite{shepard1968two}. The idea is easy
 to state: each vertex is given a thickness that is a weighted average of the known
 values, and values that are closer to the vertex have more significance than ones further
 away. The weight of each value falls off with distance, following one over the
@@ -253,16 +253,22 @@ Before storing, the values are scaled to the range zero to one by dividing by th
 largest thickness, because the modifier used in the next step expects weights in
 that range.
 
-One limitation of this choice should be stated openly, because it also explains a
-later decision. IDW here uses straight-line (euclidean) distance through space,
+One limitation of this choice should be stated openly. IDW here uses straight-line (euclidean) distance through space,
 not distance measured along the curved surface. Across a fold, or across the gap
 between the two leaflets, straight-line distance could mix values that really
 should not be mixed, because two points can be close in space while being far
-apart along the tissue. This is exactly why the two leaflets are kept as two
+apart along the tissue. Figure~\ref{fig:idw-gap} helps to clarify this issue. When performing IDW with no distinction between leaflets the weight given point C would be influenced more by point A than by point B as point A is closer in space. This is exactly why the two leaflets are kept as two
 separate meshes and interpolated separately: a value measured on one leaflet
-cannot leak across the gap onto the other. Within a single, fairly flat leaflet
+cannot leak across the gap onto the other. Also within a single, fairly flat leaflet and given a reasonably close spread of measurements,
 the difference between straight-line distance and along-surface distance is small
-enough to accept for the purpose of this work.
+enough to accept for the purpose of this work. As the dashed line representing the distance from an calculated vertex to a given point is fairly close to the actual shallow curvature of the mesh.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth]{graphics/IDW-gap.png}
+  \caption{Top-down view of the leaflet mesh in Blender, showing the interpolated thickness values as a vertex group. The color gradient represents the thickness, with red indicating thicker regions and blue indicating thinner regions.}
+  \label{fig:idw-gap}
+\end{figure}
 
 \section{Constructing the Solid Model}\label{sec:solid}
 
@@ -309,7 +315,7 @@ Once a sufficiently accurate approximation, or model, of the mitral valve had be
 
 Throughout the project, while the thickness measurements were being determined, test prints were conducted in parallel to identify the approach that would yield the best possible result. It was apparent that the heart valve would require support structures during printing, as the convex geometry would need to rest as flat as possible on the build plate, resulting in overhangs of well above 60° \cite{medellin2019design}. Printing the model vertically slightly reduced the cross-sectional area requiring support, but not to a significant extent. Furthermore, this orientation caused the structure to become unstable during printing, as the build plate moves back and forth along the y-axis. The higher the print progressed, the more pronounced this movement became, causing the structure to wobble.
 
-A major disadvantage of support material is the difficulty of completely removing all residues and achieving a smooth surface after printing. Test prints using Polylactic Acid (\emph{PLA}), for example, which is a relatively rigid polymer, demonstrated that removing the support structures alone was already a considerable challenge. Achieving a surface as smooth as the upper side of the print would then require substantial additional effort. Printing with flexible TPU did not significantly change this situation. The TPA95A used was specified with a Shore A hardness of 95; in general, lower Shore A values correspond to softer and more flexible TPU materials \cite{recreusFilamentFilaflex90}. It could be printed using settings that were almost identical to those used for PLA. For TPU82A \cite{recreusFilamentFilaflex82}, the printing speed was reduced to avoid compromising print quality. However, at the desired thickness of the heart valve, this material remained too inflexible. TPU60A \cite{recreusFilamentFilaflex60}, which provided an appropriate degree of flexibility and softness, introduced another problem: the amount of support material used previously was insufficient to adequately support the material between the individual support structures. The resulting print contained numerous holes and areas where the printed material had fused with the supports. The solution was to increase the density of the support structures by reducing the spacing between them. In this case, this was achieved by selecting smaller squares in the grid pattern.
+A major disadvantage of support material is the difficulty of completely removing all residues and achieving a smooth surface after printing. Test prints using Polylactic Acid (\emph{PLA}), for example, which is a relatively rigid polymer, demonstrated that removing the support structures alone was already a considerable challenge. Achieving a surface as smooth as the upper side of the print would then require substantial additional effort. Printing with flexible TPU did not significantly change this situation. The TPA95A \cite{recreusFilamentFilaflex90} used was specified with a Shore A hardness of 95; in general, lower Shore A values correspond to softer and more flexible TPU materials --- e.g. TPU95A is flexible but fairly stiff while TPU60A is more flexible. It could be printed using settings that were almost identical to those used for PLA. For TPU82A \cite{recreusFilamentFilaflex82}, the printing speed was reduced to avoid compromising print quality. However, at the desired thickness of the heart valve, this material remained too inflexible. TPU60A \cite{recreusFilamentFilaflex60}, which provided an appropriate degree of flexibility and softness, introduced another problem: the amount of support material used previously was insufficient to adequately support the material between the individual support structures. The resulting print contained numerous holes and areas where the printed material had fused with the supports. The solution was to increase the density of the support structures by reducing the spacing between them. In this case, this was achieved by selecting smaller squares in the grid pattern.
 
 This resulted in a print using the desired material that appeared intact at first glance. However, the issue of the difficult-to-remove support structures remained. To address this problem, additional prototypes were produced using a multi-nozzle printer capable of printing with multiple materials simultaneously. The idea was to print the supports using a water-soluble filament, in this case polyvinyl alcohol (PVA) \cite{moradi2023optimizing}, while continuing to print the mitral valve using TPU60A. The finished model could then have been placed in water, allowing the supports to dissolve completely without leaving any residue.
 
