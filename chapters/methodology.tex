@@ -16,11 +16,17 @@ the mesh and the volume into a common coordinate system, to recover the leaflet
 thickness from the volume, to transfer that thickness to the mesh, and to turn
 the single surface into a closed solid.
 
-I did not utilize a single program to perform these steps, because no single tool performs well at
-every part. Instead the work is split across three: MeVisLab \cite{mevislab} is used to load
-and prepare the volume, 3D~Slicer \cite{fedorov20123d} is used to align the mesh with the volume and
-to take the thickness measurements, and Blender \cite{blender} is used to interpolate the
-measurements over the mesh and build the solid. Minor procedures, mainly the
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\linewidth]{graphics/Schematic.png}
+  \caption{Mitral valve reconstruction and fabrication pipeline schematic. Illustrations generated using ChatGPT from methodological descriptions and refined through iterative prompting \cite{openai2026pipeline}.}
+  \label{fig:schematic}
+\end{figure}
+
+I did not utilize a single program to perform these steps, as no single tool performs well at
+every part. Instead the work is split across three platforms and six major steps --- also denoted in Figure~\ref{fig:schematic}: MeVisLab \cite{mevislab} and Blender \cite{blender} are used to load
+and prepare the volume and mesh (Step 1 described in Section~\ref{sec:input}), 3D~Slicer \cite{fedorov20123d} is used to align the mesh with the volume (Step 2 Section~\ref{sec:align}) and to take the thickness measurements (Step 3 Section~\ref{sec:measure}), and Blender is used to interpolate the
+measurements over the mesh (Step 4 Section~\ref{sec:interp}) and build the solid (Step 5 Section~\ref{sec:solid}). This solid is then printed to provide a physical model (Step 6 Section~\ref{sec:print}). Minor procedures, mainly the
 interpolation, I have implemented with short Python scripts using the numpy library. The following sections describe each part and why
 each choice was made and not one of the other possible ones.
 
@@ -31,7 +37,7 @@ voxels roughly correspond to tissue and dark voxels to the surrounding space. It
 contains the leaflets with their real thickness, but this thickness is only
 present as a bright band in the image and not as a number or a shape that can be
 measured automatically without further steps. The scan also contains impurities at several areas: the ultrasound probe used to record it left a very noisy region in
-the centre of the valve, around the opening, which becomes relevant later.
+the centre of the valve, around the opening. How we can deal with this will be discussed throughout this chapter.
 
 The second input is the surface mesh of the leaflets. This mesh is a single
 surface. It does not enclose a volume, and it has no wall thickness at all. In
@@ -49,7 +55,7 @@ would make all thickness values off by a factor of two.
 To validate this, the mesh was placed next to the volume and a cross-section through
 a leaflet was examined. If the mesh were a midsurface, it would run through the
 middle of the bright leaflet band. In this case the surface sits on one side of
-the band, which means it is the underside (a boundary surface), not the middle --- depicted in Figure~\ref{fig:EDT} (D) as well.
+the band, which means it is the underside (a boundary surface), \emph(not) the middle --- depicted in Figure~\ref{fig:EDT} (D) as well.
 This has a direct consequence for the later steps: the full measured thickness
 has to be added on one side, and there is no division by two.
 
@@ -123,7 +129,7 @@ described in Section~\ref{sec:measure}, the thickness is measured along lines
 perpendicular to the mesh surface. If the mesh is offset, those
 perpendicular lines start offset, and the measurement is not precise.
 So the mesh and the volume had to be brought into the same coordinate frame
-first. Before performing any geometric operations in Blender, all input data was uniformly scaled up by 750\%. This initial upscaling was applied to improve numerical precision during computational and transformation steps within Blender's modeling environment (as further discussed in Section~\ref{sec:interp}) and resolved export scaling issues, ensuring the resulting STL file imported at a realistic scale in the 3D-printing slicing software. This uniform scaling is fully tolerable for the valve model, as its final absolute dimensions are ultimately constrained by the physical dimensions of the ventricular chambers developed by Machoritsch, allowing the valve's scale to be adjusted accordingly prior to final production.
+first. Before performing any geometric operations in Blender, all input data was uniformly scaled up by 750\%. This initial upscaling was applied as for one to improve numerical precision during computational and transformation steps within Blender's modeling environment (as further discussed in Section~\ref{sec:interp}) and resolved export scaling issues I encountered, ensuring the resulting STL file imported at a realistic scale in the 3D-printing slicing software. This is not proposed as a general scaling factor for other datasets as in an ideal scenario the mesh and volume are at the right scale. Taken under consideration that the scaling could have been off by a factor of 100 as perhaps there was a miscommunication in metric units (centimeters in meters) between the slicing-software and the modeling environment upscaling by 750\% seamed very reasonable and was ultimately chosen as this resolved in a similar scale as the reference values determined by Dwivedi et al. \cite{dwivedi2014reference}. Furthermore this uniform scaling is fully tolerable for the valve model, as its final absolute dimensions are ultimately constrained by the physical dimensions of the ventricular chambers developed by Machoritsch, allowing the valve's scale to be quickly adjusted accordingly prior to final production.
 
 Aligning the two by their shapes directly is difficult, because the leaflet
 surface is smooth and curved and offers no clear matching landmarks to either decide on an aligning transformation nor check if they are overlapping correctly. The latter being particularly crucial. Instead, I used a reference that all three programs can interpret correctly: the bounding
