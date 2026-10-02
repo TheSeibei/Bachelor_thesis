@@ -255,24 +255,23 @@ that range.
 
 One limitation of this choice should be stated openly. IDW here uses straight-line (euclidean) distance through space,
 not distance measured along the curved surface. Across a fold, or across the gap
-between the two leaflets, straight-line distance could mix values that really
-should not be mixed, because two points can be close in space while being far
+between the two leaflets, straight-line distance could mix values that should not be mixed, because two points can be close in space while being far
 apart along the tissue. Figure~\ref{fig:idw-gap} helps to clarify this issue. When performing IDW with no distinction between leaflets the weight given point C would be influenced more by point A than by point B as point A is closer in space. This is exactly why the two leaflets are kept as two
-separate meshes and interpolated separately: a value measured on one leaflet
-cannot leak across the gap onto the other. Also within a single, fairly flat leaflet and given a reasonably close spread of measurements,
+separate meshes and interpolated separately: a value measured on one leaflet (Mesh1)
+cannot leak across the gap onto the other (Mesh2). Also within a single, fairly flat leaflet and given a reasonably close spread of measurements,
 the difference between straight-line distance and along-surface distance is small
-enough to accept for the purpose of this work. As the dashed line representing the distance from an calculated vertex to a given point is fairly close to the actual shallow curvature of the mesh.
+enough to accept for the purpose of this work. As the dashed line representing the distance from an interpolated vertex (D) to a given point (B) is fairly close to the actual shallow curvature of the mesh.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.75\linewidth]{graphics/IDW-gap.png}
-  \caption{Top-down view of the leaflet mesh in Blender, showing the interpolated thickness values as a vertex group. The color gradient represents the thickness, with red indicating thicker regions and blue indicating thinner regions.}
+  \includegraphics[width=0.75\linewidth]{graphics/IDW-gap.jpg}
+  \caption{Schematic illustrating the use of Euclidean distance in IDW thickness interpolation. Although vertex C lies on Mesh2, it is closer to measurement A on Mesh1 than to measurement B on its own leaflet. Interpolating the leaflets separately prevents this influence across the gap. Within Mesh2, the dashed straight-line distance between B and D closely approximates the distance along the shallow surface curvature.}
   \label{fig:idw-gap}
 \end{figure}
 
 \section{Constructing the Solid Model}\label{sec:solid}
 
-The last step has this problem to solve: there is now a thickness value at every
+We now have a thickness value at every
 vertex, and a single surface that represents the underside of the leaflet, and
 this has to be turned into a closed solid whose wall has the correct local
 thickness.
