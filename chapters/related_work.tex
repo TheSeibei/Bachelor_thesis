@@ -45,12 +45,13 @@ For the production of a patient-specific model, a three-dimensional ultrasound a
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth]{graphics/coronal_view_of_ultrasound_data.jpg}
-  \caption{(A) Original ultrasound image. (B) Color-coded image with visible sections of the mitral valve highlighted in orange and probe-related ultrasound artifacts highlighted in green. \textit{The colors were selected to remain distinguishable to readers with color-vision deficiencies.}}
+  \caption{(A) Original TEE ultrasound image. (B) Color-coded image with visible sections of the mitral valve highlighted in orange and probe-related ultrasound artifacts highlighted in green. \textit{The colors were selected to remain distinguishable to readers with color-vision deficiencies.}}
   \label{fig:coronal_ultrasound}
 \end{figure}
 
 To provide an example Figure~\ref{fig:coronal_ultrasound} shows a coronal slice of the ultrasound data used to derive the model presented in this thesis, specifically the thickness measurements of the mitral valve leaflets, which is covered in Section~\ref{sec:measure}. The figure also illustrates the challenge of reliably identifying and segmenting the leaflets in the presence of ultrasound artifacts and noise. \emph{Image A} (right) shows the original, unaltered ultrasound image, while \emph{Image B} (left) has been color-coded to highlight the visible portions of the mitral valve leaflets in orange and ultrasound artifacts associated with the TEE probe in green. The colored overlays are provided for visualization only and do not represent a segmentation.
 
+TTE is as mentioned the least invasive (as it is non-invasive) as the ultrasound probe is placed directly on the chest wall with a coating of gel in between to act as an interface for the ultrasound waves. No prerequisite preparation is required for the patient and it can be performed in a standard clinical setting at any time \cite{mayo2026echocardiogram}. TTE is limited by the available acoustic window and the presence of lung tissue as well as the ribcage that obstruct the ultrasound beam \cite{peters2011ultrasound}. Non-invasive ultrasound imaging is viable for quick und uncomplicated first-line assessments and monitoring behavior over time \cite{zoghbi2017recommendations}. For our purposes however this modality remains fairly unsuitable as it is challenging to obtain a complete volumetric dataset with an emphasis for detail of the voxels in the region in and around the mitral valve \cite{lang2012eae}. 
 \subsubsection{Magnetic Resonance Imaging}\label{subsubsec:mri}
 
 \section{Identified Gap in Literature}\label{sec:gap_in_literature}
