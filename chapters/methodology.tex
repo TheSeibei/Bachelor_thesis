@@ -41,8 +41,8 @@ the centre of the valve, around the opening. How we can deal with this will be d
 
 The second input is the surface mesh of the leaflets. This mesh is a single
 surface. It does not enclose a volume, and it has no wall thickness at all. In
-practice there are two separate leaflet meshes, referred to here as \ph{Mesh1}
-and \ph{Mesh2}.
+practice there are two separate leaflet meshes, referred to here as [Mesh1]
+and [Mesh2].
 
 Before deciding how to add thickness, I first had to establish what the surface
 actually represents, because this defines how the thickness is calculated and applied to the mesh. A surface mesh
@@ -55,7 +55,7 @@ would make all thickness values off by a factor of two.
 To validate this, the mesh was placed next to the volume and a cross-section through
 a leaflet was examined. If the mesh were a midsurface, it would run through the
 middle of the bright leaflet band. In this case the surface sits on one side of
-the band, which means it is the underside (a boundary surface), \emph(not) the middle --- depicted in Figure~\ref{fig:EDT} (D) as well.
+the band, which means it is the underside (a boundary surface), \emph{not} the middle --- depicted in Figure~\ref{fig:EDT} (D) as well.
 This has a direct consequence for the later steps: the full measured thickness
 has to be added on one side, and there is no division by two.
 
@@ -257,15 +257,15 @@ One limitation of this choice should be stated openly. IDW here uses straight-li
 not distance measured along the curved surface. Across a fold, or across the gap
 between the two leaflets, straight-line distance could mix values that should not be mixed, because two points can be close in space while being far
 apart along the tissue. Figure~\ref{fig:idw-gap} helps to clarify this issue. When performing IDW with no distinction between leaflets the weight given point C would be influenced more by point A than by point B as point A is closer in space. This is exactly why the two leaflets are kept as two
-separate meshes and interpolated separately: a value measured on one leaflet (Mesh1)
-cannot leak across the gap onto the other (Mesh2). Also within a single, fairly flat leaflet and given a reasonably close spread of measurements,
+separate meshes and interpolated separately: a value measured on one leaflet [Mesh1]
+cannot leak across the gap onto the other [Mesh2]. Also within a single, fairly flat leaflet and given a reasonably close spread of measurements,
 the difference between straight-line distance and along-surface distance is small
 enough to accept for the purpose of this work. As the dashed line representing the distance from an interpolated vertex (D) to a given point (B) is fairly close to the actual shallow curvature of the mesh.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth]{graphics/IDW-gap.jpg}
-  \caption{Schematic illustrating the use of Euclidean distance in IDW thickness interpolation. Although vertex C lies on Mesh2, it is closer to measurement A on Mesh1 than to measurement B on its own leaflet. Interpolating the leaflets separately prevents this influence across the gap. Within Mesh2, the dashed straight-line distance between B and D closely approximates the distance along the shallow surface curvature.}
+  \caption{Schematic illustrating the use of Euclidean distance in IDW thickness interpolation. Although vertex C lies on [Mesh2], it is closer to measurement A on [Mesh1] than to measurement B on its own leaflet. Interpolating the leaflets separately prevents this influence across the gap. Within [Mesh2], the dashed straight-line distance between B and D closely approximates the distance along the shallow surface curvature.}
   \label{fig:idw-gap}
 \end{figure}
 
@@ -301,7 +301,7 @@ sure the wall grows away from the leaflet body and not into it.
 
 Each leaflet is solidified on its own before the two are combined. The reason is
 that the two leaflets have different thickness ranges, and a single modifier can
-only hold one thickness value and one vertex group. So \ph{Mesh1} and \ph{Mesh2}
+only hold one thickness value and one vertex group. So [Mesh1] and [Mesh2]
 are each given their own modifier with their own maximum thickness. Only after the
 thickness has been fixed into the geometry, by applying the modifier, are the two
 meshes joined into one object. Joining them earlier would force a single shared
