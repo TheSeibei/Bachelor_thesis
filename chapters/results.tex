@@ -11,3 +11,56 @@ A total of 46 locations are documented in Table\ref{tab:measurements}, with 23 l
 The resulting distribution is illustrated in Figure\ref{fig:blender_weight_paint}. As intended, the thickness gradually transitions between the thinner central region and the thicker outer regions. The two leaflets were interpolated independently to prevent measurements from one leaflet influencing the thickness distribution of the other.
 
 The thickness fields were subsequently applied to the surface meshes using Blender's Solidify modifier. Since the original meshes represented the underside of the leaflets rather than their midsurfaces, the full thickness was extruded in one direction. This produced a solid geometry incorporating the reconstructed thickness distribution.
+
+\section{Physical Prototype}\label{sec:prototype}
+
+The resulting solid model was successfully manufactured using Fused Deposition Modeling (\emph{FDM}) with flexible TPU60A filament.
+
+The manufacturing process required several iterations to obtain a satisfactory result. Some attempts encountered problems related to filament clogging, insufficient support density, and difficulties removing support structures without damaging the printed leaflets. The final manufacturing approach used PLA support structures in combination with TPU60A for the valve itself. This allowed the support material to be removed while retaining the printed leaflet geometry.
+
+The completed prototype retained the intended opening between the leaflets. Following the removal of support material and excess filament, the underside of the printed structure exhibited a smooth surface.
+
+Figure~\ref{fig:completed_print} shows the completed physical prototype of the mitral valve from the top and bottom views. It can clearly be seen that the support structures were successfully removed, leaving the intended geometry intact. The leaflet surfaces appear smooth and continuous --- by the standards of unaltered FDM prints.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth]{graphics/completed_print.png}
+  \caption{(A) top view of the completed valve prototype. (B) bottom view of the completed valve prototype. White material being TPU60A and red material being PLA support structures.}
+  \label{fig:completed_print}
+\end{figure}
+
+The successful fabrication demonstrates that the reconstructed geometry could be transferred into a physical model using an accessible FDM printing process and a flexible thermoplastic material.
+
+\section{Qualitative Ultrasound Assessment by Siemens Healthineers}\label{sec:assessment}
+
+Following manufacturing, the physical prototype was provided to Siemens Healthineers for evaluation by clinical specialists.
+
+The feedback was provided by a clinical expert stationed in Vienna. In their response, they confirmed that the newly printed valve was clearly visible using ultrasound imaging and described it as nicely scannable.
+
+The valve was placed in a medium of water and scanned using the \emph{ACUSON Sequoia Ultrasound System}. Photographs of the ultrasound equipment display were provided alongside this feedback. These photographs show the ultrasound images obtained during the examination of the physical prototype and serve as qualitative evidence of its visibility in ultrasound imaging.
+
+Figure~\ref{fig:ultrasound_scans} presents the photographs provided by Siemens Healthineers, displaying the valve appearing on the ultrasound images.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth]{graphics/ultrasound_scans.png}
+  \caption{pictures of the valve appearing on ultrasound images taken by Dr. techn. Alexey Karimov while evaluating the prototype using the \emph{ACUSON Sequoia Ultrasound System}}
+  \label{fig:ultrasound_scans}
+\end{figure}
+
+The feedback indicates that the manufactured valve can be visualized using ultrasound equipment. This is an important initial result, as ultrasound visibility represents a fundamental requirement for the intended application of the model as part of a physical ultrasound phantom. This shows that the valve can be used in larger phantom systems, i.e. in combination with the cardiac chamber phantom which is being developed in parallel by fellow student \textit{Peter Machoritsch} at the Technical University of Vienna.
+
+However, the assessment was qualitative. The clinical expert did deem it appropriate and plausible in appearance, but no quantitative measurements of acoustic properties, image contrast, signal intensity, or similarity to biological valve tissue were provided. Furthermore, the photographs document the appearance of the structure on the ultrasound display but do not establish the accuracy of its reconstructed thickness.
+
+\section{Evaluation of the Developed Pipeline}\label{sec:evaluation}
+Considering the results of the reconstruction, manufacturing, and external evaluation, the developed pipeline achieved its principal technical objectives.
+
+The initial volumetric ultrasound dataset and unthickened leaflet meshes were successfully combined to reconstruct a solid mitral valve model with spatially varying thickness. The resulting geometry was suitable for additive manufacturing and could be fabricated using flexible TPU material.
+
+Furthermore, the initial ultrasound assessment performed by Siemens Healthineers confirmed that the resulting physical prototype was visible using ultrasound imaging.
+
+These findings demonstrate the feasibility of the proposed workflow, from volumetric ultrasound data to a manufactured valve prototype that can be visualized with ultrasound.
+
+Nevertheless, the results should be interpreted within the scope of the conducted evaluation. The reconstructed thickness distribution was not independently compared against a physical reference measurement, and the ultrasound assessment did not include quantitative acoustic characterization. The prototype therefore represents a successfully manufactured and ultrasound-visible model, rather than a fully validated reproduction of the acoustic and mechanical properties of a biological accurate mitral valve.
+
+\section{Implications and Future Use-Cases}\label{sec:use_cases}
