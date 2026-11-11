@@ -1,1 +1,13 @@
 \chapter{Results}\label{chap:results}
+
+This chapter presents the results of the developed reconstruction and manufacturing pipeline. It briefly covers the resulting leaflet geometry, the fabrication of the physical prototype as well as its qualitative evaluation using ultrasound imaging by Siemens Healthineers and subsequent future use-cases for the findings.
+
+\section{Reconstructed Leaflet Geometry}\label{sec:geometry}
+
+The developed pipeline successfully transformed the initially unthickened meshes of the valve into a solid representation of the mitral valve leaflets with spatially varying thickness. The thickness values were obtained from manually selected locations within the volumetric ultrasound dataset and subsequently interpolated across the respective leaflet surfaces using inverse distance weighting.
+
+A total of 46 locations are documented in Table\ref{tab:measurements}, with 23 locations assigned to each leaflet mesh. These include measurements from regions with clearly identifiable leaflet boundaries, as well as representative median-derived values for the central and outer rim regions, where the ultrasound image quality did not allow for equally reliable measurements. The resulting thickness values demonstrate a spatial variation across the leaflets. The manually sampled values range from  1.418 mm to 2.831 mm. For both leaflets, the outer rim was assigned a constant thickness of 2.634 mm, while the central region was assigned a constant thickness of 1.420 mm. The remaining values were interpolated across the respective surfaces.
+
+The resulting distribution is illustrated in Figure\ref{fig:blender_weight_paint}. As intended, the thickness gradually transitions between the thinner central region and the thicker outer regions. The two leaflets were interpolated independently to prevent measurements from one leaflet influencing the thickness distribution of the other.
+
+The thickness fields were subsequently applied to the surface meshes using Blender's Solidify modifier. Since the original meshes represented the underside of the leaflets rather than their midsurfaces, the full thickness was extruded in one direction. This produced a solid geometry incorporating the reconstructed thickness distribution.
