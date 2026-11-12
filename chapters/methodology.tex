@@ -325,6 +325,26 @@ This resulted in a print using the desired material that appeared intact at firs
   \label{fig:failed_prints}
 \end{figure}
 
-However, there were concerns that the TPU might not adhere sufficiently to the PVA supports during printing, potentially resulting in print defects in the model. Therefore, PLA supports were initially used instead. Ultimately, this proved to be the right choice for this particular application, as the PLA and TPU adhered strongly enough to ensure a successful print while still allowing the valve to be easily peeled away from the support material after completion. As hoped, this resulted in a perfectly smooth underside. Furthermore, the gap within the valve opening was preserved. Although as for the print settings such as temperature, speed, retraction- and flow-rate, etc. all parameters were set as recommended by the filament manufacturer \cite{recreusFilamentFilaflex60} working with a highly flexible filament resulted being tedious and required several attempts to produce a successful print. The TPU60A was prone to clog inside the extruder which resulted in failed prints as the material could not be applied fast enough as an example of this is displayed in Image~\ref{fig:failed_prints}. The final slicer settings are listed in Table. \todo{make Table}
+However, there were concerns that the TPU might not adhere sufficiently to the PVA supports during printing, potentially resulting in print defects in the model. Therefore, PLA supports were initially used instead. Ultimately, this proved to be the right choice for this particular application, as the PLA and TPU adhered strongly enough to ensure a successful print while still allowing the valve to be easily peeled away from the support material after completion. As hoped, this resulted in a perfectly smooth underside. Furthermore, the gap within the valve opening was preserved. Although as for the print settings such as temperature, speed, retraction- and flow-rate, etc. all parameters were set as recommended by the filament manufacturer \cite{recreusFilamentFilaflex60} working with a highly flexible filament resulted being tedious and required several attempts to produce a successful print. The TPU60A was prone to clog inside the extruder which resulted in failed prints as the material could not be applied fast enough as an example of this is displayed in Image~\ref{fig:failed_prints}. Mentionable slicer settings are listed in Table~\ref{tab:measurements}. Settings related to the respective filament were set as recommended by the manufacturer \cite{recreusFilamentFilaflex60}. Due to the nature of the thin structure of the model, an infill of 100\% is applied automatically as the leaflets leave no room for infill. The brim is used to ensure that the model adheres to the print bed and does not detach during printing. The overhang threshold is set to 50° to ensure that support structures are generated for any overhanging parts of the model. The support pattern is set to rectilinear and pattern spacing to 0.5 mm to provide the flexible material enough surface are to not collapse. Finally, the wipe tower is enabled to ensure that any oozing filament from the TPU nozzle is cleaned off before printing the next layer.
+
+\begin{table}[htbp]
+\centering
+\caption{Mentionable settings used for 3D printing the mitral valve prototype on the Original Prusa XL5T.}
+\label{tab:settings}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Parameter} & \textbf{Setting} \\
+\hline
+Layer Height & 0.2 mm \\
+Nozzle Diameter & 0.4 mm \\
+Brim & Outer Brim Only \\
+Support & Enabled \\
+Overhang Threshold & 50$^\circ$ \\
+Support Pattern & Rectilinear \\
+Pattern Spacing & 0.5 mm \\
+Wipe Tower & Enabled \\
+\hline
+\end{tabular}
+\end{table}
 
 The only remaining step was to manually remove any excess strands of filament and create a small incision in the opening using a scalpel. This was necessary because 3D printing small openings generally leaves behind thin strands of filament, a phenomenon known as \emph{stringing}, which can cause the opening to become partially sealed \cite{prusa_stringing_oozing}. The completed prototype, including the support structures, was handed over to Siemens Healthineers, where the valve underwent testing and evaluation by clinical specialists.
