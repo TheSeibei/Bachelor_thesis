@@ -6,7 +6,7 @@
 The aim of this work is a 3D-printed prototype of a thickness-accurate 3D model of the valve
 leaflets that can serve as the basis for an ultrasound phantom. We start with a volumetric ultrasound scan of the valve, stored as a VDB
 volume and a surface mesh of the leaflets. Unfortunately these two do not
-provide all parameters that are necessary for the production for a full tangible model. The scan contains the full valve, but only as a
+provide all parameters that are necessary for the production of a complete tangible model. The scan contains the full valve, but only as a
 grid of grayscale values with no explicit geometry. The mesh has clean geometry,
 but it is only a single surface with no thickness, so on its own it cannot be
 converted into a physical object with a wall.
@@ -23,11 +23,11 @@ the single surface into a closed solid.
   \label{fig:schematic}
 \end{figure}
 
-I did not utilize a single program to perform these steps, as no single tool performs well at
+I did not use a single program to perform these steps, as no single tool performs well at
 every part. Instead the work is split across three platforms and six major steps --- also denoted in Figure~\ref{fig:schematic}: MeVisLab \cite{mevislab} and Blender \cite{blender} are used to load
-and prepare the volume and mesh (Step 1 described in Section~\ref{sec:input}), 3D~Slicer \cite{fedorov20123d} is used to align the mesh with the volume (Step 2 Section~\ref{sec:align}) and to take the thickness measurements (Step 3 Section~\ref{sec:measure}), and Blender is used to interpolate the
+and prepare the volume and mesh (Step 1 described in Section~\ref{sec:input}), 3D~Slicer \cite{fedorov20123d} is used to align the mesh with the volume (Step 2 in Section~\ref{sec:align}) and to take the thickness measurements (Step 3 Section~\ref{sec:measure}), and Blender is used to interpolate the
 measurements over the mesh (Step 4 Section~\ref{sec:interp}) and build the solid (Step 5 Section~\ref{sec:solid}). This solid is then printed to provide a physical model (Step 6 Section~\ref{sec:print}). Minor procedures, mainly the
-interpolation, I have implemented with short Python scripts using the numpy library. The following sections describe each part and why
+interpolation, I have implemented with short Python scripts using the NumPy library \cite{harris2020array}. The following sections describe each part and why
 each choice was made and not one of the other possible ones.
 
 \section{Input Data}\label{sec:input}
@@ -37,7 +37,7 @@ voxels roughly correspond to tissue and dark voxels to the surrounding space. It
 contains the leaflets with their real thickness, but this thickness is only
 present as a bright band in the image and not as a number or a shape that can be
 measured automatically without further steps. The scan also contains impurities at several areas: the ultrasound probe used to record it left a very noisy region in
-the center of the valve, around the opening. How we can deal with this will be discussed throughout this chapter.
+the center of the valve, around the opening as well as the outer brim. How we can deal with this will be discussed throughout this chapter.
 
 The second input is the surface mesh of the leaflets. This mesh is a single
 surface. It does not enclose a volume, and it has no wall thickness at all. In
@@ -62,13 +62,13 @@ has to be added on one side, and there is no division by two.
 \section{Modality of Thickness Recovery}\label{sec:recover}
 
 Thickness is not stored anywhere in the data. It has to be recovered from the
-grayscale volume. There were two reasonable ways to do this, and this sections explains both because the reason for choosing the second one is part of the
+grayscale volume. There were two reasonable ways to do this, and this section explains both because the reason for choosing the second one is part of the
 method.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.75\linewidth]{graphics/distance_field_workflow.jpg}
-  \caption{(A) Original ultrasound image. (B) Ultrasound image with a threshold set at >0.2. (C) Ultrasound image after the Euclidean Distance Transform. (D) Mesh mapped onto the Euclidean Distance Transformed image --- all images captured from an identical slice}
+  \caption{(A) Original ultrasound image. (B) Ultrasound image with a threshold set at >0.2. (C) Ultrasound image after the Euclidean Distance Transform. (D) Mesh mapped onto the Euclidean Distance Transformed image --- all images captured from an identical slice.}
   \label{fig:EDT}
 \end{figure}
 
@@ -86,7 +86,7 @@ mode to produce the distance field. Visible in image (D) the mesh is not a midsu
 
 The reason this idea is promising is that it is automatic and dense: it would
 give a thickness value everywhere on the leaflet at once, without any manual
-work. However I decided to abandon this method, considering the following points:
+work. However, I decided to abandon this method, considering the following points:
 
 First, there is a practical problem with reading the result. To get thickness at
 the mesh, the distance field has to be sampled exactly at the positions of the
@@ -94,7 +94,7 @@ mesh points. MeVisLab does not provide a ready-made module for ``sampling from
 volume X at the vertices of mesh Y'', and the scripting module has no image
 input or output that would let this be done directly inside the network. It would
 mean exporting the distance field and doing the sampling externally in Python,
-which is possible however adds another step that would itself have to be checked.
+which is possible but adds another step that would itself have to be checked.
 
 Second, the simple ``two times the distance'' rule only holds if the mesh is a
 midsurface. As shown in Section~\ref{sec:input} and depicted in Figure~\ref{fig:EDT} (D), the mesh here is the underside.
@@ -111,28 +111,28 @@ this data.
 \end{figure}
 
 Third, the whole result depends on one global threshold
-that separates material from background and given the noisy volume this separation is not trivial. Figure~\ref{fig:speckles} helps to illustrates the issue. Image (A) shows the interrupted tissue of the valve. The Ultrasound volume has speckled and blurred edges, and this scan has an
+that separates material from background and given the noisy volume this separation is not trivial. Figure~\ref{fig:speckles} helps to illustrate the issue. Image (A) shows the interrupted tissue of the valve. The ultrasound volume has speckled and blurred edges, and this scan has an
 especially noisy region in the center of the valve as can be seen in image (B). The highlighted region marks the area where the valve is meant to be but due to severe noise it cannot be identified. A single fixed threshold
-applied to the whole volume turns that noise into false geometry, especially in noisy regions, and there would be no simple way to reliably tell noise from tissue after thresholding. Changing the threshold does not solve the issue since lowering it would result in perhaps more continuous regions but also artifacts not actually within the leaflets therefore resulting in larger thickness readings than the true value. Increasing the threshold results in even less surface area to measure from. Resolving these difficulties with preprocessing and interpolation would be possible to some extent but again add several steps to the entire pipeline.
+applied to the whole volume turns that noise into false geometry, especially in noisy regions, and there would be no simple way to reliably tell noise from tissue after thresholding. Changing the threshold does not solve the issue since lowering it would result in possibly more continuous regions but also artifacts not actually within the leaflets therefore resulting in larger thickness readings than the true value. Increasing the threshold results in even less surface area to measure from. Resolving these difficulties with preprocessing and interpolation would be possible to some extent but again add several steps to the entire pipeline.
 
 Taken together, these points describe a method that would contain a lot of parameters and numbers that could not be reliably validated. For the extent of this thesis, a dense
 automatic result that cannot be verified is less desirable than a smaller set of values
 that can. This is the reason I chose to measure the thickness manually at a
-limited number of well-imaged locations instead. This however, only
+limited number of well-imaged locations instead. This, however, only
 works if the mesh is correctly placed inside the volume, so the first step before
 measuring was to align the two entities.
 
 \section{Aligning the Mesh and the Volume}\label{sec:align}
 
-The mesh and the volume did not overlap when they were first loaded together in both MeVisLab and 3D Slicer --- only Blender could directly open the .usda file which preserved both coordinate systems in the correct orientation. In MeVisLab and 3D Slicer they sat in different coordinate systems. This alignment matters here because, as
+The mesh and the volume did not overlap when they were first loaded together in both MeVisLab and 3D Slicer --- only Blender could directly open the .usda file, which preserved both coordinate systems in the correct orientation. In MeVisLab and 3D Slicer they sat in different coordinate systems. This alignment matters here because, as
 described in Section~\ref{sec:measure}, the thickness is measured along lines
 perpendicular to the mesh surface. If the mesh is offset, those
 perpendicular lines start offset, and the measurement is not precise.
 So the mesh and the volume had to be brought into the same coordinate frame
-first. Before performing any geometric operations in Blender, all input data was uniformly scaled up by 750\%. This initial upscaling was applied as for one to improve numerical precision during computational and transformation steps within Blender's modeling environment (as further discussed in Section~\ref{sec:interp}) and resolved export scaling issues I encountered, ensuring the resulting STL file imported at a realistic scale in the 3D-printing slicing software. This is not proposed as a general scaling factor for other datasets as in an ideal scenario the mesh and volume are at the right scale. Taken under consideration that the scaling could have been off by a factor of 100 as perhaps there was a miscommunication in metric units (centimeters in meters) between the slicing-software and the modeling environment upscaling by 750\% seamed very reasonable and was ultimately chosen as this resolved in a similar scale as the reference values determined by Dwivedi et al. \cite{dwivedi2014reference}. Furthermore this uniform scaling is fully tolerable for the valve model, as its final absolute dimensions are ultimately constrained by the physical dimensions of the ventricular chambers developed by Machoritsch, allowing the valve's scale to be quickly adjusted accordingly prior to final production.
+first. Before performing any geometric operations in Blender, all input data was uniformly scaled up by 750 \%. This initial upscaling was applied in order to improve numerical precision during computational and transformation steps within Blender's modeling environment (as further discussed in Section~\ref{sec:interp}) and resolved export scaling issues I encountered, ensuring the resulting STL file imported at a realistic scale in the 3D-printing slicing software. This is not proposed as a general scaling factor for other datasets as in an ideal scenario the mesh and volume are at the right scale. Taking into account that the scaling could have been off by a factor of 100 as perhaps there was a miscommunication in metric units (centimeters and meters) between the slicing-software and the modeling environment upscaling by 750 \% seemed very reasonable and was ultimately chosen as this resolved in a similar scale as the reference values determined by Dwivedi et al. \cite{dwivedi2014reference}. Furthermore this uniform scaling is fully tolerable for the valve model, as its final absolute dimensions are ultimately constrained by the physical dimensions of the ventricular chambers developed by Machoritsch, allowing the valve's scale to be quickly adjusted accordingly prior to final production.
 
 Aligning the two by their shapes directly is difficult, because the leaflet
-surface is smooth and curved and offers no clear matching landmarks to either decide on an aligning transformation nor check if they are overlapping correctly. The latter being particularly crucial. Instead, I used a reference that all three programs can interpret correctly: the bounding
+surface is smooth and curved and offers no clear matching landmarks to neither decide on an aligning transformation nor to check if they are overlapping correctly. The latter being particularly crucial. Instead, I used a reference that all three programs can interpret correctly: the bounding
 box. MeVisLab, 3D~Slicer and Blender each draw an axis-aligned bounding box
 around the volume, and this box is the same in all of them because it is derived
 from the same volume. Since everything was perfectly aligned in Blender I added 
@@ -164,10 +164,10 @@ the line (ruler) markup, which gives a direct distance reading in millimeters
 between two points. The important part here is the rule I followed
 for placing the two points achieving repeatability for the measurements.
 
-I did not to determine the leaflet edges purely by eye, and I also chose not to
+I did not determine the leaflet edges purely by eye, and I also chose not to
 threshold the whole volume, for the reasons given in
 Section~\ref{sec:recover}. Instead, I used a local intensity criterion, applied
-only at the spot being measured. As an acceptable tradeoff, considering the available data and its quality, I selected to interpret everything from an intensity of ~0.2 and upward as actual tissue as this offered a decent amount of area to take measurements from but would also not overestimate on tissue which clearly was not part of the mitral valve. Each measurement line was placed perpendicular to the mesh surface at
+only at the spot being measured. As an acceptable trade-off, considering the available data and its quality, I chose to treat intensities of ~0.2 and above as tissue as this offered a decent amount of area to take measurements from but would also not overestimate on tissue which clearly was not part of the mitral valve. Each measurement line was placed perpendicular to the mesh surface at
 the chosen location. Along that line, the measurement starts where the intensity
 first rises to~0.2 and ends where it falls back on or below~0.2, and the thickness is
 the length of that span. This is the same kind of intensity criterion that the
@@ -179,31 +179,31 @@ decided where the tissue began and ended.
 Where the measurements were taken was itself a choice driven by the data quality.
 Thickness is not the same everywhere on a leaflet, so I wanted to sample across
 the surface, but two regions in particular are challenging to measure. The first is the
-centerof the valve, around the opening, where the probe left a noisy hole in the
+center of the valve, around the opening, where the probe left a noisy hole in the
 scan. In that region it is difficult to see a clean tissue band, so reliable
 perpendicular measurements are not easy to obtain. The second is the thin outer brim
 of the leaflet, at the edge of the mesh, where measurements were also difficult
 to take cleanly. In between these two problem regions the data is clearer, so
 most of the measurements were taken there, where the tissue band is well defined
-and the intensity rule can be applied with confidence. The resulting locations where measurements were taken are shown in Figure~\ref{fig:Valve_measurments} although the numbers in the figure do not correspond to the actual indexing of the measurements in Table~\ref{tab:measurements}. It should be mentioned that the aortic valve is shown as well in the figure and it was within the scope of the project to produce a model of the aortic valve too, but due to the poor quality of the ultrasound data around it there were nearly any areas where measurements could be taken. Therefore, the aortic valve was not included in the final model.
+and the intensity rule can be applied with confidence. The resulting locations where measurements were taken are shown in Figure~\ref{fig:Valve_measurments} although the numbers in the figure do not correspond to the actual indexing of the measurements in Table~\ref{tab:measurements}. It should be mentioned that the aortic valve is shown as well in the figure and it was within the scope of the project to produce a model of the aortic valve too, but due to the poor quality of the ultrasound data around it there were hardly any areas where measurements could be taken. Therefore, the aortic valve was not included in the final model.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth]{graphics/Valve_measurments.png}
-  \caption{Valve mesh with volume and locations of the manual thickness measurements on the leaflets meshes from 3D-Slicer. Mesh depicted in yellow, ultrasound volume in blue/turquoise and measurement points in red}
+  \caption{Valve mesh with volume and locations of the manual thickness measurements on the leaflets meshes from 3D-Slicer. Mesh depicted in yellow, ultrasound volume in blue/turquoise and measurement points in red.}
   \label{fig:Valve_measurments}
 \end{figure}
 
 For the two difficult regions I made a deliberate simplification rather than
 forcing measurements the data does not support. For the noisy centerI sampled all
 the measurements I could obtain in this region and selected the
-median and treated the thickness across the whole centerregion as constant at
+median and treated the thickness across the whole center region as constant at
 that value. I did the same for the outer edge, selecting the median of the edge
 measurements and treating the edge as having one constant thickness. The median
 was used rather than the mean because it is less affected by bad
 readings, which is exactly what is expected in these noisy regions. Assuming a
-homogeneous thickness in the centerand at the edge is a simplification, and it is
-stated as such, but it is a reasonable in this case: the data in those regions is not good
+homogeneous thickness in the center and at the edge is a simplification, and it is
+stated as such, but it is a reasonable: the data in those regions is not good
 enough to justify anything finer, and a single well-chosen value is more justifiable
 than a set of unreliable point measurements.
 
@@ -211,17 +211,17 @@ than a set of unreliable point measurements.
 
 For each leaflet I obtained a set of thickness values: several point
 measurements in the well-imaged middle region, plus one constant value for the
-noisy centerand one constant value for the outer edge. The mesh, however, has
+noisy center and one constant value for the outer edge. The mesh, however, has
 several thousand vertices, and the step that builds the solid
 (Section~\ref{sec:solid}) needs a thickness value at every single vertex. So the
 measured values have to be distributed over the whole surface.
 
-The measured points can be recorded as follows in Table~\ref{tab:measurements}, which lists the coordinates of each measured point and the corresponding thickness value. The table is split into two parts, one for each leaflet mesh, and it includes the sample points, the outer rim points, and the centerpoints. The outer rim and centerpoints are treated as having constant thickness values, as described in Section~\ref{sec:measure}.
+The measured points are listed in Table~\ref{tab:measurements}, which lists the coordinates of each measured point and the corresponding thickness value. The table is split into two parts, one for each leaflet mesh, and it includes the sample points, the outer brim points, and the center points. The outer brim and center points are treated as having constant thickness values, as described in Section~\ref{sec:measure}.
 
 The simplest way to solve this would be to give the whole leaflet one average
 thickness. I rejected this because it would remove the variation between the base
-and the edge, resulting not in a desired realistic model. Therefore a type of
-interpolation is needed for the region that is well sampled, while the centerand
+and the outer brim, resulting not in a desired realistic model. Therefore a type of
+interpolation is needed for the region that is well sampled, while the center and
 the edge keep their constant median values as described in
 Section~\ref{sec:measure}.
 
@@ -237,7 +237,7 @@ I chose IDW over more advanced interpolation methods such as kriging or radial
 basis functions. With only a finite set of known values, the more
 advanced methods bring in extra assumptions and parameters that could not be
 checked with so little data. IDW, in contrast, makes no assumption about an
-underlying function, works with irregularly placed values, simple and perfectly adequate in this case. For the power parameter, a value of two was used. This gives greater weight to nearby measurements while still providing a smooth transition between the measured points. The resulting assignment of thickness values to the mesh is shown in Figure~\ref{fig:blender_weight_paint}. The outer brim of the leaflet is shown in red as it has the maximum thickness, while the centerof the leaflet, the thinnest part, is shown here in green which is roughly half of the maximum thickness and therefore not in blue, as blue would map to a thickness of zero. The transition between the two is smooth, as expected from the interpolation.
+underlying function, works with irregularly placed values, simple and perfectly adequate in this case. For the power parameter, a value of two was used. This gives greater weight to nearby measurements while still providing a smooth transition between the measured points. The resulting assignment of thickness values to the mesh is shown in Figure~\ref{fig:blender_weight_paint}. The outer brim of the leaflet is shown in red as it has the maximum thickness, while the center of the leaflet, the thinnest part, is shown here in green which is roughly half of the maximum thickness and therefore not in blue, as blue would map to a thickness of zero. The transition between the two is smooth, as expected from the interpolation.
 
 \begin{figure}[ht]
   \centering
@@ -246,14 +246,14 @@ underlying function, works with irregularly placed values, simple and perfectly 
   \label{fig:blender_weight_paint}
 \end{figure}
 
-The interpolation itself was carried out in Blender using a short Python script, as shown in Listing~\ref{lst:thickness_interpolation} and the values and coordinates as in Table~\ref{tab:measurements}. NumPy \cite{harris2020array} is used for the distance and weighted averaging calculations. For each vertex, the script calculates the Euclidean distance to all measured points, determines the corresponding inverse-distance weights, and computes the weighted average of the measured thickness values. For every vertex the script computes the distances to
+The interpolation itself was carried out in Blender using a short Python script, as shown in Listing~\ref{lst:thickness_interpolation} and the values and coordinates as in Table~\ref{tab:measurements}. NumPy is used for the distance and weighted averaging calculations. For every vertex, the script computes the Euclidean distance to all measured points, determines the corresponding inverse-distance weights, and computes the weighted average of the measured thickness values. For every vertex the script computes the distances to
 the known values, forms the weights, and takes the weighted average. The result
 is stored on the mesh as a per-vertex weight, called a vertex group in Blender.
 Before storing, the values are scaled to the range zero to one by dividing by the
 largest thickness, because the modifier used in the next step expects weights in
 that range.
 
-One limitation of this choice should be stated openly. IDW here uses straight-line (euclidean) distance through space,
+One limitation of this choice should be stated openly. IDW here uses straight-line (Euclidean) distance through space,
 not distance measured along the curved surface. Across a fold, or across the gap
 between the two leaflets, straight-line distance could mix values that should not be mixed, because two points can be close in space while being far
 apart along the tissue. Figure~\ref{fig:idw-gap} helps to clarify this issue. When performing IDW with no distinction between leaflets the weight given point C would be influenced more by point A than by point B as point A is closer in space. This is exactly why the two leaflets are kept as two
@@ -287,8 +287,8 @@ because Blender works in metres, and the zero-to-one weights then scale every
 other part of the surface below that maximum. The local thickness at a vertex is
 the weight at that vertex multiplied by the modifier thickness.
 
-The extrusion is done in one direction only, which is where the check from
-Section~\ref{sec:input} finally pays off. Because the mesh is the underside of
+The extrusion is done in one direction only, which is why the check from
+Section~\ref{sec:input} was done. Because the mesh is the underside of
 the leaflet and not the midsurface, the whole thickness has to be added on one
 side, growing outward from the surface, rather than split half on each side. This
 is also the concrete reason why the ``two times the distance'' rule from the
@@ -310,26 +310,26 @@ between them, for the reason given in Section~\ref{sec:interp}. The output of th
 measured, locally varying thickness.
 
 \section{Printing the Complete Model}\label{sec:print}
-Once a sufficiently accurate approximation, or model, of the mitral valve had been successfully developed, the actual objective and core of this work was addressed: the fabrication of a realistic ultrasound phantom. Fused Deposition Modeling (\emph{FDM}) 3D printing --- works by layering an extruded filament over itself --- was selected as the manufacturing method \cite{medellin2019design} as it allows for a fairly quick and uncomplicated production of a prototype. With an established pipeline for retrieving the model it can be scaled to different production platforms. Modern 3D printers provide sufficient detail resolution and, importantly for this project, the ability to work with flexible materials such as Thermoplastic PolyUrethane (\emph{TPU}). The fabrication of flexible structures using molds and a material such as silicone would also have been possible and could even have enabled scalable production from the start. However, 3D printing was ultimately chosen because it allows for easy modifications to the model and eliminates the need to consider how the mold can be removed after casting.
+Once a sufficiently accurate approximation, or model, of the mitral valve had been successfully developed, the actual objective and core of this work was addressed: the fabrication of a realistic ultrasound phantom. Fused Deposition Modeling (\emph{FDM}) 3D printing --- which works by layering an extruded filament over itself --- was selected as the manufacturing method \cite{medellin2019design} as it allows for a fairly quick and uncomplicated production of a prototype. With an established pipeline for retrieving the model, it can be scaled to different production platforms. Modern 3D printers provide sufficient detail resolution and, importantly for this project, the ability to work with flexible materials such as Thermoplastic PolyUrethane (\emph{TPU}). The fabrication of flexible structures using molds and a material such as silicone would also have been possible and could even have enabled scalable production from the start. However, 3D printing was ultimately chosen because it allows for easy modifications to the model and eliminates the need to consider how the mold can be removed after casting.
 
 Throughout the project, while the thickness measurements were being determined, test prints utilizing an \emph{Original Prusa i3 MK3S+} were conducted in parallel to identify the approach that would yield the best possible result. It was apparent that the heart valve would require support structures during printing, as the convex geometry would need to rest as flat as possible on the build plate, resulting in overhangs of well above 60° \cite{medellin2019design}. Printing the model vertically slightly reduced the cross-sectional area requiring support, but not to a significant extent. Furthermore, this orientation caused the structure to become unstable during printing, as the build plate moves back and forth along the y-axis. The higher the print progressed, the more pronounced this movement became, causing the structure to wobble.
 
-A major disadvantage of support material is the difficulty of completely removing all residues and achieving a smooth surface after printing. Test prints using PolyLactic Acid (\emph{PLA}), for example, which is a relatively rigid polymer, demonstrated that removing the support structures alone was already a considerable challenge. Achieving a surface as smooth as the upper side of the print would then require substantial additional effort. Printing with flexible TPU did not significantly change this situation. The TPA95A \cite{recreusFilamentFilaflex90} used was specified with a Shore A hardness of 95; in general, lower Shore A values correspond to softer and more flexible TPU materials --- e.g. TPU95A is flexible but fairly stiff while TPU60A is more flexible. It could be printed using settings that were almost identical to those used for PLA. For TPU82A \cite{recreusFilamentFilaflex82}, the printing speed was reduced to avoid compromising print quality. However, at the desired thickness of the heart valve, this material remained too inflexible. TPU60A \cite{recreusFilamentFilaflex60}, which provided an appropriate degree of flexibility and softness, introduced another problem: the amount of support material used previously was insufficient to adequately support the material between the individual support structures. The resulting print contained numerous holes and areas where the printed material had fused with the supports. The solution was to increase the density of the support structures by reducing the spacing between them. In this case, this was achieved by selecting smaller squares in the grid pattern.
+A major disadvantage of support material is the difficulty of completely removing all residues and achieving a smooth surface after printing. Test prints using PolyLactic Acid (\emph{PLA}), for example, which is a relatively rigid polymer, demonstrated that removing the support structures alone was already a considerable challenge. Achieving a surface as smooth as the upper side of the print would then require substantial additional effort. Printing with flexible TPU did not significantly change this situation. The TPU95A \cite{recreusFilamentFilaflex90} used was specified with a Shore A hardness of 95; in general, lower Shore A values correspond to softer and more flexible TPU materials --- e.g., TPU95A is flexible but fairly stiff while TPU60A is more flexible. It could be printed using settings that were almost identical to those used for PLA. For TPU82A \cite{recreusFilamentFilaflex82}, the printing speed was reduced to avoid compromising print quality. However, at the desired thickness of the heart valve, this material remained too inflexible. TPU60A \cite{recreusFilamentFilaflex60}, which provided an appropriate degree of flexibility and softness, introduced another problem: the amount of support material used previously was insufficient to adequately support the material between the individual support structures. The resulting print contained numerous holes and areas where the printed material had fused with the supports. The solution was to increase the density of the support structures by reducing the spacing between them. In this case, this was achieved by selecting smaller squares in the grid pattern.
 
 This resulted in a print using the desired material that appeared intact at first glance. However, the issue of the difficult-to-remove support structures remained. To address this problem, additional prototypes were produced using an \emph{Original Prusa XL5T}, a multi-nozzle printer capable of printing with multiple materials simultaneously. The idea was to print the supports using a water-soluble filament, in this case PolyVinyl Alcohol (\emph{PVA}) \cite{moradi2023optimizing}, while continuing to print the mitral valve using TPU60A. The finished model could then have been placed in water, allowing the supports to dissolve completely without leaving any residue.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth]{graphics/failed_prints.png}
-  \caption{Pictures taken from 3D-printer's extruder (A) and print bed (B) displaying failed prints due to clogging of the extruder. The left image shows the extruder clogging in the gears, while the right image shows the print bed with a failed print. \textit{Pictures taken by Dr. techn. Daniel Pahr}}
+  \caption{Pictures taken from the 3D-printer's extruder (A) and print bed (B) displaying failed prints due to clogging of the extruder. The left image shows the extruder clogging in the gears, while the right image shows the print bed with a failed print. \textit{Pictures taken by Dr. techn. Daniel Pahr.}}
   \label{fig:failed_prints}
 \end{figure}
 
-However, there were concerns that the TPU might not adhere sufficiently to the PVA supports during printing, potentially resulting in print defects in the model. Therefore, PLA supports were initially used instead. Ultimately, this proved to be the right choice for this particular application, as the PLA and TPU adhered strongly enough to ensure a successful print while still allowing the valve to be easily peeled away from the support material after completion. As hoped, this resulted in a perfectly smooth underside. Furthermore, the gap within the valve opening was preserved. Although as for the print settings such as temperature, speed, retraction- and flow-rate, etc. all parameters were set as recommended by the filament manufacturer \cite{recreusFilamentFilaflex60} working with a highly flexible filament resulted being tedious and required several attempts to produce a successful print. The TPU60A was prone to clog inside the extruder which resulted in failed prints as the material could not be applied fast enough as an example of this is displayed in Image~\ref{fig:failed_prints}. Mentionable slicer settings are listed in Table~\ref{tab:measurements}. Settings related to the respective filament were set as recommended by the manufacturer \cite{recreusFilamentFilaflex60}. Due to the nature of the thin structure of the model, an infill of 100\% is applied automatically as the leaflets leave no room for infill. The brim is used to ensure that the model adheres to the print bed and does not detach during printing. The overhang threshold is set to 50° to ensure that support structures are generated for any overhanging parts of the model. The support pattern is set to rectilinear and pattern spacing to 0.5 mm to provide the flexible material enough surface are to not collapse. Finally, the wipe tower is enabled to ensure that any oozing filament from the TPU nozzle is cleaned off before printing the next layer.
+However, there were concerns that the TPU might not adhere sufficiently to the PVA supports during printing, potentially resulting in print defects in the model. Therefore, PLA supports were initially used instead. Ultimately, this proved to be the right choice for this particular application, as the PLA and TPU adhered strongly enough to ensure a successful print while still allowing the valve to be easily peeled away from the support material after completion. As hoped, this resulted in a smooth underside. Furthermore, the gap within the valve opening was preserved. Although as for the print settings such as temperature, speed, retraction- and flow-rate, etc. all parameters were set as recommended by the filament manufacturer \cite{recreusFilamentFilaflex60} working with a highly flexible filament resulted in being tedious and required several attempts to produce a successful print. The TPU60A was prone to clog inside the extruder which resulted in failed prints as the material could not be applied fast enough. An example of this is displayed in Figure~\ref{fig:failed_prints}. Notable slicer settings are listed in Table~\ref{tab:measurements}. Due to the nature of the thin structure of the model, an infill of 100 \% is applied automatically as the leaflets leave no room for infill. The brim is used to ensure that the model adheres to the print bed and does not detach during printing. The overhang threshold is set to 50° to ensure that support structures are generated for any overhanging parts of the model. The support pattern is set to rectilinear and pattern spacing to 0.5 mm to provide the flexible material enough surface area to avoid collapsing. Finally, the wipe tower is enabled to ensure that any oozing filament from the TPU nozzle is cleaned off before printing the next layer.
 
 \begin{table}[htbp]
 \centering
-\caption{Mentionable settings used for 3D printing the mitral valve prototype on the Original Prusa XL5T.}
+\caption{Notable settings used for 3D printing the mitral valve prototype on the Original Prusa XL5T.}
 \label{tab:settings}
 \begin{tabular}{|l|l|}
 \hline
@@ -347,4 +347,4 @@ Wipe Tower & Enabled \\
 \end{tabular}
 \end{table}
 
-The only remaining step was to manually remove any excess strands of filament and create a small incision in the opening using a scalpel. This was necessary because 3D printing small openings generally leaves behind thin strands of filament, a phenomenon known as \emph{stringing}, which can cause the opening to become partially sealed \cite{prusa_stringing_oozing}. The completed prototype, including the support structures, was handed over to Siemens Healthineers, where the valve underwent testing and evaluation by clinical specialists.
+The only remaining step was to manually remove any excess strands of filament and create a small incision in the opening using a scalpel. This was necessary because 3D printing small openings generally leaves behind thin strands of filament, a phenomenon known as \emph{stringing}, which can cause the opening to become partially sealed \cite{prusa_stringing_oozing}. The completed prototype, including the intact support structures, was handed over to Siemens Healthineers, where the valve underwent testing and evaluation by clinical specialists.
