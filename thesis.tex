@@ -137,7 +137,14 @@
 \end{acknowledgements*}
 
 \begin{abstract}
-\include{chapters/abstract}
+The development of realistic, patient-specific cardiovascular phantoms requires accurate anatomical reconstruction and manufacturing methods that preserve the geometric properties of the structures being modelled. In particular, the spatial distribution of mitral valve leaflet thickness represents an important aspect of producing anatomically representative physical models.
+
+This thesis presents a reconstruction and manufacturing pipeline for producing a three-dimensional printed mitral valve prototype with spatially varying leaflet thickness, derived from volumetric ultrasound data. The approach combines a volumetric ultrasound dataset with initially unthickened leaflet surface meshes. After aligning both datasets within a common coordinate system, leaflet thickness is recovered through manually guided measurements at locations where the tissue boundaries can be reliably identified. To account for image noise and regions with insufficient visibility, representative median values are assigned to the central and outer rim regions. The resulting measurements are distributed across the leaflet surfaces using inverse distance weighting. The interpolated thickness distributions are subsequently transferred to the original meshes and converted into closed solid geometries.
+
+The reconstructed model is manufactured using fused deposition modeling with flexible thermoplastic polyurethane filament. Several manufacturing iterations are conducted to address challenges related to material flexibility, support structures, and print quality. The resulting physical prototype is subsequently evaluated by Siemens Healthineers using ultrasound imaging. Feedback from clinical personnel confirms that the printed valve is visible and scannable using ultrasound equipment.
+
+The results demonstrate the feasibility of reconstructing spatially varying leaflet thickness from volumetric ultrasound data and transferring the resulting geometry into a physical, ultrasound-visible prototype. While the initial ultrasound assessment is encouraging, further quantitative evaluation is required to establish acoustic similarity to biological tissue and validate the reconstructed thickness distribution. The developed pipeline provides a foundation for the further development of patient-specific cardiovascular ultrasound phantoms.
+
 \end{abstract}
 
 % Select the language of the thesis, e.g., english or naustrian.
@@ -168,7 +175,7 @@
 % Declare the use of AI tools as mentioned in the statement of originality.
 % Use either the English aitools or the German kitools.
 \begin{aitools}
-\todo{Ihr Text hier.}
+Generative AI tools were used to assist in the work conducted for this thesis as well of the writing of the thesis document itself. OpenAI's ChatGPT (GPT-6.1 Sol Medium) was used to generate initial drafts for sections of the thesis to set an initial direction for the discussed topics but the contents and wording and subsequent writing were performed by the author. AI was also used to generate a illustration of the pipeline schematic in Figure~\ref{fig:schematic} as well as to assist in researching references for statements made in this thesis, which were checked by the author for suitability before inclusion. AI assistance was also provided for formatting and spelling correction of the document, however the actual phrasing and contents remained unaltered. 
 \end{aitools}
 
 % Use an optional list of figures.
