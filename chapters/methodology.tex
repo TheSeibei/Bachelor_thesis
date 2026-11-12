@@ -37,7 +37,7 @@ voxels roughly correspond to tissue and dark voxels to the surrounding space. It
 contains the leaflets with their real thickness, but this thickness is only
 present as a bright band in the image and not as a number or a shape that can be
 measured automatically without further steps. The scan also contains impurities at several areas: the ultrasound probe used to record it left a very noisy region in
-the centre of the valve, around the opening. How we can deal with this will be discussed throughout this chapter.
+the center of the valve, around the opening. How we can deal with this will be discussed throughout this chapter.
 
 The second input is the surface mesh of the leaflets. This mesh is a single
 surface. It does not enclose a volume, and it has no wall thickness at all. In
@@ -112,7 +112,7 @@ this data.
 
 Third, the whole result depends on one global threshold
 that separates material from background and given the noisy volume this separation is not trivial. Figure~\ref{fig:speckles} helps to illustrates the issue. Image (A) shows the interrupted tissue of the valve. The Ultrasound volume has speckled and blurred edges, and this scan has an
-especially noisy region in the centre of the valve as can be seen in image (B). The highlighted region marks the area where the valve is meant to be but due to severe noise it cannot be identified. A single fixed threshold
+especially noisy region in the center of the valve as can be seen in image (B). The highlighted region marks the area where the valve is meant to be but due to severe noise it cannot be identified. A single fixed threshold
 applied to the whole volume turns that noise into false geometry, especially in noisy regions, and there would be no simple way to reliably tell noise from tissue after thresholding. Changing the threshold does not solve the issue since lowering it would result in perhaps more continuous regions but also artifacts not actually within the leaflets therefore resulting in larger thickness readings than the true value. Increasing the threshold results in even less surface area to measure from. Resolving these difficulties with preprocessing and interpolation would be possible to some extent but again add several steps to the entire pipeline.
 
 Taken together, these points describe a method that would contain a lot of parameters and numbers that could not be reliably validated. For the extent of this thesis, a dense
@@ -179,7 +179,7 @@ decided where the tissue began and ended.
 Where the measurements were taken was itself a choice driven by the data quality.
 Thickness is not the same everywhere on a leaflet, so I wanted to sample across
 the surface, but two regions in particular are challenging to measure. The first is the
-centre of the valve, around the opening, where the probe left a noisy hole in the
+centerof the valve, around the opening, where the probe left a noisy hole in the
 scan. In that region it is difficult to see a clean tissue band, so reliable
 perpendicular measurements are not easy to obtain. The second is the thin outer brim
 of the leaflet, at the edge of the mesh, where measurements were also difficult
@@ -195,14 +195,14 @@ and the intensity rule can be applied with confidence. The resulting locations w
 \end{figure}
 
 For the two difficult regions I made a deliberate simplification rather than
-forcing measurements the data does not support. For the noisy centre I sampled all
+forcing measurements the data does not support. For the noisy centerI sampled all
 the measurements I could obtain in this region and selected the
-median and treated the thickness across the whole centre region as constant at
+median and treated the thickness across the whole centerregion as constant at
 that value. I did the same for the outer edge, selecting the median of the edge
 measurements and treating the edge as having one constant thickness. The median
 was used rather than the mean because it is less affected by bad
 readings, which is exactly what is expected in these noisy regions. Assuming a
-homogeneous thickness in the centre and at the edge is a simplification, and it is
+homogeneous thickness in the centerand at the edge is a simplification, and it is
 stated as such, but it is a reasonable in this case: the data in those regions is not good
 enough to justify anything finer, and a single well-chosen value is more justifiable
 than a set of unreliable point measurements.
@@ -211,17 +211,17 @@ than a set of unreliable point measurements.
 
 For each leaflet I obtained a set of thickness values: several point
 measurements in the well-imaged middle region, plus one constant value for the
-noisy centre and one constant value for the outer edge. The mesh, however, has
+noisy centerand one constant value for the outer edge. The mesh, however, has
 several thousand vertices, and the step that builds the solid
 (Section~\ref{sec:solid}) needs a thickness value at every single vertex. So the
 measured values have to be distributed over the whole surface.
 
-The measured points can be recorded as follows in Table~\ref{tab:measurements}, which lists the coordinates of each measured point and the corresponding thickness value. The table is split into two parts, one for each leaflet mesh, and it includes the sample points, the outer rim points, and the centre points. The outer rim and centre points are treated as having constant thickness values, as described in Section~\ref{sec:measure}.
+The measured points can be recorded as follows in Table~\ref{tab:measurements}, which lists the coordinates of each measured point and the corresponding thickness value. The table is split into two parts, one for each leaflet mesh, and it includes the sample points, the outer rim points, and the centerpoints. The outer rim and centerpoints are treated as having constant thickness values, as described in Section~\ref{sec:measure}.
 
 The simplest way to solve this would be to give the whole leaflet one average
 thickness. I rejected this because it would remove the variation between the base
 and the edge, resulting not in a desired realistic model. Therefore a type of
-interpolation is needed for the region that is well sampled, while the centre and
+interpolation is needed for the region that is well sampled, while the centerand
 the edge keep their constant median values as described in
 Section~\ref{sec:measure}.
 
@@ -237,7 +237,7 @@ I chose IDW over more advanced interpolation methods such as kriging or radial
 basis functions. With only a finite set of known values, the more
 advanced methods bring in extra assumptions and parameters that could not be
 checked with so little data. IDW, in contrast, makes no assumption about an
-underlying function, works with irregularly placed values, simple and perfectly adequate in this case. For the power parameter, a value of two was used. This gives greater weight to nearby measurements while still providing a smooth transition between the measured points. The resulting assignment of thickness values to the mesh is shown in Figure~\ref{fig:blender_weight_paint}. The outer brim of the leaflet is shown in red as it has the maximum thickness, while the centre of the leaflet, the thinnest part, is shown here in green which is roughly half of the maximum thickness and therefore not in blue, as blue would map to a thickness of zero. The transition between the two is smooth, as expected from the interpolation.
+underlying function, works with irregularly placed values, simple and perfectly adequate in this case. For the power parameter, a value of two was used. This gives greater weight to nearby measurements while still providing a smooth transition between the measured points. The resulting assignment of thickness values to the mesh is shown in Figure~\ref{fig:blender_weight_paint}. The outer brim of the leaflet is shown in red as it has the maximum thickness, while the centerof the leaflet, the thinnest part, is shown here in green which is roughly half of the maximum thickness and therefore not in blue, as blue would map to a thickness of zero. The transition between the two is smooth, as expected from the interpolation.
 
 \begin{figure}[ht]
   \centering
@@ -293,7 +293,7 @@ the leaflet and not the midsurface, the whole thickness has to be added on one
 side, growing outward from the surface, rather than split half on each side. This
 is also the concrete reason why the ``two times the distance'' rule from the
 distance-field idea in Section~\ref{sec:recover} would have been wrong for this
-data: a factor of two is only correct when the surface is the centre, and here it
+data: a factor of two is only correct when the surface is the center, and here it
 is a boundary. In the modifier this is set by using a one-sided offset so that the
 material grows only outward. The direction of the extrusion follows the surface
 normals, so the normals were checked beforehand and flipped where needed, to make
