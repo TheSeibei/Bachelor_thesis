@@ -1,2 +1,21 @@
 \chapter{Conclusion}\label{chap:conclusion}
 
+The objective of this thesis was to develop a reproducible pipeline for reconstructing spatially varying mitral valve leaflet thickness from volumetric ultrasound data and transferring the resulting geometry into a manufacturable physical model.
+
+The developed approach combined volumetric ultrasound data with an initially unthickened surface mesh of the mitral valve leaflets. After establishing a common coordinate system, leaflet thickness was recovered through manually guided measurements in regions where the ultrasound boundaries could be identified reliably. This approach was selected over global automatic thresholding because of the considerable noise and segmentation artifacts present in the original dataset.
+
+The resulting measurements were distributed across the leaflet surfaces using inverse distance weighting. Regions with insufficient image quality, particularly around the central opening and the outer leaflet boundaries, were treated using representative median thickness values. The interpolated thickness distributions were subsequently transferred to the original meshes and converted into closed solid geometries.
+
+The resulting model was successfully manufactured using fused deposition modeling printing with flexible TPU60A filament. Despite several challenges associated with the printing of flexible materials and the removal of support structures, a satisfactory physical prototype was obtained. The final model retained the intended leaflet opening and exhibited a smooth underside following support structure removal.
+
+An initial qualitative assessment was subsequently conducted by Siemens Healthineers. Feedback from the involved personnel confirmed that the manufactured valve was nicely scannable with ultrasound. The accompanying photographs of the ultrasound display provide additional qualitative evidence that the printed structure could be visualized using ultrasound equipment.
+
+Returning to the research question, the results demonstrate that spatially varying leaflet thickness can be recovered from volumetric ultrasound data using a locally guided measurement strategy and transferred to a 3D-printable anatomical model. The successful manufacturing and subsequent ultrasound visualization demonstrate the practical feasibility of the proposed reconstruction pipeline.
+
+However, several limitations remain. The thickness measurements depend on manual identification of leaflet boundaries and are therefore subject to operator-related uncertainty. The use of constant median values in regions with insufficient image quality introduces simplifications into the reconstructed thickness distribution. Furthermore, the interpolation provides an approximation of the thickness between measured locations rather than an independently verified representation of the true tissue thickness.
+
+The ultrasound assessment also remains qualitative. Although the visibility of the prototype was confirmed, no quantitative comparison with biological tissue or an established reference phantom was performed. Consequently, the acoustic similarity and suitability of the prototype for more advanced ultrasound applications remain to be investigated.
+
+Future work should focus on extending the evaluation to the complete heart phantom developed in parallel to this thesis project. In particular, integrating the mitral valve with the reconstructed heart chambers and submerging the complete model in an ultrasound medium would provide an opportunity to investigate ultrasound visualization under more representative experimental conditions.
+
+In conclusion, this thesis establishes a practical workflow for reconstructing, manufacturing, and initially evaluating a patient-specific mitral valve prototype from volumetric ultrasound data. Although further validation is necessary before claiming equivalence to biological tissue, the results provide a promising foundation for the development of more realistic physical ultrasound phantoms of the cardiovascular system.
