@@ -77,7 +77,7 @@
 
 \makeindex      % Use an optional index.
 \makeglossaries % Use an optional glossary.
-%\glstocfalse   % Remove the glossaries from the table of contents.
+\glstocfalse   % Remove the glossaries from the table of contents.
 
 % Set persons with 4 arguments:
 %  {title before name}{name}{title after name}{gender}
@@ -193,6 +193,8 @@ Generative AI tools were used to assist in the work conducted for this thesis as
 \printindex % Rerun build-thesis or build-all when removing the index through commenting.
 
 % Add a glossary.
+\phantomsection
+\addcontentsline{toc}{chapter}{Acronyms}
 \printglossaries % Rerun build-thesis or build-all when removing it through commenting.
 
 % Add a bibliography.
