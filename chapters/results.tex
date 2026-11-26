@@ -4,7 +4,7 @@ This chapter presents the results of the developed reconstruction and manufactur
 
 \section{Reconstructed Leaflet Geometry}\label{sec:geometry}
 
-The developed pipeline successfully transformed the initially unthickened meshes of the valve into a solid representation of the mitral valve leaflets with spatially varying thickness. The thickness values were obtained from manually selected locations within the volumetric ultrasound dataset and subsequently interpolated across the respective leaflet surfaces using inverse distance weighting.
+The developed pipeline successfully transformed the initially unthickened meshes of the valve into a solid representation of the mitral valve leaflets with spatially varying thickness. The thickness values were obtained from manually selected locations within the volumetric ultrasound dataset and subsequently interpolated across the respective leaflet surfaces using \gls{idw}.
 
 A total of 46 locations are documented in Table~\ref{tab:measurements}, with 23 locations assigned to each leaflet mesh. These include measurements from regions with clearly identifiable leaflet boundaries, as well as representative median-derived values for the central and outer brim regions, where the ultrasound image quality did not allow for equally reliable measurements. The resulting thickness values demonstrate a spatial variation across the leaflets. The manually sampled values range from  1.418 mm to 2.831 mm. For both leaflets, the outer brim was assigned a constant thickness of 2.634 mm, while the central region was assigned a constant thickness of 1.420 mm. The remaining values were interpolated across the respective surfaces.
 
@@ -14,22 +14,22 @@ The thickness fields were subsequently applied to the surface meshes using Blend
 
 \section{Physical Prototype}\label{sec:prototype}
 
-The resulting solid model was successfully manufactured using Fused Deposition Modeling (\emph{FDM}) with flexible TPU60A filament.
+The resulting solid model was successfully manufactured using \gls{fdm} with flexible \gls{tpu}60A filament.
 
-The manufacturing process required several iterations to obtain a satisfactory result. Some attempts encountered problems related to filament clogging, insufficient support density, and difficulties removing support structures without damaging the printed leaflets. The final manufacturing approach used PLA support structures in combination with TPU60A for the valve itself. This allowed the support material to be removed while retaining the printed leaflet geometry.
+The manufacturing process required several iterations to obtain a satisfactory result. Some attempts encountered problems related to filament clogging, insufficient support density, and difficulties removing support structures without damaging the printed leaflets. The final manufacturing approach used \gls{pla} support structures in combination with \gls{tpu}60A for the valve itself. This allowed the support material to be removed while retaining the printed leaflet geometry.
 
 The completed prototype retained the intended opening between the leaflets. Following the removal of support material and excess filament, the underside of the printed structure exhibited a smooth surface.
 
-Figure~\ref{fig:completed_print} shows the completed physical prototype of the mitral valve from the top and bottom views. It can clearly be seen as well that the support structures were successfully removed, leaving the intended geometry intact. The leaflet surfaces appear smooth and continuous --- by the standards of unaltered FDM prints.
+Figure~\ref{fig:completed_print} shows the completed physical prototype of the mitral valve from the top and bottom views. It can clearly be seen as well that the support structures were successfully removed, leaving the intended geometry intact. The leaflet surfaces appear smooth and continuous --- by the standards of unaltered \gls{fdm} prints.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\linewidth]{graphics/completed_print.png}
-  \caption{(A) Top view of the completed valve prototype. (B) Bottom view of the completed valve prototype. White material being TPU60A and red material being PLA support structures.}
+  \caption{(A) Top view of the completed valve prototype. (B) Bottom view of the completed valve prototype. White material being \gls{tpu}60A and red material being \gls{pla} support structures.}
   \label{fig:completed_print}
 \end{figure}
 
-The successful fabrication demonstrates that the reconstructed geometry could be transferred into a physical model using an accessible FDM printing process and a flexible thermoplastic material.
+The successful fabrication demonstrates that the reconstructed geometry could be transferred into a physical model using an accessible \gls{fdm} printing process and a flexible thermoplastic material.
 
 \section{Qualitative Ultrasound Assessment by Siemens Healthineers}\label{sec:assessment}
 
@@ -55,7 +55,7 @@ However, the assessment was qualitative. The clinical expert did deem it appropr
 \section{Evaluation of the Developed Pipeline}\label{sec:evaluation}
 Considering the results of the reconstruction, manufacturing, and external evaluation, the developed pipeline achieved its principal technical objectives.
 
-The initial volumetric ultrasound dataset and unthickened leaflet meshes were successfully combined to reconstruct a solid mitral valve model with spatially varying thickness. The resulting geometry was suitable for additive manufacturing and could be fabricated using flexible TPU material.
+The initial volumetric ultrasound dataset and unthickened leaflet meshes were successfully combined to reconstruct a solid mitral valve model with spatially varying thickness. The resulting geometry was suitable for additive manufacturing and could be fabricated using flexible \gls{tpu} material.
 
 Furthermore, the initial ultrasound assessment performed by Siemens Healthineers confirmed that the resulting physical prototype was visible using ultrasound imaging.
 
