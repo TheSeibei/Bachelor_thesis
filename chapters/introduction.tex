@@ -14,14 +14,14 @@ In this context, the geometric accuracy of the phantom --- specifically the spat
 
 \section{Aim of the Work}\label{sec:intro_aim}
 
-The primary aim of this work is to design and developes a pipeline that produces a 3D-printed prototype of an anatomically accurate mitral valve ultrasound phantom with realistic, spatially varying leaflet thickness. Ideally this component would be integrated into a larger heart phantom and allow for a realistic blood-flow simulation. Starting from a volumetric ultrasound scan and an unthickened single-surface leaflet mesh, this project establishes an end-to-end processing pipeline to recover local leaflet thickness from image data, transfer it onto the geometric mesh, construct a closed solid model, and manufacture a flexible physical phantom suitable for ultrasound imaging and device interaction assessment.
+The primary aim of this work is to design and developes a pipeline that produces a \gls{3d}-printed prototype of an anatomically accurate mitral valve ultrasound phantom with realistic, spatially varying leaflet thickness. Ideally this component would be integrated into a larger heart phantom and allow for a realistic blood-flow simulation. Starting from a volumetric ultrasound scan and an unthickened single-surface leaflet mesh, this project establishes an end-to-end processing pipeline to recover local leaflet thickness from image data, transfer it onto the geometric mesh, construct a closed solid model, and manufacture a flexible physical phantom suitable for ultrasound imaging and device interaction assessment.
 
 \section{Research Question}\label{sec:intro_rq}
 
 To guide the development and evaluation of the pipeline, this thesis addresses the following central research question:
 
 \begin{quote}
-\emph{To what extent can spatially varying leaflet thickness be recovered from volumetric ultrasound data and transferred to a 3D-printable, anatomically accurate valve model?}
+\emph{To what extent can spatially varying leaflet thickness be recovered from volumetric ultrasound data and transferred to a \gls{3d}-printable, anatomically accurate valve model?}
 \end{quote}
 
 \section{Scientific Contribution}\label{sec:intro_contribution}
@@ -30,6 +30,6 @@ The key contributions of this work are:
 
 \begin{enumerate}
     \item \textbf{Manually guided, locally plausible thickness recovery:} A hybrid measurement strategy that avoids the pitfalls of global volumetric thresholding in noisy ultrasound data. This is done by combining local intensity profile criteria with guided manual sampling in reliable image regions, supplementing missing values with robust median estimates in low-quality regions.
-    \item \textbf{Multi-software bounding-box alignment:} A reproducible geometric registration method using bounding-box reference planes. This is employed to align disparate coordinate spaces across MeVisLab, 3D Slicer, and Blender without relying on ambiguous curved and complex surface landmarks.
+    \item \textbf{Multi-software bounding-box alignment:} A reproducible geometric registration method using bounding-box reference planes. This is employed to align disparate coordinate spaces across MeVisLab, 3D~Slicer, and Blender without relying on ambiguous curved and complex surface landmarks.
     \item \textbf{Spatially interpolated boundary surface extrusion:} A method to map discrete thickness measurements across complex surface meshes using \gls{idw} and single-sided boundary surface extrusion. This supports preserving authentic anatomical thickness gradients without artificial uniform wall assumptions.
 \end{enumerate}
